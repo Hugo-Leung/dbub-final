@@ -1,0 +1,135 @@
+\documentclass[reprint,aps,unsortedaddress,superscriptaddress,prd,floatfix,showpacs,linenumbers]{revtex4-2}
+\usepackage[utf8]{inputenc}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{verbatim}
+\usepackage{url}
+\usepackage{subcaption}
+\usepackage[separate-uncertainty=true]{siunitx}
+\usepackage{physics}
+\usepackage{hyperref}
+\usepackage[capitalize]{cleveref}
+\usepackage[obeyFinal]{todonotes}
+\setuptodonotes{inline}
+\usepackage{adjustbox}
+\usepackage{multirow}
+\usepackage{lineno}
+\linenumbers
+\graphicspath{{figures/}}
+\DeclareSIUnit\barn{b}
+
+\captionsetup{justification=raggedright,singlelinecheck=false}
+
+\begin{document}
+
+\title{Improve measurement of flavor asymmetry of the light-quark sea in the proton with Drell-Yan production in
+	\texorpdfstring{$p+p$}{p+p} and \texorpdfstring{$p+d$}{p+d} collisions at \texorpdfstring{\SI{120}{\GeV}}{120~GeV}}
+\input{author}
+
+\date{\today}
+
+\begin{abstract}
+\end{abstract}
+
+
+\maketitle
+
+\section{Introduction}
+\todo{are we comparing with E866 here?}
+\todo{summarized previos finding?}
+\todo{discribe the results from STAR and why this new result is better}
+
+The results based on Run 2-3 have previously reported~\cite{dove2021,dove2023}. 
+In this letter, we report the improved results using all data collected by the SeaQuest Experiment at Fermilab.
+The data constitute a twofold increase in the detected muons compared to our previous publications.
+\todo{also summarized any improvement in the analysis if any}
+
+\section{The Drell-Yan Process}
+
+\section{The SeaQuest Experiment}
+\subsection{Target System}
+\subsection{Spectrometer}
+\subsection{Trigger System}
+
+\section{Data Analysis}
+\todo{progress between nature paper and now?}
+\subsection{Track reconstruction}
+
+\subsection{Monte Carlo simulation}
+\todo{Explain the event generation, geat4 options, embeding(?), realization(?).}
+\todo{How well is our data discribed by GMC? Which distributions are we comparing?}
+
+\subsection{Mass-fit method}
+\todo{Explain the method. If we are using NMSU mix, we will need to justify the normalization.}
+\begin{figure}[htbp!]
+	\centering
+	\begin{subfigure}{\linewidth}
+		\includegraphics[width=\linewidth]{massfit_run56_LH2.pdf}
+	\end{subfigure}
+	\begin{subfigure}{\linewidth}
+		\includegraphics[width=\linewidth]{massfit_run56_LD2.pdf}
+	\end{subfigure}
+	\caption{Dimuon mass distribution for events collected
+	on liquid hydrogen (top) and deuterium (bottom) targets for the second data set.
+	The data points (solid squares) are compared with a fit (solid blue line) consisting of
+	various components (see text).}
+	\label{fig:massfit}
+\end{figure}
+\missingfigure[figwidth=\linewidth]{Drell-Yan yeild vs $x_T$ after background subtraction compared with MC} 
+\todo{corrections(?): rate dependence, target contamination, live PoT}
+
+\section{Measurement of The \texorpdfstring{$\sigma^{pd}/2\sigma^{pp}$}{pd/2pp} Drell-Yan Cross Section Ratio}
+\todo{which variables do we want to show? (x2, x1, mass, pT, xF, etc)}
+\begin{figure}[htbp!]
+	\centering
+	\includegraphics[width=\linewidth]{E906_E866_xT_CT18only.pdf}
+	\caption{Measured $\sigma_{pd}/2\sigma_{pp}$ Drell-Yan cross section ratio from SeaQuest compared with E866/NuSea~\cite{towell2001}
+		and calculations using CT18~\cite{hou2021} at different kinematics.}
+	\label{fig:xT_csr}
+\end{figure}
+
+\todo{break down of systematics}
+\todo{consistence of the data(source of systematics)}
+
+\section{Extraction of \texorpdfstring{$\bar{d}\left(x\right)/\bar{u}\left(x\right)$}{dbar(x)/ubar(x)}
+	and \texorpdfstring{$\bar{d}\left(x\right)-\bar{u}\left(x\right)$}{dbar(x)-ubar(x)}}
+\todo{Explain the extraction. There are also addition systematics here.}
+\todo{Where to put acceptance? We did show the acceptance in nature paper.}
+\begin{figure}[htbp!]
+	\centering
+	\includegraphics[width=\linewidth]{E906_E866_dbarubar}
+	\caption{Comparison of the extracted $\bar{d}\left(x\right)/\bar{u}\left(x\right)$ from SeaQuest
+		compared with E866/NuSea~\cite{towell2001} and meson cloud~\cite{alberg2022} and statistical models~\cite{soffer2019}.}
+	\label{fig:dbub_ratio}
+\end{figure}
+\begin{table*}[htbp!]
+	\centering
+	\caption{The measured $\sigma_{pd}/2\sigma_{pp}$ cross section ratio as well
+		as the extracted $\bar{d}/\bar{u}$ and $\bar{d}-\bar{u}$ for each $x_{2}$ bin.
+		The first uncertainty is statistical and the second systematic.}
+	\begin{adjustbox}{max width=\textwidth}
+		\input{table/dbarubar.tex}
+	\end{adjustbox}
+\end{table*}
+\begin{table*}[htbp!]
+	\centering
+	\caption{Values of $\int_{0.45}^{0.13} \left[\bar{d}\left(x\right) - \bar{u}\left(x\right)\right] \dd{x}$
+		and $\int_{0.45}^{0.13} x\left[\bar{d}\left(x\right) - \bar{u}\left(x\right)\right] \dd{x}$ at $Q^2=\SI{25.5}{\GeV\squared}$ extracted from
+		SeaQuest compared with CT18, NNPDF4.0 PDFs as well as meson cloud and statistical models.}	
+	\begin{adjustbox}{max width=\textwidth}
+		\input{table/dbarubar_int.tex}
+	\end{adjustbox}
+\end{table*}
+\section{Impact on PDF analysis}
+\todo{Not sure about this part}
+
+\section{Conclusions}
+
+\begin{acknowledgments}
+\todo{Add funding information}
+\end{acknowledgments}
+\bibliography{reference}
+
+\end{document}
+
