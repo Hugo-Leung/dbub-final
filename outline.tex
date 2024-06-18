@@ -1,0 +1,141 @@
+\documentclass{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{siunitx}
+\usepackage{physics}
+\usepackage{hyperref}
+\usepackage{cleveref}
+\usepackage[style=phys,%
+	biblabel=brackets,%
+	chaptertitle=false,pageranges=false,%
+maxnames=4,sorting=none,eprint]{biblatex}
+\addbibresource{ref.bib}
+\usepackage{authblk}
+\usepackage{subcaption}
+
+\title{Outline of the Final $\bar{d}/\bar{u}$ Paper}
+\author{Ching Him Leung}
+\date{\today}
+\begin{document}
+\maketitle
+Title: ``Improve measurement of flavor asymmetry of the light-quark sea in the proton with Drell-Yan production in
+	\texorpdfstring{$p+p$}{p+p} and \texorpdfstring{$p+d$}{p+d} collisions at \texorpdfstring{\SI{120}{\GeV}}{120~GeV}''
+\begin{enumerate}
+    \item Section: Introduction
+    \begin{enumerate}
+        \item summarize the improvements as compared to the previous paper
+        \begin{enumerate}
+            \item double the size of data, hence reduced statistical uncertainties.
+            \item different trigger roadset, hence can be to used to check for potential unknown sources of systematics.
+            \item Improved analysis techniques.
+        \end{enumerate}
+        \item perhaps state that results on the $J/\psi$ production has been reported in [ref] in the introduction.
+    \end{enumerate} 
+    \item Section: Drell-Yan Process
+    \begin{enumerate}
+        \item Define the kinematics variables $x_1$, $x_2$, and $x_F$
+        \item Explain how the $\sigma_{pd}/2\sigma_{pp}$ ratio is related the $\bar{d}/\bar{u}$
+    \end{enumerate}
+    \item Section: The SeaQuest Experiment
+    \begin{enumerate}
+        \item Target System
+        \item Spectrometer and Tracking Stations
+        \item Trigger System. Explain FPGA1, FPGA4, and NIM3, and their purpose
+    \end{enumerate}
+    \item Section: Data Analysis
+    \begin{enumerate}
+        \item Monte Carlo simulation
+        \begin{itemize}
+            \item Event generation
+            \item GEANT4 settings
+            \item realization
+            \item NIM3 embedding
+            \item Data/GMC comparisons (Or should we put this after discussing massfit?)
+            \item We might want to use the new reweighted GMC from Dinupa. Need to investigate more.
+                However, I am not keen on explaining the ML driven reweighting.
+                I might be a bit old-school, I prefer to frame reweighting as fine tuning the input parameters (eg.~$p_T,\,\bar{d}/\bar{u}$, etc).
+        \end{itemize}
+        \item Track reconstruction
+        \begin{itemize}
+            \item some comment on the event selection
+            \begin{itemize}
+                \item We use loose cuts during the fit, then impose tighter cuts during projection.
+                \item additional $x_B$ and mass cut during projection
+            \end{itemize}
+        \end{itemize}
+        \item massfit
+        \begin{itemize}
+            \item explain the track mixing method(s) (FPGA4mix and/or FPGA1mix), we would then quote the differences as systematics.
+            \item Corrections:
+            \begin{itemize}
+                \item live PoT
+                \item rate dependence
+                \item target contamination (?)\\
+                    We might want to admit our previous mistakes here.
+            \end{itemize}
+            \item figure:
+            \begin{itemize}
+                \item mass fit for LH2 and LD2
+                \item background subtracted yield compared with GMC. Which variable(s) should we show?
+            \end{itemize}
+        \end{itemize}
+    \end{enumerate}
+    \item Section: Measurement of The \texorpdfstring{$\sigma_{pd}/2\sigma_{pp}$}{pd/2pp} Drell-Yan Cross Section Ratio
+    \begin{enumerate}
+        \item figure:
+        \begin{itemize}
+            \item $\sigma_{pd}/2\sigma_{pp}$ vs $x_2$
+            \begin{itemize}
+                \item Comparing results from long paper and combined results.\\
+                ``the results from Ref.~[ref]  are compared with the results obtained with the improved analysis and full dataset''
+                \item Comparing SeaQuest and NuSea.
+                \item Which PDFs are we planning to show? CT18, NNPDF4.0, or others?
+                    It might be interesting to compare the results from the same group before and after nature paper.
+                    Namely, NNPDF3.0 vs NNPDF4.0, or CJ15 vs CJ22. 
+            \end{itemize}
+            \item Not sure about other variables at this point. I think mass and $p_T$ would be interesting.
+            But I am not sure what new information $x_1$ or $x_F$ would bring, aside from comparing with previous results. 
+            \begin{itemize}
+                \item $x_F$ might be useful for comparing with $J/\psi$.
+                \item $x_1$ would be useful for nuclear dependence studies. But we don't have any results yet.
+            \end{itemize}
+        \end{itemize}
+        \item tables:
+        \begin{itemize}
+            \item The measured $\sigma_{pd}/2\sigma_{pp}$ cross section ratio as well
+		as the extracted $\bar{d}/\bar{u}$ and $\bar{d}-\bar{u}$ for each $x_{2}$ bin.
+            \item Breakdown of systematic uncertainty in the cross section ratio
+        \end{itemize}
+        \item comment on the consistency between datasets
+        \item comment of the different beam energies between SeaQuest and NuSea, therefore expected differences in the cross section ratio
+    \end{enumerate}
+    \item Section: Extraction of \texorpdfstring{$\bar{d}\left(x\right)/\bar{u}\left(x\right)$}{dbar(x)/ubar(x)}
+	and \texorpdfstring{$\bar{d}\left(x\right)-\bar{u}\left(x\right)$}{dbar(x)-ubar(x)}
+    \begin{enumerate}
+        \item Explain the extraction, and the additional systematics
+        \item Should we also include the acceptance table here?
+        \item figures:
+        \begin{itemize}
+            \item $\bar{d}/\bar{u}$
+            \begin{itemize}
+                \item comparisons with E866
+                \item comparisons with meson cloud and statistical models
+                \item comparisons with PDFs
+                \item comparisons with long paper? I think this less important.
+            \end{itemize}
+            \item $\bar{d}-\bar{u}$
+            \begin{itemize}
+                \item also include SIDIS data from HERMES
+            \end{itemize}
+        \end{itemize}
+        \item tables:
+        \begin{itemize}
+            \item $\int_{0.45}^{0.13} \left[\bar{d}\left(x\right) - \bar{u}\left(x\right)\right] \dd{x}$
+            \item $\int_{0.45}^{0.13} x\left[\bar{d}\left(x\right) - \bar{u}\left(x\right)\right] \dd{x}$
+            \item statistical model and meson cloud model
+            \item PDFs
+        \end{itemize}
+    \end{enumerate}
+\end{enumerate}
+\end{document}
+
