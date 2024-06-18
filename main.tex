@@ -1,4 +1,4 @@
-\documentclass[reprint,aps,unsortedaddress,superscriptaddress,prd,floatfix,showpacs,linenumbers]{revtex4-2}
+\documentclass[reprint,aps,unsortedaddress,superscriptaddress,prl,floatfix,showpacs,linenumbers]{revtex4-2}
 \usepackage[utf8]{inputenc}
 \usepackage{float}
 \usepackage{graphicx}
@@ -30,6 +30,12 @@
 \date{\today}
 
 \begin{abstract}
+	We report improved results from the SeaQuest Fermilab E906 experiment with improved statistical precision for
+	$\bar{d}\left(x\right) / \bar{u}\left(x\right)$ in the large $x$ region up to $x=0.45$ using the 120 GeV proton beam.
+	The $\bar{d}\left(x\right) / \bar{u}\left(x\right)$ ratios and the $\bar{d}\left(x\right) - \bar{u}\left(x\right)$
+	differences are deduced from these cross section ratios for $0.13 < x < 0.45$.
+	The new results on $\bar{d}\left(x\right) / \bar{u}\left(x\right)$ and $\bar{d}\left(x\right) - \bar{u}\left(x\right)$
+	are compared with various parton distribution functions and theoretical calculations.
 \end{abstract}
 
 
@@ -40,17 +46,138 @@
 \todo{summarized previos finding?}
 \todo{discribe the results from STAR and why this new result is better}
 
-The results based on Run 2-3 have previously reported~\cite{dove2021,dove2023}. 
+The results based on Run 2-3 have been previously reported in Refs.~\cite{dove2021,dove2023}.
+Several recent global PDF analyses~\cite{cocuzza2021,ball2022a,accardi2023,alekhin2023}
+have included these results, in addition to the $W$ boson production data from the STAR collaboration~\cite{adam2021}.
 In this letter, we report the improved results using all data collected by the SeaQuest Experiment at Fermilab.
-The data constitute a twofold increase in the detected muons compared to our previous publications.
+The data constitute a two-fold increase in the detected muons compared to our previous publications.
 \todo{also summarized any improvement in the analysis if any}
 
 \section{The Drell-Yan Process}
+\label{sec:drell-yan}
+The SeaQuest experiment detects $\mu^+\mu^-$ pairs (dimuons) produced in the interaction of a proton
+beam with various targets nuclei. The production of massive dimuon pairs are described by the Drell-Yan
+process~\cite{drell1970}. In the Drell-Yan process, the leading order (LO) cross section is given by
+\begin{multline}
+	\frac{d^2\sigma}{dx_1dx_2}=\frac{4\pi \alpha^2}{9x_1x_2s} \times
+	\label{eq:DYCross} \\
+	\sum_{i\in u,d,s,\dots} e_i^2 \left[q_i^A\left(x_1\right) \bar q_i^B\left(x_2\right) + \bar q_i^A\left(x_1\right)
+		q_i^B\left(x_2\right)\right],
+\end{multline}
+where $\alpha$ is the fine-structure constant, $e_i$ is the charge of a quark with flavor $i$,
+and $q_i^{A,B}\left(x_{1,2}\right)$ are the quark distribution functions in hadrons $A$ and $B$
+for quarks carrying a momentum fraction $x_1$ and $x_2$, respectively.
+An analogous notation is used for antiquark distribution functions $\bar q_i^{A,B}\left(x_{1,2}\right)$.
+
+The experiment measures the momenta of the $\mu^+$ and $\mu^-$, $p_{\mu^+}$ and $p_{\mu^-}$.
+From these, the four-momentum $Q$ of virtual photon from the quark-antiquark annihilation is determined,
+$Q = p_{\mu^+} + p_{\mu^-}$.
+The variables $x_1$ and $x_2$ of the quark-antiquark pair are then
+\begin{equation}
+	x_1 = \frac{P_2 \cdot Q}{P_2 \cdot P} \text{ and } x_2 =
+	\frac{P_1 \cdot Q}{P_1 \cdot P},
+	\label{def_x1x2}
+\end{equation}
+where $P_1$ and $P_2$ are the four-momenta of the projectile and target hadron,
+respectively, and $P$ is the sum of $P_1$ and $P_2$, $P=P_1+P_2$.
+The invariant mass-squared of the dimuon, $M^2 = Q^2$, is related to $x_1$, $x_2$, $s$, and $P_T$ by
+\begin{equation}
+	M^2=x_1 x_2 s - P_T^2,
+	\label{def_mass}
+\end{equation}
+where $P_T$ is the transverse momentum of the dimuon.
+
+The Feynman-$x$, $x_F$, of the dimuon is
+\begin{equation}
+	x_F = \frac{P_L}{P_{\text{max}}} = \frac{2P_L}{\sqrt{s}\left(1-M^2/s\right)},
+	\label{def_xf}
+\end{equation}
+where $P_L$ is the longitudinal momentum of the dimuon and $P_\textrm{max}$ is the maximum momentum in the center-of-mass frame of the colliding hadrons.
+With the definition of $x_F$ adopted in \cref{def_xf},
+the full range of $\left|x_F\right| < 1$ is covered.
+In contrast, for the alternative definition of $x_F = 2P_L/\sqrt{s}$,
+frequently used in the literature,
+the coverage of $x_F$ is limited to $\left|x_F\right| <\left(1-M^2/s\right)$.
+These two definitions of $x_F$ converge at the high-energy limit when $M^2/s \to 0$.
+It is worth noting that \cref{def_mass} becomes the familiar expression $M^2=x_1 x_2 s$,
+often adopted in the literature, when $P_T/\sqrt{s} \to 0$.
+For the SeaQuest experiment, the modest beam momentum of \SI{120}{\GeV} $\left(\sqrt{s} = \SI{15.1}{\GeV}\right)$
+warrants the use of the definitions of kinematic variables shown in \cref{def_mass} and \ref{def_xf}.
+
+The leading order Drell-Yan cross section, expressed in \cref{eq:DYCross},
+contains two terms since the annihilation could proceed with the antiquark from either parent hadron.
+For most fixed-target experiments, including SeaQuest,
+the spectrometers have large acceptance for the positive $x_F$  region $\left(x_F > 0\right)$.
+Thus, to a good approximation, the Drell-Yan cross section is dominated by the first term,
+corresponding to the annihilation of a beam quark with a target antiquark.
+To demonstrate the relation between the cross section ratio and the flavor asymmetry
+$\bar{d}\left(x\right) / \bar{u}\left(x\right)$,
+an approximate formula can be derived as follows.
+Taking into account the dominance of $u\left(x\right)$ over $d\left(x\right)$ in
+beam proton and the charge squared weighting factor $e_i^2$ in \cref{eq:DYCross}, one obtains for $x_1 \gg x_2$,
+\begin{align}
+	\frac{\sigma^{pd}}{2\sigma^{pp}} = \frac{1}{2}\left[1 + \frac{\sigma^{pn}}{\sigma^{pp}}\right]
+	\approx \frac{1}{2}\left[1 + \frac{\bar{u}_n\left(x_2\right)}{\bar{u}_p\left(x_2\right)}\right],
+\end{align}
+with the assumption that $\sigma^{pd} \approx \sigma^{pp} + \sigma^{pn}$,
+which neglects small nuclear effects of the deuteron~\cite{kumano1998,ehlers2014}.
+Charge symmetry for the parton distributions~\cite{londergan2010} between the proton and the neutron:
+\begin{equation}
+	\begin{split}
+		\bar u\left(x\right)  \equiv & \bar u_p\left(x\right) = \bar d_n\left(x\right)\textrm{, and } \\
+		\bar d\left(x\right)  \equiv & \bar d_p\left(x\right) = \bar u_n\left(x\right),
+	\end{split}
+	\label{eq:chargeSymmetry}
+\end{equation}
+leads to the approximate expression
+\begin{equation}
+	\frac{\sigma^{pd}}{2\sigma^{pp}} \approx
+	\frac{1}{2} \left[1+\frac{\bar d\left(x_2\right)}{\bar u\left(x_2\right)}\right].
+	\label{eq:crRatio}
+\end{equation}
+While \cref{eq:crRatio} illustrates the power of the $\sigma^{pd}/2\sigma^{pp}$ Drell-Yan cross section ratio to reveal the flavor asymmetry between $\bar d$ and $\bar u$, the actual extraction of the $\bar d\left(x\right) / \bar u\left(x\right)$ ratios from the measured $\sigma^{pd}/ 2 \sigma^{pp}$ Drell-Yan cross section ratios is made without these simplifying approximations and is carried out in Next-to-Leading Order (NLO) in the strong coupling constant, $\alpha_s$, as discussed in Sec.~\ref{sec:extraction}.
 
 \section{The SeaQuest Experiment}
+The SeaQuest experiment receives the  proton beam from the Fermilab Main Injector at \SI{120}{\GeV}
+once every minute in 4-second periods (spills).
+The proton beam is further grouped into \SI{2}{\ns} ``buckets'' every \SI{18.8}{\ns},
+inherited from the accelerator \SI{53.1}{\MHz} radiofrequency (RF) structure.
+The average intensity of the beam is approximately $2\times 10^{12}$ protons per second.
+The proton beam in the Main Injector are peeled off using a process known as resonance
+extraction over the course of the \SI{4}{\second} spill.
+While the average instantaneous intensity was roughly $10^4$ protons per buckets,
+the measured numbers varied up to few times of $10^5$ protons.
+
+Buckets with a large number of protons can produce large numbers of hits in the detector,
+easily satisfy the trigger requirements, and can saturate the data  
+Moreover, these events are typically too noisy to be reconstructed effectively.
 \subsection{Target System}
 \subsection{Spectrometer}
+\begin{figure*}
+	\centering
+	\includegraphics[width=0.8\linewidth]{spectrometer/twoColumnSeaQuestSpectrometerNIM.pdf}
+	\caption{Schematic of the SeaQuest spectrometer.}
+	\label{fig:spectrometer}
+\end{figure*}
+The schematic layout od the SeaQuest spectrometer, discussed in detail in Ref.~\cite{aidala2019},
+is displayed in \cref{fig:spectrometer}.
+
 \subsection{Trigger System}
+
+\begin{table}[tb]
+	\centering
+	\caption{Triggers used in the present analysis. The T or B denotes the top or bottom section traversed by the track. \label{tab:triggers}}
+	\begin{tabular}{c@{\hspace{6\tabcolsep}}c@{\hspace{6\tabcolsep}}c@{\hspace{6\tabcolsep}}l}
+		\hline
+		\hline
+		Trigger & Side  & Charge  & Description        \\
+		\hline
+		1       & TB/BT & $+-/-+$ & Unlike-sign dimuon \\
+		4       & T/B   & $+/-$   & Single muon        \\
+		\hline
+		\hline
+	\end{tabular}
+\end{table}
 
 \section{Data Analysis}
 \todo{progress between nature paper and now?}
@@ -71,15 +198,15 @@ The data constitute a twofold increase in the detected muons compared to our pre
 		\includegraphics[width=\linewidth]{massfit_run56_LD2.pdf}
 	\end{subfigure}
 	\caption{Dimuon mass distribution for events collected
-	on liquid hydrogen (top) and deuterium (bottom) targets for the second data set.
-	The data points (solid squares) are compared with a fit (solid blue line) consisting of
-	various components (see text).}
+		on liquid hydrogen (top) and deuterium (bottom) targets for the second data set.
+		The data points (solid squares) are compared with a fit (solid blue line) consisting of
+		various components (see text).}
 	\label{fig:massfit}
 \end{figure}
-\missingfigure[figwidth=\linewidth]{Drell-Yan yeild vs $x_T$ after background subtraction compared with MC} 
+\missingfigure[figwidth=\linewidth]{Drell-Yan yeild vs $x_T$ after background subtraction compared with MC}
 \todo{corrections(?): rate dependence, target contamination, live PoT}
 
-\section{Measurement of The \texorpdfstring{$\sigma^{pd}/2\sigma^{pp}$}{pd/2pp} Drell-Yan Cross Section Ratio}
+\section{Measurement of The \texorpdfstring{$\sigma_{pd}/2\sigma_{pp}$}{pd/2pp} Drell-Yan Cross Section Ratio}
 \todo{which variables do we want to show? (x2, x1, mass, pT, xF, etc)}
 \begin{figure}[htbp!]
 	\centering
@@ -90,19 +217,20 @@ The data constitute a twofold increase in the detected muons compared to our pre
 \end{figure}
 
 \todo{break down of systematics}
+\begin{table*}
+	\centering
+	\caption{Breakdown of systematic uncertainty for $\sigma_{pd}/2\sigma_{pp}$.}
+	\begin{adjustbox}{max width=\linewidth}
+		\input{table/DY-csr/MF-xT.tex}
+	\end{adjustbox}
+\end{table*}
 \todo{consistence of the data(source of systematics)}
 
 \section{Extraction of \texorpdfstring{$\bar{d}\left(x\right)/\bar{u}\left(x\right)$}{dbar(x)/ubar(x)}
-	and \texorpdfstring{$\bar{d}\left(x\right)-\bar{u}\left(x\right)$}{dbar(x)-ubar(x)}}
+  and \texorpdfstring{$\bar{d}\left(x\right)-\bar{u}\left(x\right)$}{dbar(x)-ubar(x)}}
+\label{sec:extraction}
 \todo{Explain the extraction. There are also addition systematics here.}
 \todo{Where to put acceptance? We did show the acceptance in nature paper.}
-\begin{figure}[htbp!]
-	\centering
-	\includegraphics[width=\linewidth]{E906_E866_dbarubar}
-	\caption{Comparison of the extracted $\bar{d}\left(x\right)/\bar{u}\left(x\right)$ from SeaQuest
-		compared with E866/NuSea~\cite{towell2001} and meson cloud~\cite{alberg2022} and statistical models~\cite{soffer2019}.}
-	\label{fig:dbub_ratio}
-\end{figure}
 \begin{table*}[htbp!]
 	\centering
 	\caption{The measured $\sigma_{pd}/2\sigma_{pp}$ cross section ratio as well
@@ -116,18 +244,51 @@ The data constitute a twofold increase in the detected muons compared to our pre
 	\centering
 	\caption{Values of $\int_{0.45}^{0.13} \left[\bar{d}\left(x\right) - \bar{u}\left(x\right)\right] \dd{x}$
 		and $\int_{0.45}^{0.13} x\left[\bar{d}\left(x\right) - \bar{u}\left(x\right)\right] \dd{x}$ at $Q^2=\SI{25.5}{\GeV\squared}$ extracted from
-		SeaQuest compared with CT18, NNPDF4.0 PDFs as well as meson cloud and statistical models.}	
+		SeaQuest compared with CT18, NNPDF4.0 PDFs as well as meson cloud and statistical models.}
 	\begin{adjustbox}{max width=\textwidth}
 		\input{table/dbarubar_int.tex}
 	\end{adjustbox}
 \end{table*}
+
+\begin{figure}[htpb!]
+	\centering
+	\begin{subfigure}{\linewidth}
+		\includegraphics[width=\linewidth]{E906_E866_dbarubar_PDF.pdf}
+	\end{subfigure}
+	\begin{subfigure}{\linewidth}
+		\includegraphics[width=\linewidth]{E906_E866_dbarubar.pdf}
+	\end{subfigure}
+	\caption{The extracted $\bar{d}/\bar{u}$ from the measured $\sigma_{pd}/2\sigma_{pp}$ Drell-Yan cross section ratio
+		from SeaQuest (red solid circles), E866~\cite{towell2001} (open blue circles).
+		The extracted ratios are compared with CT18~\cite{hou2021} and NNPDF4.0~\cite{ball2022a} global PDF analyses (top)
+		and with predictions from meson cloud model~\cite{alberg2022} and statistical model~\cite{soffer2019} (bottom).}
+	\label{fig:e906_e866_dbarubar}
+\end{figure}
+
+\begin{figure}[htpb!]
+	\centering
+	\begin{subfigure}{\linewidth}
+		\includegraphics[width=\linewidth]{dbub_diff_with_PDF.pdf}
+	\end{subfigure}
+	\begin{subfigure}{\linewidth}
+		\includegraphics[width=\linewidth]{dbub_diff_with_model.pdf}
+	\end{subfigure}
+	\caption{The extracted $\bar{d}-\bar{u}$ from from SeaQuest (red solid circles), E866~\cite{towell2001} (open blue circles)
+		and HERMES~\cite{ackerstaff1998} (black triangles).
+		The results are compared with CT18~\cite{hou2021} and NNPDF4.0~\cite{ball2022a} global PDF analyses (top)
+		and with predictions from meson cloud model~\cite{alberg2022} and statistical model~\cite{soffer2019} (bottom).
+		The bottom panel is also zoomed in on $x>0.1$ in order to emphasis the SeaQuest results.}
+	\label{fig:e906_e866_dbarMubar}
+\end{figure}
+
+
 \section{Impact on PDF analysis}
 \todo{Not sure about this part}
 
 \section{Conclusions}
 
 \begin{acknowledgments}
-\todo{Add funding information}
+	\todo{Add funding information}
 \end{acknowledgments}
 \bibliography{reference}
 
