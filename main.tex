@@ -1,4 +1,4 @@
-\documentclass[reprint,aps,unsortedaddress,superscriptaddress,prl,floatfix,showpacs,linenumbers]{revtex4-2}
+\documentclass[reprint,aps,unsortedaddress,superscriptaddress,prc,floatfix,showpacs,linenumbers]{revtex4-2}
 \usepackage[utf8]{inputenc}
 \usepackage{float}
 \usepackage{graphicx}
@@ -15,6 +15,9 @@
 \usepackage{adjustbox}
 \usepackage{multirow}
 \usepackage{lineno}
+\usepackage{cmap}
+\usepackage[version=4]{mhchem}
+\usepackage{makecell}
 \linenumbers
 \graphicspath{{figures/}}
 \DeclareSIUnit\barn{b}
@@ -23,7 +26,7 @@
 
 \begin{document}
 
-\title{Improve measurement of flavor asymmetry of the light-quark sea in the proton with Drell-Yan production in
+\title{Improved measurement of flavor asymmetry of the light-quark sea in the proton with Drell-Yan production in
 	\texorpdfstring{$p+p$}{p+p} and \texorpdfstring{$p+d$}{p+d} collisions at \texorpdfstring{\SI{120}{\GeV}}{120~GeV}}
 \input{author}
 
@@ -42,16 +45,51 @@
 \maketitle
 
 \section{Introduction}
-\todo{are we comparing with E866 here?}
-\todo{summarized previos finding?}
-\todo{discribe the results from STAR and why this new result is better}
-
-The results based on Run 2-3 have been previously reported in Refs.~\cite{dove2021,dove2023}.
+The large asymmetry of the distributions of $\bar{d}$ and $\bar{u}$ in the proton was first observed in deep inelastic
+scattering experiments via the violation of the Gottfried sum rule~\cite{amaudruz1991}. 
+The Bjorken-$x$ dependence of this light sea-quark asymmetry measured the FNAL E866/NuSea
+experiment using the Drell-Yan process~\cite{towell2001}.
+The small-$x$ region has been measured with high precision by E866,
+using an \SI{800}{\GeV} proton beam. 
+The FNAL E906/SeaQuest experiment, using a new spectrometer~\cite{aidala2019} and a \SI{120}{\GeV}
+proton beam, has extended the measurement to higher $x$~\cite{dove2021,dove2023}. 
+%\todo{are we comparing with E866 here?}
+%\todo{summarized previos finding?}
+%\todo{discribe the results from STAR and why this new result is better}
+Results on the charmonium production have also been reported recently in Ref.~\cite{leung2024a}.
+The SeaQuest data is separated into two sets, each roughly half of the data sample.
+The first part covers the data taken between June 2014 and July 2015.
+Results from the analysis of the first part of data have been reported in the earlier work~\cite{dove2021,dove2023}, 
+and we have shown that the $\sigma_{pd}/2\sigma_{pp}$ ratio to remain above one.
+Therefore suggesting $\bar{d}/\bar{u}$ ratio to remain above unity in the proton,
+contrary to the results from E866~\cite{towell2001}.
 Several recent global PDF analyses~\cite{cocuzza2021,ball2022a,accardi2023,alekhin2023}
 have included these results, in addition to the $W$ boson production data from the STAR collaboration~\cite{adam2021}.
-In this letter, we report the improved results using all data collected by the SeaQuest Experiment at Fermilab.
+The second set of data covers the remaining period up to July 2016.
+In this paper, we report the improved results on the Drell-Yan measurements
+by including both sets of data collected by the SeaQuest Experiment at Fermilab.
 The data constitute a two-fold increase in the detected muons compared to our previous publications.
+Since the trigger
+conditions and the detector configuration for the two data sets are not
+identical, the analysis was performed separately for each data set. 
+Results obtained from the two data sets are first compared to verify their
+consistency, and then combined for the final results.
 \todo{also summarized any improvement in the analysis if any}
+
+
+Several models, including the meson cloud model~\cite{alberg2022} and statistical model~\cite{soffer2019},
+have been proposed to explain the light sea-quark asymmetry.
+Recent advancement in lattice QCD allows the partonic structure to be calculated within the LaMET framework~\cite{constantinou2021}.
+
+
+After this introduction, the Drell-Yan process and the kinematic variables are briefly summarized in \cref{sec:drell-yan}.
+The SeaQuest experiment is described in \cref{sec:seaquest_spectrometer}.
+\Cref{sec:analysis} presents the data analysis.
+Results of the Drell-Yan cross section ratios are presented in \cref{sec:csr}.
+\Cref{sec:extraction} discusses the extraction of the $\bar{d}/\bar{u}$ and $\bar{d}-\bar{u}$
+from the measured ratios.
+The results on the absolute Drell-Yan cross section are presented in \cref{sec:abs_cs}.
+We conclude in \cref{sec:Conclusions}.
 
 \section{The Drell-Yan Process}
 \label{sec:drell-yan}
@@ -135,9 +173,15 @@ leads to the approximate expression
 	\frac{1}{2} \left[1+\frac{\bar d\left(x_2\right)}{\bar u\left(x_2\right)}\right].
 	\label{eq:crRatio}
 \end{equation}
-While \cref{eq:crRatio} illustrates the power of the $\sigma^{pd}/2\sigma^{pp}$ Drell-Yan cross section ratio to reveal the flavor asymmetry between $\bar d$ and $\bar u$, the actual extraction of the $\bar d\left(x\right) / \bar u\left(x\right)$ ratios from the measured $\sigma^{pd}/ 2 \sigma^{pp}$ Drell-Yan cross section ratios is made without these simplifying approximations and is carried out in Next-to-Leading Order (NLO) in the strong coupling constant, $\alpha_s$, as discussed in Sec.~\ref{sec:extraction}.
+While \cref{eq:crRatio} illustrates the power of the $\sigma^{pd}/2\sigma^{pp}$ Drell-Yan cross section
+ratio to reveal the flavor asymmetry between $\bar d$ and $\bar u$,
+the actual extraction of the $\bar d\left(x\right) / \bar u\left(x\right)$ ratios
+from the measured $\sigma^{pd}/ 2 \sigma^{pp}$ Drell-Yan cross section ratios is
+made without these simplifying approximations and is carried out in Next-to-Leading Order (NLO)
+in the strong coupling constant, $\alpha_s$, as discussed in Sec.~\ref{sec:extraction}.
 
 \section{The SeaQuest Experiment}
+\label{sec:seaquest_spectrometer}
 The SeaQuest experiment receives the  proton beam from the Fermilab Main Injector at \SI{120}{\GeV}
 once every minute in 4-second periods (spills).
 The proton beam is further grouped into \SI{2}{\ns} ``buckets'' every \SI{18.8}{\ns},
@@ -149,9 +193,50 @@ While the average instantaneous intensity was roughly $10^4$ protons per buckets
 the measured numbers varied up to few times of $10^5$ protons.
 
 Buckets with a large number of protons can produce large numbers of hits in the detector,
-easily satisfy the trigger requirements, and can saturate the data  
+easily satisfy the trigger requirements, and can saturate the data
 Moreover, these events are typically too noisy to be reconstructed effectively.
+A beam intensity monitor (BIM), based on a Cherenkov counter,
+has been installed upstream of the target, with the capacity of measuring the beam intensity in each RF bucket.
+The BIM would also veto buckets with intensity exceeding a programable threshed.
+The threshed is typically set to \numrange{6.5e4}{9.5e4} protons,
+but vary over time due to gradual deterioration and occasional adjustments to the mirror in the BIM.
+
 \subsection{Target System}
+The SeaQuest target is placed between the Beam Intensity Monitor and the front face
+of spectrometer. The target system consists of two liquid targets (hydrogen and deuterium),
+three solid targets (iron, carbon and tungsten), and two calibration targets (``empty flask'' and ``no target'').
+The \SI{2.2}{\liter} of liquid target material is held
+in a \SI{50.8}{\cm} long cylindrical vacuum vessel, with a diameter of \SI{3.81}{\cm}.
+The proton beam would also traverse through two
+\SI{140}{\um} thick windows on both ends of the vacuum vessel and the \SI{51}{\um} end caps.
+The ``empty flask'' calibration target is an evacuated flask identical to the liquid targets,
+and the ``no target'' is simply air.
+The different targets are mounted on a movable table, as shown in \cref{fig:target_table},
+which slides horizontally during the \SI{56}{\s} period between two spills.
+Due to the different density between the liquid targets, the number of spill on the
+hydrogen target per cycle is roughly twice as on deuterium, as shown in \cref{table:target}.
+The frequent shifting of targets reduces the systematic uncertainty due to variation in experimental condition over time. 
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=\linewidth]{spectrometer/target-tableLayout.pdf}
+	\caption{Schematic top view of the SeaQuest target table.}
+	\label{fig:target_table}
+\end{figure}
+\begin{table}[h!]
+	\centering
+	\caption{Density and thickness of the target material and number of spills per target-rotation cycle for the SeaQuest targets.}
+	\label{table:target}
+	\begin{adjustbox}{max width=\linewidth}
+		\begin{tabular}{ccccc}
+			\hline \hline
+			Material    & \makecell{Density\\(\unit{\g\per\cm\cubed})} & \makecell{Length\\(\unit{\cm})} & \makecell{No.\,of Interaction\\Lengths}   & Spills/cycle \\ \hline
+			\ce{H_2}    & \num{0.071}       & \num{50.8} & \num{0.069}  & 10 \\
+			Empty Flask & -                 & -          & \num{0.0016} & 2  \\
+			\ce{D_2}    & \num{0.1634}      & \num{50.8} & \num{0.115}  & 5  \\
+			\hline \hline
+		\end{tabular}
+	\end{adjustbox}
+\end{table}
 \subsection{Spectrometer}
 \begin{figure*}
 	\centering
@@ -159,11 +244,28 @@ Moreover, these events are typically too noisy to be reconstructed effectively.
 	\caption{Schematic of the SeaQuest spectrometer.}
 	\label{fig:spectrometer}
 \end{figure*}
-The schematic layout od the SeaQuest spectrometer, discussed in detail in Ref.~\cite{aidala2019},
+The schematic layout of the SeaQuest spectrometer, discussed in detail in Ref.~\cite{aidala2019},
 is displayed in \cref{fig:spectrometer}.
+The SeaQuest spectrometer consists of two magnets and four tracking stations.
+A solid iron magnet,
+FMag, is placed \SI{104}{\cm} downstream the target. It is then followed by
+the first tracking station. The SeaQuest detector system is separated into four tracking stations.
+Stations 1, 2 and 3 each consists of plastic scintillator hodoscopes and drift chambers.
+The hodoscopes in each stations provides a fast signal for triggering whereas
+the drift chambers provide good spatial resolution for precise track reconstruction.
+An open air dipole magnet (KMag) is placed between station 1 and station 2.
+Downstream of station 3, there is an \SI{1}{\meter} iron wall acting as an
+absorber. Station 4 is located behind the  absorber and acts as a
+muon identifier. Station 4 consists of a hodoscope array and 4 layers of
+proportional tube planes.
 
 \subsection{Trigger System}
-
+The SeaQuest trigger uses discriminated signals from the hodoscope counters.
+During SeaQuest data taking, there are five trigger inputs, but for this present analysis,
+only two triggers are used, as listed in \cref{tab:triggers}.
+Trigger 1 is the main physics trigger, and requires a coincidence of two opposite sign muons,
+one in the top and one in the bottom halves of the spectrometer.
+Trigger 4 only requires one muon track, and it is mainly used for studying the accidental background.
 \begin{table}[tb]
 	\centering
 	\caption{Triggers used in the present analysis. The T or B denotes the top or bottom section traversed by the track. \label{tab:triggers}}
@@ -180,15 +282,31 @@ is displayed in \cref{fig:spectrometer}.
 \end{table}
 
 \section{Data Analysis}
+\label{sec:analysis}
 \todo{progress between nature paper and now?}
 \subsection{Track reconstruction}
 
 \subsection{Monte Carlo simulation}
+\label{subsec:MC}
 \todo{Explain the event generation, geat4 options, embeding(?), realization(?).}
 \todo{How well is our data discribed by GMC? Which distributions are we comparing?}
 
 \subsection{Mass-fit method}
 \todo{Explain the method. If we are using NMSU mix, we will need to justify the normalization.}
+The mass spectrum, as shown in \cref{fig:massfit} can be expressed as a linear combination of different components,
+namely Drell-Yan, charmonium decays, accidental background and background from instruments.
+These different contributions would have distinct mass spectra, for example, the $J/\psi$
+and $\psi^\prime$ decays would have sharp distributions centered around their masses.
+Therefore, the data can be fitted to various templates to obtain
+the relative contribution from each sources. 
+As input parameters to the fit, the mass distributions for $J/\psi$, $\psi\left(2S\right)$ 
+and the Drell-Yan are obtained from studying the Monte Carlo simulation, as discussed in \cref{subsec:MC}.
+The spectrum of accidental coincidence events was made by pairing at random $\mu^+$ and $\mu^-$ collected with the ``single-muon'' trigger (trigger 4 of \cref{tab:triggers})
+under the condition that the beam intensities of $\mu^+$ and $\mu^-$ events were comparable.
+The magnitudes of these components,
+with the exception of the empty-flask data for which the normalization is known,
+were varied in the fit to the mass spectrum, using the algorithm described in Ref.~\cite{barlow1993}.
+\Cref{fig:massfit} shows the fit to the $p+p$ and $p+d$ dimuon spectra respectively.
 \begin{figure}[htbp!]
 	\centering
 	\begin{subfigure}{\linewidth}
@@ -205,9 +323,23 @@ is displayed in \cref{fig:spectrometer}.
 \end{figure}
 \missingfigure[figwidth=\linewidth]{Drell-Yan yeild vs $x_T$ after background subtraction compared with MC}
 \todo{corrections(?): rate dependence, target contamination, live PoT}
+After the mass fit is performed, and the normalization for accidental background has been determined,
+a mass cut ($M>\SI{4.5}{\GeV}$) is applied to remove the $J/\psi$ and $\psi\left(2S\right)$ events.
+The remaining events are projected into various kinematic variables, such as $x_1$, $x_2$, $x_F$, and $P_T$.
+Several corrections are applied to extract the final Drell-Yan yields.
+These include the effective luminosity, obtained from the total number of protons on targets passing the BIM cut.
+A target contamination correction is also applied to the \ce{D_2} data due to \ce{H} contamination in the target cell.
+It should noted that during this analysis,
+a revised correction is used as compared with the earlier work~\cite{dove2021,dove2023},
+resulting in a roughly \SI{2}{\percent} shift in the ratios.
+The reconstruction inefficiency and DAQ deadtime, which have a small but non-negligible target dependence,
+are also taken into account.
+
 
 \section{Measurement of The \texorpdfstring{$\sigma_{pd}/2\sigma_{pp}$}{pd/2pp} Drell-Yan Cross Section Ratio}
+\label{sec:csr}
 \todo{which variables do we want to show? (x2, x1, mass, pT, xF, etc)}
+\Cref{fig:xT_csr} shows the extracted $\sigma_{pd}/2\sigma_{pp}$
 \begin{figure}[htbp!]
 	\centering
 	\includegraphics[width=\linewidth]{E906_E866_xT_CT18only.pdf}
@@ -231,11 +363,47 @@ is displayed in \cref{fig:spectrometer}.
 \label{sec:extraction}
 \todo{Explain the extraction. There are also addition systematics here.}
 \todo{Where to put acceptance? We did show the acceptance in nature paper.}
+In order to compare the results from SeaQuest with predictions from various models,
+an estimate for the $\bar{d}/\bar{u}$ ratio is extracted from the cross section ratio by
+an iterative method, as described in Ref.~\cite{dove2021}.
+We first make an estimate for the $\bar{d}/\bar{u}$ ratio over the measured $x_2$
+and calculate the cross section ratio $R$ using a chosen PDF set.
+This PDF set provides all other parton distributions except for the $\bar{d}/\bar{u}$ ratio,
+which is allowed to vary. The $\bar{d}/\bar{u}$ ratio is initialized as
+\begin{equation}
+	\left[\frac{\bar{d}}{\bar{u}}\right]\left(x_2\right) = 2R\left(x_2\right)-1.
+\end{equation}
+The $\bar{d}/\bar{u}$ ratio outside the measured $x_T$ range was assumed to be $1.0$,
+and changed to $0.5$ and $2.0$ to estimate the systematic uncertainty arises from this assumption.
+The cross section ratio $R$ is then calculated up to next-to-leading order, as
+\begin{equation}
+	R_{\mathrm{pred}}\left(x_T\right)  = \frac{\sum_{x_1} A\left(x_1, x_2\right)\sigma^{pd}_{NLO}\left(x_1, x_2\right)}{2\sum_{x_1} A\left(x_1, x_2\right)\sigma^{pp}_{NLO}\left(x_1, x_2\right)},
+\end{equation}
+where $A\left(x_1,x_2\right)$ is the acceptance for a $\left(x_1, x_2\right)$ bin.
+The $\bar{d}/\bar{u}$ ratio is then adjusted according to the difference between
+the measured and predicted ratios, until the difference is less than $10^{-3}$.
+
+The extracted $\bar{d}/\bar{u}$ from the measured SeaQuest cross section ratio,
+using the CT18 PDFs as the basis, are shown in \cref{fig:e906_e866_dbarubar}
+and tabulated in \cref{tab:dbarubar}.
+While the SeaQuest results are consistent with previous E866 results~\cite{towell2001} at low $x$,
+the extracted $\bar{d}/\bar{u}$ ratios from the SeaQuest measurement continue to rise as $x$ increases,
+and is in tension with the E866 result.
+The SeaQuest results are also in much better agreement with predictions from meson cloud model~\cite{alberg2022}
+and statistical model~\cite{soffer2019}.
+The extracted $\bar{d}/\bar{u}$ ratios are also compared with results from CT18~\cite{hou2021} and NNPDF4.0~\cite{ball2022a}
+global analyses in \cref{fig:e906_e866_dbarubar}.
+The inclusion of the SeaQuest result from Run 2-3 in the NNPDF4.0 analysis strongly constrains the $\bar{d}/\bar{u}$ ratios
+to remain above unity at large $x$.
+With the reduced statistical uncertainties from the combined analysis presented in this thesis,
+the uncertainty on the $\bar{d}/\bar{u}$ in these global analyses can be further reduced.
+
 \begin{table*}[htbp!]
 	\centering
 	\caption{The measured $\sigma_{pd}/2\sigma_{pp}$ cross section ratio as well
 		as the extracted $\bar{d}/\bar{u}$ and $\bar{d}-\bar{u}$ for each $x_{2}$ bin.
 		The first uncertainty is statistical and the second systematic.}
+	\label{tab:dbarubar}
 	\begin{adjustbox}{max width=\textwidth}
 		\input{table/dbarubar.tex}
 	\end{adjustbox}
@@ -245,10 +413,45 @@ is displayed in \cref{fig:spectrometer}.
 	\caption{Values of $\int_{0.45}^{0.13} \left[\bar{d}\left(x\right) - \bar{u}\left(x\right)\right] \dd{x}$
 		and $\int_{0.45}^{0.13} x\left[\bar{d}\left(x\right) - \bar{u}\left(x\right)\right] \dd{x}$ at $Q^2=\SI{25.5}{\GeV\squared}$ extracted from
 		SeaQuest compared with CT18, NNPDF4.0 PDFs as well as meson cloud and statistical models.}
+	\label{tab:dbarMubar}
 	\begin{adjustbox}{max width=\textwidth}
 		\input{table/dbarubar_int.tex}
 	\end{adjustbox}
 \end{table*}
+
+The isovector PDF $\bar{d}-\bar{u}$ over the region $0.13<x<0.45$
+can also be calculated from the extracted $\bar{d}/\bar{u}$ ratio by taking the $\bar{d}+\bar{u}$
+distribution from CT18.
+As a flavor non-singlet quantity, the integral, $\int^1_0 \left[\bar{d}\left(x\right) - \bar{u}\left(x\right)\right] \dd{x}$,
+is expected to be independent of $Q^2$, even though the $x$ dependence might differ at different $Q^2$.
+As the perturbative processes should not produce a significant $\bar{d},\,\bar{u}$ difference,
+the $\bar{d}-\bar{u}$ values can provide a direct measure on the non-perturbative contributions.
+The values of $\bar{d}-\bar{u}$ derived from the SeaQuest data are shown in \cref{fig:e906_e866_dbarMubar} and tabulated in \cref{tab:dbarubar},
+and are also compared with results from E866~\cite{towell2001} and HERMES~\cite{ackerstaff1998},
+and with predictions from meson cloud and statistical models.
+Unlike $\bar{d}/\bar{u}$ ratio, the difference $\bar{d}-\bar{u}$ is insensitive to the flavor-symmetric contributions
+to the sea-quark distributions in these models. Like the ratio, the deduced difference $\bar{d}-\bar{u}$ is also
+in good agreement with both models.
+It is also worth pointing out that the small $x$ behavior of the $\bar{d}-\bar{u}$ can be studied using
+semi-inclusive DIS as indicated by the HERMES measurements~\cite{ackerstaff1998}.
+With the advent of the Electron Ion Collider, the flavor asymmetry at small $x$ region, where abundant sea-quarks reside,
+can be further constrained.
+The flavor asymmetry $\bar{d}-\bar{u}$ can also be study using lattice techniques
+within the framework of LaMET.
+Though, it has been pointed out that calculations from lattice in the antiquark region are currently
+susceptible to systematic uncertainties,
+and in particular the inverse problem arising in the reconstruction of the $x$-dependence~\cite{constantinou2021}.
+The current results using the LaMET framework do not agree among different groups nor with current global PDF analyses.
+The measured flavor asymmetry can provide an important benchmark for the lattice calculations in the future.
+
+The SeaQuest data can also be used to calculate two integral: $\int^{0.45}_{0.13} \left[\bar{d}\left(x\right) - \bar{u}\left(x\right) \right]\dd{x}$,
+which describes the integrated sea-quark flavor asymmetry, and $\int^{0.45}_{0.13} x\left[\bar{d}\left(x\right) - \bar{u}\left(x\right) \right]\dd{x}$,
+which represents the difference in the momentum fractions carried by $\bar{u}$ and $\bar{d}$ quarks.
+These values are listed in \cref{tab:dbarMubar}, and are compared with different PDFs and models.
+It should be noted that as SeaQuest is only probing the large $x$ region, the sea-quark PDFs are small in this region.
+Hence, when compared with the measured $\int^{1}_{0} \left[\bar{d}\left(x\right) - \bar{u}\left(x\right) \right]\dd{x}=0.118\pm 0.012$
+from E866 based on the measurements over $0.015<x<0.35$ and extrapolations~\cite{towell2001},
+the result from SeaQuest is inherently smaller.
 
 \begin{figure}[htpb!]
 	\centering
@@ -281,12 +484,20 @@ is displayed in \cref{fig:spectrometer}.
 	\label{fig:e906_e866_dbarMubar}
 \end{figure}
 
+\section{Measurement of \texorpdfstring{$p+p$}{p+p} and \texorpdfstring{$p+d$}{p+d} Drell-Yan cross section}
+\label{sec:abs_cs}
+\begin{figure*}
+	\missingfigure{Drell-Yan cross section: pp and pd on two seperate pannel. All $x_F$}
+	\caption{The $p+p$ (left) and $p+d$ (right) Drell-Yan double differential cross section $M^3d^2\sigma/dMdx_F$.
+		The dotted curves are NLO calculations using NNPDF4.0~\cite{ball2022a} parton distribution functions.}
+\end{figure*}
+\todo{What are the discussion here?}
 
 \section{Impact on PDF analysis}
 \todo{Not sure about this part}
 
 \section{Conclusions}
-
+\label{sec:Conclusions}
 \begin{acknowledgments}
 	\todo{Add funding information}
 \end{acknowledgments}
