@@ -13,7 +13,7 @@ jobs:
         uses: actions/checkout@v4
         with: 
           fetch-depth: 0
-      - run: git config --system --add safe.directory /__w/jpsi-paper/jpsi-paper
+      - run: git config --system --add safe.directory ${GITHUB_WORKSPACE} 
       - name: Get previous tag name
         id: previous_tag
         env:
