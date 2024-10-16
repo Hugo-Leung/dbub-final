@@ -24,6 +24,11 @@
 
 \captionsetup{justification=raggedright,singlelinecheck=false}
 
+\usepackage[most]{tcolorbox}
+
+%\let\includegraphicsold\includegraphics
+%\renewcommand{\includegraphics}[2][]{\tcbox{\includegraphicsold[#1]{#2}}}
+
 \begin{document}
 
 \title{Improved measurement of flavor asymmetry of the light-quark sea in the proton with Drell-Yan production in
@@ -74,13 +79,14 @@ conditions and the detector configuration for the two data sets are not
 identical, the analysis was performed separately for each data set. 
 Results obtained from the two data sets are first compared to verify their
 consistency, and then combined for the final results.
-\todo{also summarized any improvement in the analysis if any}
+%\todo{also summarized any improvement in the analysis if any}
 
 
 Several models, including the meson cloud model~\cite{alberg2022} and statistical model~\cite{soffer2019},
 have been proposed to explain the light sea-quark asymmetry.
 Recent advancement in lattice QCD allows the partonic structure to be calculated within the LaMET framework~\cite{constantinou2021}.
-
+The SeaQuest measurement of the Drell-Yan cross section ratio at large $x_2$ can provide strong
+constrains on the flavor asymmetry and checks on the various models.
 
 After this introduction, the Drell-Yan process and the kinematic variables are briefly summarized in \cref{sec:drell-yan}.
 The SeaQuest experiment is described in \cref{sec:seaquest_spectrometer}.
@@ -284,12 +290,53 @@ Trigger 4 only requires one muon track, and it is mainly used for studying the a
 \section{Data Analysis}
 \label{sec:analysis}
 \todo{progress between nature paper and now?}
+The analysis procedure is largely similar to that described in Ref.~\cite{dove2023}.
 \subsection{Track reconstruction}
+The muon tracks are reconstructed using the hits in the drift chambers and proportional tubes in each stations. 
+To reduce the number of potential hits, several catagories of spurious hits are first removed.
+These include out-of-time hits, after-pulse hits, and cluster hits.
+The out-of-time hits have a drift time outside of the allowable range;
+The after-pulse hits are caused by occasional ringing in the readout electronics;
+And the cluster hits are caused by $\delta$ rays or cosmic rays traveling parallel to the detector planes,
+resulting in three or more hits in adjacent wires. 
+The numbers of hits are further reduced by only preserving hits that correspond to a matching hodoscope hits.
+
+After removing these hits, the remaining chambers hits are organized into straight-line segments (called tracklets)
+for each of the first three stations.
+The tracklets from different stations are then matched to find valid tracks consistent with muons 
+originating from target area. 
+The tracks are also projected to the proportional tubes in stations 4, located after the iron absorber,
+to identify corresponding hits and for muon identification.
+The Kalman filter algorithm~\cite{kalman1960} are then used to further refine the muon tracks,
+and determine the best estimate of the muon momentum.
+The magnetic field of the two magnets and the energy loss in the solid iron FMag are also taken into account during this stage.
+Finally, pairs of opposite charged muons tracks from the top and bottom sections of the spectrometer are
+matched to determine the interaction vertex using Kalman filter.
 
 \subsection{Monte Carlo simulation}
 \label{subsec:MC}
 \todo{Explain the event generation, geat4 options, embeding(?), realization(?).}
 \todo{How well is our data discribed by GMC? Which distributions are we comparing?}
+
+To compare the experimental results with theoretical expectations,
+a GEANT4~\cite{agostinelli2003,allison2006,allison2016} based Monte Carlo simulations has been developed.
+The Drell-Yan event generator is produce a uniform distribution in mass and $x_F$,
+with weights proportional to the theoretical cross section, calculated using CT14 PDFs~\cite{hou2018}.
+The dimuon transverse momentum distribution has been tunned to match the measured distribution.
+Other PDFs, such as the statistical model~\cite{soffer2019}, were used to measure the systematic effects due to input PDFs.
+The SeaQuest spectrometer is modeled and trajectories of the muons are calculated using GEANT4.
+The energy loss and multiple scattering in the FMag are also included in the simulation,
+and are the dominant factor in determining the momentum resolution of the muons. 
+
+The efficiency and the resolution of the chambers are taken into account in the simulation
+by dropping a small number of hits, and applying Gaussian smearing to the drift distance of the remaining hits.
+Both the efficiency and the width of the smearing are taken from the data.
+
+To simulate the noise and background hits during data taking,
+each Monte Carlo events are embedded with hits recorded by the random trigger.
+This allows us to determine the our reconstruction efficiency due to the varying chamber occupancies.
+It also allows us to evaluate the accuracy of the reconstruction algorithm in measuring the dimuon kinematics.
+
 
 \subsection{Mass-fit method}
 \todo{Explain the method. If we are using NMSU mix, we will need to justify the normalization.}
@@ -305,7 +352,8 @@ The spectrum of accidental coincidence events was made by pairing at random $\mu
 under the condition that the beam intensities of $\mu^+$ and $\mu^-$ events were comparable.
 The magnitudes of these components,
 with the exception of the empty-flask data for which the normalization is known,
-were varied in the fit to the mass spectrum, using the algorithm described in Ref.~\cite{barlow1993}.
+were varied in the fit to the mass spectrum.
+The statistical uncertainties of the Monte Carlo and empty-flask date are taken into account using the algorithm described in Ref.~\cite{barlow1993}.
 \Cref{fig:massfit} shows the fit to the $p+p$ and $p+d$ dimuon spectra respectively.
 \begin{figure}[htbp!]
 	\centering
@@ -339,19 +387,51 @@ are also taken into account.
 \section{Measurement of The \texorpdfstring{$\sigma_{pd}/2\sigma_{pp}$}{pd/2pp} Drell-Yan Cross Section Ratio}
 \label{sec:csr}
 \todo{which variables do we want to show? (x2, x1, mass, pT, xF, etc)}
-\Cref{fig:xT_csr} shows the extracted $\sigma_{pd}/2\sigma_{pp}$
+\Cref{fig:xT_csr} shows the measured $\sigma_{pd}/2\sigma_{pp}$ cross section ratio from the combined analysis
+compared with results from E866~\cite{towell2001} and NLO calculations using DYNNLO~\cite{catani2007,catani2009},
+with nucleon PDFs CT18~\cite{hou2021}. The measured ratio is also tabulated in \cref{tab:dbarubar}.
+\Cref{subfig:xT_csr_data} shows the comparisons of the two datasets from SeaQuest.
+The results from both data sets mostly consistent with each other, except for the low $x_2$ bin where our acceptance is smaller. 
+And the results from the combined analysis is compared with results from E866~\cite{towell2001} in \cref{subfig:xT_csr_exp}.
+As the E866 data is used in the CT18 global analysis, the small $x$ behavior in the PDF is well constrained. 
+The consistence between the SeaQuest results and the CT18 calculations at small $x_2$ demonstrate the agreement between
+the two experiments at this region.
+The small difference between E866 and SeaQuest results between $0.1<x_2<0.2$ mostly originates from the different beam energies
+and thus different $x_1$ coverage, as reflected in the calculated cross section ratios. 
+At $x_2$ increases, the ratio measured by SeaQuest remains above one, and unlike E866, no drop off in the ratio is observed.
 \begin{figure}[htbp!]
-	\centering
-	\includegraphics[width=\linewidth]{E906_E866_xT_CT18only.pdf}
-	\caption{Measured $\sigma_{pd}/2\sigma_{pp}$ Drell-Yan cross section ratio from SeaQuest compared with E866/NuSea~\cite{towell2001}
-		and calculations using CT18~\cite{hou2021} at different kinematics.}
+	\captionsetup[subfigure]{labelformat=empty}
+	\begin{subfigure}{\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{data_full_xT_syst.pdf}	
+		\phantomcaption
+		\label{subfig:xT_csr_data}
+	\end{subfigure}
+	\begin{subfigure}{\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{E906_E866_xT_CT18only.pdf}
+		\phantomcaption
+		\label{subfig:xT_csr_exp}
+	\end{subfigure}
+	\caption{Measured $\sigma_{pd}/2\sigma_{pp}$ Drell-Yan cross section ratio from the two SeaQuest datasets compared calculations using 
+		CT18 ~\cite{hou2021} and NNPDF4.0~\cite{ball2022a} (top). As well as comparisons with
+		with E866/NuSea~\cite{towell2001} and calculations using CT18~\cite{hou2021} at different kinematics (bottom).}
 	\label{fig:xT_csr}
+	\todo{which PDFs to use?}
 \end{figure}
+This strongly suggest the $\bar{d}/\bar{u}$ ratio to remain above unity at large $x$.
 
 \todo{break down of systematics}
+The sources of systematic uncertainties are tabulated in \cref{tab:sys_csr}.
+The main uncertainties originate from the modeling of the accidental background ($\delta_{mix}$). 
+Different methods for generating the accidental background distributions have been studied~\cite{pate2023},
+and the differences are quoted as the systematic uncertainty.
+Other sources of systematic uncertainties include the the efficiency corrections ($\delta_{Eff.\,stat.}$ and $\delta_{Eff.\,param.}$),
+empty flask normalization ($\delta_{Empty}$), and the relative beam luminosity ($\delta_{Beam\,norm.}$).
 \begin{table*}
 	\centering
-	\caption{Breakdown of systematic uncertainty for $\sigma_{pd}/2\sigma_{pp}$.}
+	\caption{Breakdown of systematic uncertainty for $\sigma_{pd}/2\sigma_{pp}$ ratio in each $x_2$ bins.}
+	\label{tab:sys_csr}
 	\begin{adjustbox}{max width=\linewidth}
 		\input{table/DY-csr/MF-xT.tex}
 	\end{adjustbox}
@@ -491,14 +571,20 @@ the result from SeaQuest is inherently smaller.
 	\caption{The $p+p$ (left) and $p+d$ (right) Drell-Yan double differential cross section $M^3d^2\sigma/dMdx_F$.
 		The dotted curves are NLO calculations using NNPDF4.0~\cite{ball2022a} parton distribution functions.}
 \end{figure*}
-\todo{What are the discussion here?}
+\todo{What are the discussion here? This part should be removed if this is a letter.}
 
 \section{Impact on PDF analysis}
 \todo{Not sure about this part}
 
 \section{Conclusions}
 \label{sec:Conclusions}
+In summary, we have reported the improved results on the $\sigma_{pd}/2\sigma_{pp}$ Drell-Yen cross section ratio up to $x_2=4.5$,
+based on the analysis of the entire SeaQuest dataset.
+The measured ratio remains above unity, which suggests the $\bar{d}/\bar{u}$ ratio continues to increase at large $x$.
+These results are in better agreement with various model predictions, including the meson cloud model and the statistical model.
+
 \begin{acknowledgments}
+	This work was performed by the SeaQuest Collaboration, whose work was supported in part by the
 	\todo{Add funding information}
 \end{acknowledgments}
 \bibliography{reference}
