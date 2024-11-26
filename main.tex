@@ -1,4 +1,4 @@
-\documentclass[reprint,aps,unsortedaddress,superscriptaddress,prc,floatfix,showpacs,linenumbers]{revtex4-2}
+\documentclass[reprint,aps,unsortedaddress,superscriptaddress,prc,floatfix,showpacs,linenumbers,final]{revtex4-2}
 \usepackage[utf8]{inputenc}
 \usepackage{float}
 \usepackage{graphicx}
@@ -8,7 +8,7 @@
 \usepackage{subcaption}
 \usepackage[separate-uncertainty=true]{siunitx}
 \usepackage{physics}
-\usepackage{hyperref}
+\usepackage[pdfusetitle]{hyperref}
 \usepackage[capitalize]{cleveref}
 \usepackage[obeyFinal]{todonotes}
 \setuptodonotes{inline}
@@ -86,7 +86,7 @@ Several models, including the meson cloud model~\cite{alberg2022} and statistica
 have been proposed to explain the light sea-quark asymmetry.
 Recent advancement in lattice QCD allows the partonic structure to be calculated within the LaMET framework~\cite{constantinou2021}.
 The SeaQuest measurement of the Drell-Yan cross section ratio at large $x_2$ can provide strong
-constrains on the flavor asymmetry and checks on the various models.
+constrains on the flavor asymmetry and checks the various models.
 
 After this introduction, the Drell-Yan process and the kinematic variables are briefly summarized in \cref{sec:drell-yan}.
 The SeaQuest experiment is described in \cref{sec:seaquest_spectrometer}.
@@ -256,22 +256,22 @@ The SeaQuest spectrometer consists of two magnets and four tracking stations.
 A solid iron magnet,
 FMag, is placed \SI{104}{\cm} downstream the target. It is then followed by
 the first tracking station. The SeaQuest detector system is separated into four tracking stations.
-Stations 1, 2 and 3 each consists of plastic scintillator hodoscopes and drift chambers.
+Stations~1, 2 and 3 each consists of plastic scintillator hodoscopes and drift chambers.
 The hodoscopes in each stations provides a fast signal for triggering whereas
 the drift chambers provide good spatial resolution for precise track reconstruction.
-An open air dipole magnet (KMag) is placed between station 1 and station 2.
-Downstream of station 3, there is an \SI{1}{\meter} iron wall acting as an
-absorber. Station 4 is located behind the  absorber and acts as a
-muon identifier. Station 4 consists of a hodoscope array and 4 layers of
+An open air dipole magnet (KMag) is placed between station~1 and station~2.
+Downstream of station~3, there is an \SI{1}{\meter} iron wall acting as an
+absorber. Station~4 is located behind the  absorber and acts as a
+muon identifier. Station~4 consists of a hodoscope array and 4 layers of
 proportional tube planes.
 
 \subsection{Trigger System}
 The SeaQuest trigger uses discriminated signals from the hodoscope counters.
 During SeaQuest data taking, there are five trigger inputs, but for this present analysis,
 only two triggers are used, as listed in \cref{tab:triggers}.
-Trigger 1 is the main physics trigger, and requires a coincidence of two opposite sign muons,
+Trigger~1 is the main physics trigger, and requires a coincidence of two opposite sign muons,
 one in the top and one in the bottom halves of the spectrometer.
-Trigger 4 only requires one muon track, and it is mainly used for studying the accidental background.
+Trigger~4 only requires one muon track, and it is mainly used for studying the accidental background.
 \begin{table}[tb]
 	\centering
 	\caption{Triggers used in the present analysis. The T or B denotes the top or bottom section traversed by the track. \label{tab:triggers}}
@@ -305,7 +305,7 @@ After removing these hits, the remaining chambers hits are organized into straig
 for each of the first three stations.
 The tracklets from different stations are then matched to find valid tracks consistent with muons 
 originating from target area. 
-The tracks are also projected to the proportional tubes in stations 4, located after the iron absorber,
+The tracks are also projected to the proportional tubes in station~4, located after the iron absorber,
 to identify corresponding hits and for muon identification.
 The Kalman filter algorithm~\cite{kalman1960} are then used to further refine the muon tracks,
 and determine the best estimate of the muon momentum.
