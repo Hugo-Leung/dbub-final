@@ -83,13 +83,13 @@ consistency, and then combined for the final results.
 %\todo{also summarized any improvement in the analysis if any}
 
 
+\begin{comment}
 Several models, including the meson cloud model~\cite{alberg2022} and statistical model~\cite{soffer2019},
 have been proposed to explain the light sea-quark asymmetry.
 Recent advancement in lattice QCD allows the partonic structure to be calculated within the LaMET framework~\cite{constantinou2021}.
 The SeaQuest measurement of the Drell-Yan cross section ratio at large $x_2$ can provide strong
 constrains on the flavor asymmetry and checks the various models.
 
-\begin{comment}
 After this introduction, the Drell-Yan process and the kinematic variables are briefly summarized in \cref{sec:drell-yan}.
 The SeaQuest experiment is described in \cref{sec:seaquest_spectrometer}.
 \Cref{sec:analysis} presents the data analysis.
@@ -191,84 +191,19 @@ in the strong coupling constant, $\alpha_s$. % as discussed in Sec.~\ref{sec:ext
 
 \section{The SeaQuest Experiment}
 \label{sec:seaquest_spectrometer}
+The SeaQuest spectrometer is  discussed in detail in Ref.~\cite{aidala2019},
 The SeaQuest experiment receives the  proton beam from the Fermilab Main Injector at \SI{120}{\GeV}
-once every minute in 4-second periods (spills).
-The proton beam is further grouped into \SI{2}{\ns} ``buckets'' every \SI{18.8}{\ns},
-inherited from the accelerator \SI{53.1}{\MHz} radiofrequency (RF) structure.
-The average intensity of the beam is approximately $2\times 10^{12}$ protons per second.
-The proton beam in the Main Injector are peeled off using a process known as resonance
-extraction over the course of the \SI{4}{\second} spill.
-While the average instantaneous intensity was roughly $10^4$ protons per buckets,
-the measured numbers varied up to few times of $10^5$ protons.
-
-Buckets with a large number of protons can produce large numbers of hits in the detector,
-easily satisfy the trigger requirements, and can saturate the data
-Moreover, these events are typically too noisy to be reconstructed effectively.
-A beam intensity monitor (BIM), based on a Cherenkov counter,
-has been installed upstream of the target, with the capacity of measuring the beam intensity in each RF bucket.
-The BIM would also veto buckets with intensity exceeding a programable threshed.
-The threshed is typically set to \numrange{6.5e4}{9.5e4} protons,
-but vary over time due to gradual deterioration and occasional adjustments to the mirror in the BIM.
-
-\subsection{Target System}
-The SeaQuest target is placed between the Beam Intensity Monitor and the front face
-of spectrometer. The target system consists of two liquid targets (hydrogen and deuterium),
+once every minute in 4-second periods (spills), with average intensity of \num{10e4} per RF bucket.
+The target system consists of two liquid targets (hydrogen and deuterium),
 three solid targets (iron, carbon and tungsten), and two calibration targets (``empty flask'' and ``no target'').
 The \SI{2.2}{\liter} of liquid target material is held
 in a \SI{50.8}{\cm} long cylindrical vacuum vessel, with a diameter of \SI{3.81}{\cm}.
-The proton beam would also traverse through two
-\SI{140}{\um} thick windows on both ends of the vacuum vessel and the \SI{51}{\um} end caps.
-The ``empty flask'' calibration target is an evacuated flask identical to the liquid targets,
-and the ``no target'' is simply air.
-The different targets are mounted on a movable table, as shown in \cref{fig:target_table},
+The different targets are mounted on a movable table,
 which slides horizontally during the \SI{56}{\s} period between two spills.
 Due to the different density between the liquid targets, the number of spill on the
-hydrogen target per cycle is roughly twice as on deuterium, as shown in \cref{table:target}.
+hydrogen target per cycle is roughly twice as on deuterium.
 The frequent shifting of targets reduces the systematic uncertainty due to variation in experimental condition over time. 
-\begin{figure}[htb]
-	\centering
-	\includegraphics[width=\linewidth]{spectrometer/target-tableLayout.pdf}
-	\caption{Schematic top view of the SeaQuest target table.}
-	\label{fig:target_table}
-\end{figure}
-\begin{table}[h!]
-	\centering
-	\caption{Density and thickness of the target material and number of spills per target-rotation cycle for the SeaQuest targets.}
-	\label{table:target}
-	\begin{adjustbox}{max width=\linewidth}
-		\begin{tabular}{ccccc}
-			\hline \hline
-			Material    & \makecell{Density\\(\unit{\g\per\cm\cubed})} & \makecell{Length\\(\unit{\cm})} & \makecell{No.\,of Interaction\\Lengths}   & Spills/cycle \\ \hline
-			\ce{H_2}    & \num{0.071}       & \num{50.8} & \num{0.069}  & 10 \\
-			Empty Flask & -                 & -          & \num{0.0016} & 2  \\
-			\ce{D_2}    & \num{0.1634}      & \num{50.8} & \num{0.115}  & 5  \\
-			\hline \hline
-		\end{tabular}
-	\end{adjustbox}
-\end{table}
-\subsection{Spectrometer}
-\begin{figure*}
-	\centering
-	\includegraphics[width=0.8\linewidth]{spectrometer/twoColumnSeaQuestSpectrometerNIM.pdf}
-	\caption{Schematic of the SeaQuest spectrometer.}
-	\label{fig:spectrometer}
-\end{figure*}
-The schematic layout of the SeaQuest spectrometer, discussed in detail in Ref.~\cite{aidala2019},
-is displayed in \cref{fig:spectrometer}.
-The SeaQuest spectrometer consists of two magnets and four tracking stations.
-A solid iron magnet,
-FMag, is placed \SI{104}{\cm} downstream the target. It is then followed by
-the first tracking station. The SeaQuest detector system is separated into four tracking stations.
-Stations~1, 2 and 3 each consists of plastic scintillator hodoscopes and drift chambers.
-The hodoscopes in each stations provides a fast signal for triggering whereas
-the drift chambers provide good spatial resolution for precise track reconstruction.
-An open air dipole magnet (KMag) is placed between station~1 and station~2.
-Downstream of station~3, there is an \SI{1}{\meter} iron wall acting as an
-absorber. Station~4 is located behind the  absorber and acts as a
-muon identifier. Station~4 consists of a hodoscope array and 4 layers of
-proportional tube planes.
 
-\subsection{Trigger System}
 The SeaQuest trigger uses discriminated signals from the hodoscope counters.
 During SeaQuest data taking, there are five trigger inputs, but for this present analysis,
 only two triggers are used, as listed in \cref{tab:triggers}.
@@ -289,6 +224,7 @@ Trigger~4 only requires one muon track, and it is mainly used for studying the a
 		\hline
 	\end{tabular}
 \end{table}
+
 
 \section{Data Analysis}
 \label{sec:analysis}
