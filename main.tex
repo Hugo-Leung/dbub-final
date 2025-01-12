@@ -1,3 +1,4 @@
+% !TeX root = main.tex
 \documentclass[reprint,aps,unsortedaddress,superscriptaddress,prl,floatfix,showpacs,linenumbers,final]{revtex4-2}
 \usepackage[utf8]{inputenc}
 \usepackage{float}
@@ -229,33 +230,14 @@ Trigger~4 only requires one muon track, and it is mainly used for studying the a
 \section{Data Analysis}
 \label{sec:analysis}
 \todo{progress between nature paper and now?}
-Detail discussion on the analysis procedure can be found in Ref.~\cite{dove2023}, some key steps are summarized here.
-\subsection{Track reconstruction}
+Detail discussion on the analysis procedure can be found in earlier publication~\cite{dove2021,dove2023}.
 The muon tracks are reconstructed using the hits in the drift chambers and proportional tubes in each stations. 
-To reduce the number of potential hits, several catagories of spurious hits are first removed.
-These include out-of-time hits, after-pulse hits, and cluster hits.
-The out-of-time hits have a drift time outside of the allowable range;
-The after-pulse hits are caused by occasional ringing in the readout electronics;
-And the cluster hits are caused by $\delta$ rays or cosmic rays traveling parallel to the detector planes,
-resulting in three or more hits in adjacent wires. 
-The numbers of hits are further reduced by only preserving hits that correspond to a matching hodoscope hits.
-
-After removing these hits, the remaining chambers hits are organized into straight-line segments (called tracklets)
-for each of the first three stations.
-The tracklets from different stations are then matched to find valid tracks consistent with muons 
-originating from target area. 
-The tracks are also projected to the proportional tubes in station~4, located after the iron absorber,
-to identify corresponding hits and for muon identification.
-The Kalman filter algorithm~\cite{kalman1960} are then used to further refine the muon tracks,
+After identifying potential hits originating from interactions within the target region,
+the Kalman filter algorithm~\cite{kalman1960} are used to reconstruct the muon tracks,
 and determine the best estimate of the muon momentum.
 The magnetic field of the two magnets and the energy loss in the solid iron FMag are also taken into account during this stage.
-Finally, pairs of opposite charged muons tracks from the top and bottom sections of the spectrometer are
+Pairs of opposite charged muons tracks from the top and bottom sections of the spectrometer are
 matched to determine the interaction vertex using Kalman filter.
-
-\subsection{Monte Carlo simulation}
-\label{subsec:MC}
-\todo{Explain the event generation, geat4 options, embeding(?), realization(?).}
-\todo{How well is our data discribed by GMC? Which distributions are we comparing?}
 
 To compare the experimental results with theoretical expectations,
 a GEANT4~\cite{agostinelli2003,allison2006,allison2016} based Monte Carlo simulations has been developed.
@@ -263,21 +245,12 @@ The Drell-Yan event generator is produce a uniform distribution in mass and $x_F
 with weights proportional to the theoretical cross section, calculated using CT14 PDFs~\cite{hou2018}.
 The dimuon transverse momentum distribution has been tunned to match the measured distribution.
 Other PDFs, such as the statistical model~\cite{soffer2019}, were used to measure the systematic effects due to input PDFs.
-The SeaQuest spectrometer is modeled and trajectories of the muons are calculated using GEANT4.
-The energy loss and multiple scattering in the FMag are also included in the simulation,
-and are the dominant factor in determining the momentum resolution of the muons. 
-
 The efficiency and the resolution of the chambers are taken into account in the simulation
 by dropping a small number of hits, and applying Gaussian smearing to the drift distance of the remaining hits.
 Both the efficiency and the width of the smearing are taken from the data.
+An embedding procedure has also been developed to simulate the background hits by embedding each Monte Carlo events
+with hits recorded by the random trigger.
 
-To simulate the noise and background hits during data taking,
-each Monte Carlo events are embedded with hits recorded by the random trigger.
-This allows us to determine the our reconstruction efficiency due to the varying chamber occupancies.
-It also allows us to evaluate the accuracy of the reconstruction algorithm in measuring the dimuon kinematics.
-
-
-\subsection{Mass-fit method}
 \todo{Explain the method. If we are using NMSU mix, we will need to justify the normalization.}
 The mass spectrum, as shown in \cref{fig:massfit} can be expressed as a linear combination of different components,
 namely Drell-Yan, charmonium decays, accidental background and background from instruments.
@@ -461,6 +434,7 @@ It is also worth pointing out that the small $x$ behavior of the $\bar{d}-\bar{u
 semi-inclusive DIS as indicated by the HERMES measurements~\cite{ackerstaff1998}.
 With the advent of the Electron Ion Collider, the flavor asymmetry at small $x$ region, where abundant sea-quarks reside,
 can be further constrained.
+\begin{comment}
 The flavor asymmetry $\bar{d}-\bar{u}$ can also be study using lattice techniques
 within the framework of LaMET.
 Though, it has been pointed out that calculations from lattice in the antiquark region are currently
@@ -468,6 +442,7 @@ susceptible to systematic uncertainties,
 and in particular the inverse problem arising in the reconstruction of the $x$-dependence~\cite{constantinou2021}.
 The current results using the LaMET framework do not agree among different groups nor with current global PDF analyses.
 The measured flavor asymmetry can provide an important benchmark for the lattice calculations in the future.
+\end{comment}
 
 The SeaQuest data can also be used to calculate two integral: $\int^{0.45}_{0.13} \left[\bar{d}\left(x\right) - \bar{u}\left(x\right) \right]\dd{x}$,
 which describes the integrated sea-quark flavor asymmetry, and $\int^{0.45}_{0.13} x\left[\bar{d}\left(x\right) - \bar{u}\left(x\right) \right]\dd{x}$,
@@ -526,12 +501,13 @@ the result from SeaQuest is inherently smaller.
 
 \section{Conclusions}
 \label{sec:Conclusions}
-In summary, we have reported the improved results on the $\sigma_{pd}/2\sigma_{pp}$ Drell-Yen cross section ratio up to $x_2=4.5$,
-based on the analysis of the entire SeaQuest dataset.
+In summary, we have reported the improved results on the $\sigma_{pd}/2\sigma_{pp}$ Drell-Yen cross section ratio up to $x_2=0.45$,
+based on the analysis of the entire SeaQuest dataset, which supersede the earlier results in Ref.~\cite{dove2021,dove2023}.
 The measured ratio remains above unity, which suggests the $\bar{d}/\bar{u}$ ratio continues to increase at large $x$.
 The improved statistical precision presented in this paper will help to further constrain the light sea-quark asymmetry in future global analysis.
 These results are also in better agreement with various model predictions, including the meson cloud model and the statistical model.
-
+With recent developments in the lattice calculations within the framework of large momentum effective theory~\cite{constantinou2021},
+these results can provide an important benchmark for the lattice calculations in the future.
 \begin{acknowledgments}
 	This work was performed by the SeaQuest Collaboration, whose work was supported in part by the
 	\todo{Add funding information}
