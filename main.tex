@@ -53,20 +53,17 @@
 
 \section{Introduction}
 The large asymmetry of the distributions of $\bar{d}$ and $\bar{u}$ in the proton was first observed in deep inelastic
-scattering experiments via the violation of the Gottfried sum rule~\cite{amaudruz1991}. 
+scattering experiments via the violation of the Gottfried sum rule~\cite{amaudruz1991}.
 The Bjorken-$x$ dependence of this light sea-quark asymmetry measured the FNAL E866/NuSea
 experiment using the Drell-Yan process~\cite{towell2001}.
 The small-$x$ region has been measured with high precision by E866,
-using an \SI{800}{\GeV} proton beam. 
+using an \SI{800}{\GeV} proton beam.
 The FNAL E906/SeaQuest experiment, using a new spectrometer~\cite{aidala2019} and a \SI{120}{\GeV}
-proton beam, has extended the measurement to higher $x$~\cite{dove2021,dove2023}. 
-%\todo{are we comparing with E866 here?}
-%\todo{summarized previos finding?}
-%\todo{discribe the results from STAR and why this new result is better}
+proton beam, has extended the measurement to higher $x$~\cite{dove2021,dove2023}.
 Results on the charmonium production have also been reported recently in Ref.~\cite{leung2024a}.
 The SeaQuest data is separated into two sets, each roughly half of the data sample.
 The first part covers the data taken between June 2014 and July 2015.
-Results from the analysis of the first part of data have been reported in the earlier work~\cite{dove2021,dove2023}, 
+Results from the analysis of the first part of data have been reported in the earlier work~\cite{dove2021,dove2023},
 and we have shown that the $\sigma_{pd}/2\sigma_{pp}$ ratio to remain above one.
 Therefore suggesting $\bar{d}/\bar{u}$ ratio to remain above unity in the proton,
 contrary to the results from E866~\cite{towell2001}.
@@ -78,11 +75,9 @@ by including both sets of data collected by the SeaQuest Experiment at Fermilab.
 The data constitute a two-fold increase in the detected muons compared to our previous publications.
 Since the trigger
 conditions and the detector configuration for the two data sets are not
-identical, the analysis was performed separately for each data set. 
+identical, the analysis was performed separately for each data set.
 Results obtained from the two data sets are first compared to verify their
 consistency, and then combined for the final results.
-%\todo{also summarized any improvement in the analysis if any}
-
 
 \begin{comment}
 Several models, including the meson cloud model~\cite{alberg2022} and statistical model~\cite{soffer2019},
@@ -135,6 +130,7 @@ The invariant mass-squared of the dimuon, $M^2 = Q^2$, is related to $x_1$, $x_2
 \end{equation}
 where $P_T$ is the transverse momentum of the dimuon.
 
+\begin{comment}
 The Feynman-$x$, $x_F$, of the dimuon is
 \begin{equation}
 	x_F = \frac{P_L}{P_{\text{max}}} = \frac{2P_L}{\sqrt{s}\left(1-M^2/s\right)},
@@ -151,6 +147,7 @@ It is worth noting that \cref{def_mass} becomes the familiar expression $M^2=x_1
 often adopted in the literature, when $P_T/\sqrt{s} \to 0$.
 For the SeaQuest experiment, the modest beam momentum of \SI{120}{\GeV} $\left(\sqrt{s} = \SI{15.1}{\GeV}\right)$
 warrants the use of the definitions of kinematic variables shown in \cref{def_mass,def_xf}.
+\end{comment}
 
 The leading order Drell-Yan cross section, expressed in \cref{eq:DYCross},
 contains two terms since the annihilation could proceed with the antiquark from either parent hadron.
@@ -158,31 +155,17 @@ For most fixed-target experiments, including SeaQuest,
 the spectrometers have large acceptance for the positive $x_F$  region $\left(x_F > 0\right)$.
 Thus, to a good approximation, the Drell-Yan cross section is dominated by the first term,
 corresponding to the annihilation of a beam quark with a target antiquark.
-To demonstrate the relation between the cross section ratio and the flavor asymmetry
-$\bar{d}\left(x\right) / \bar{u}\left(x\right)$,
-an approximate formula can be derived as follows.
-Taking into account the dominance of $u\left(x\right)$ over $d\left(x\right)$ in
-beam proton and the charge squared weighting factor $e_i^2$ in \cref{eq:DYCross}, one obtains for $x_1 \gg x_2$,
-\begin{align}
-	\frac{\sigma^{pd}}{2\sigma^{pp}} = \frac{1}{2}\left[1 + \frac{\sigma^{pn}}{\sigma^{pp}}\right]
-	\approx \frac{1}{2}\left[1 + \frac{\bar{u}_n\left(x_2\right)}{\bar{u}_p\left(x_2\right)}\right],
-\end{align}
-with the assumption that $\sigma^{pd} \approx \sigma^{pp} + \sigma^{pn}$,
-which neglects small nuclear effects of the deuteron~\cite{kumano1998,ehlers2014}.
-Charge symmetry for the parton distributions~\cite{londergan2010} between the proton and the neutron:
-\begin{equation}
-	\begin{split}
-		\bar u\left(x\right)  \equiv & \bar u_p\left(x\right) = \bar d_n\left(x\right)\textrm{, and } \\
-		\bar d\left(x\right)  \equiv & \bar d_p\left(x\right) = \bar u_n\left(x\right),
-	\end{split}
-	\label{eq:chargeSymmetry}
-\end{equation}
-leads to the approximate expression
+With the assumption that $\sigma^{pd} \approx \sigma^{pp} + \sigma^{pn}$,
+which neglects small nuclear effects of the deuteron~\cite{kumano1998,ehlers2014},
+and charge symmetry for the parton distributions~\cite{londergan2010} between the proton and the neutron,
+\cref{eq:DYCross} can be approximated as the followning expression
 \begin{equation}
 	\frac{\sigma^{pd}}{2\sigma^{pp}} \approx
-	\frac{1}{2} \left[1+\frac{\bar d\left(x_2\right)}{\bar u\left(x_2\right)}\right].
+	\frac{1}{2} \frac{4+\frac{d\left(x_1\right)}{u\left(x_1\right)}}{4+\frac{d\left(x_1\right)}{u\left(x_1\right)}\frac{\bar d\left(x_2\right)}{\bar u\left(x_2\right)}}
+	\left[1+\frac{\bar d\left(x_2\right)}{\bar u\left(x_2\right)}\right].
 	\label{eq:crRatio}
 \end{equation}
+
 While \cref{eq:crRatio} illustrates the power of the $\sigma^{pd}/2\sigma^{pp}$ Drell-Yan cross section
 ratio to reveal the flavor asymmetry between $\bar d$ and $\bar u$,
 the actual extraction of the $\bar d\left(x\right) / \bar u\left(x\right)$ ratios
@@ -203,7 +186,7 @@ The different targets are mounted on a movable table,
 which slides horizontally during the \SI{56}{\s} period between two spills.
 Due to the different density between the liquid targets, the number of spill on the
 hydrogen target per cycle is roughly twice as on deuterium.
-The frequent shifting of targets reduces the systematic uncertainty due to variation in experimental condition over time. 
+The frequent shifting of targets reduces the systematic uncertainty due to variation in experimental condition over time.
 
 The SeaQuest trigger uses discriminated signals from the hodoscope counters.
 The main physics trigger requires a coincidence of two opposite sign muons,
@@ -212,9 +195,8 @@ A separate trigger only requires one muon track, and it is mainly used for study
 
 \section{Data Analysis}
 \label{sec:analysis}
-\todo{progress between nature paper and now?}
 Detail discussion on the analysis procedure can be found in earlier publication~\cite{dove2021,dove2023}.
-The muon tracks are reconstructed using the hits in the drift chambers and proportional tubes in each stations. 
+The muon tracks are reconstructed using the hits in the drift chambers and proportional tubes in each stations.
 After identifying potential hits originating from interactions within the target region,
 the Kalman filter algorithm~\cite{kalman1960} are used to reconstruct the muon tracks,
 and determine the best estimate of the muon momentum.
@@ -234,14 +216,13 @@ Both the efficiency and the width of the smearing are taken from the data.
 An embedding procedure has also been developed to simulate the background hits by embedding each Monte Carlo events
 with hits recorded by the random trigger.
 
-\todo{Explain the method. If we are using NMSU mix, we will need to justify the normalization.}
 The mass spectrum, as shown in \cref{fig:massfit} can be expressed as a linear combination of different components,
 namely Drell-Yan, charmonium decays, accidental background and background from instruments.
 These different contributions would have distinct mass spectra, for example, the $J/\psi$
 and $\psi\left(2S\right)$ decays would have sharp distributions centered around their masses.
 Therefore, the data can be fitted to various templates to obtain
-the relative contribution from each sources. 
-As input parameters to the fit, the mass distributions for $J/\psi$, $\psi\left(2S\right)$ 
+the relative contribution from each sources.
+As input parameters to the fit, the mass distributions for $J/\psi$, $\psi\left(2S\right)$
 and the Drell-Yan are obtained from studying the Monte Carlo simulation. %, as discussed in \cref{subsec:MC}.
 The distribution of accidental coincidence events was made by pairing at random $\mu^+$ and $\mu^-$ collected with the ``single-muon'' trigger
 under the condition that the beam intensities of $\mu^+$ and $\mu^-$ events were comparable.
@@ -249,26 +230,19 @@ The magnitudes of these components,
 with the exception of the empty-flask data for which the normalization is known,
 were varied in the fit to the mass spectrum.
 The statistical uncertainties of the Monte Carlo and empty-flask date are taken into account using the algorithm described in Ref.~\cite{barlow1993}.
-\Cref{fig:massfit} shows the fit to the $p+p$ and $p+d$ dimuon spectra respectively,
-and the mass distributions are well described by this fitting procedure. 
+\Cref{fig:massfit} shows the fit to the $p+p$ dimuon spectrum,
+and the mass distribution are well described by this fitting procedure.
 The fit to mass spectrum was also preformed in individual kinematic bins in Ref.~\cite{leung2024a},
 and the results are consistent with the combined fit.
 \begin{figure}[htbp!]
 	\centering
-	\begin{subfigure}{\linewidth}
-		\includegraphics[width=\linewidth]{massfit_run56_LH2.pdf}
-	\end{subfigure}
-	\begin{subfigure}{\linewidth}
-		\includegraphics[width=\linewidth]{massfit_run56_LD2.pdf}
-	\end{subfigure}
+	\includegraphics[width=\linewidth]{massfit_run56_LH2.pdf}
 	\caption{Dimuon mass distribution for events collected
-		on liquid hydrogen (top) and deuterium (bottom) targets for the second data set.
+		on liquid hydrogen targets for the second data set.
 		The data points (solid squares) are compared with a fit (solid blue line) consisting of
 		various components (see text).}
 	\label{fig:massfit}
 \end{figure}
-\missingfigure[figwidth=\linewidth]{Drell-Yan yeild vs $x_T$ after background subtraction compared with MC}
-\todo{corrections(?): rate dependence, target contamination, live PoT}
 
 After the mass fit is performed, and the normalization for accidental background has been determined,
 a mass cut ($M>\SI{4.5}{\GeV}$) is applied to remove the $J/\psi$ and $\psi\left(2S\right)$ events.
@@ -286,45 +260,48 @@ are also taken into account.
 
 \section{Measurement of The \texorpdfstring{$\sigma_{pd}/2\sigma_{pp}$}{pd/2pp} Drell-Yan Cross Section Ratio}
 \label{sec:csr}
-\todo{which variables do we want to show? (x2, x1, mass, pT, xF, etc)}
-\Cref{fig:xT_csr} shows the measured $\sigma_{pd}/2\sigma_{pp}$ cross section ratio from the combined analysis
-compared with results from E866~\cite{towell2001} and NLO calculations using DYNNLO~\cite{catani2007,catani2009},
-with nucleon PDFs CT18~\cite{hou2021}. The measured ratio is also tabulated in \cref{tab:dbarubar}.
-\Cref{subfig:xT_csr_data} shows the comparisons of the two datasets from SeaQuest.
+\Cref{fig:xT_csr} shows the measured $\sigma_{pd}/2\sigma_{pp}$ cross section ratio from the comparisons
+of the two datasets from SeaQuest, and the combined analysis is also compared with
+NLO calculations using DYNNLO~\cite{catani2007,catani2009},
+with nucleon PDFs CT18~\cite{hou2021} and NNPDF4.0~\cite{ball2022a}.
+The measured ratio is also tabulated in \cref{tab:dbarubar}.
 The results from both data sets are mostly consistent with each other, except for the low $x_2$ bin where our acceptance is smaller,
 and most sensitive to the trigger condition.
+
+\begin{comment}
 And the results from the combined analysis is compared with results from E866~\cite{towell2001} in \cref{subfig:xT_csr_exp}.
-As the E866 data is used in the CT18 global analysis, the small $x$ behavior in the PDF is well constrained. 
+As the E866 data is used in the CT18 global analysis, the small $x$ behavior in the PDF is well constrained.
 The consistence between the SeaQuest results and the CT18 calculations at small $x_2$ demonstrate the agreement between
 the two experiments at this region.
 The small difference between E866 and SeaQuest results between $0.1<x_2<0.2$ mostly originates from the different beam energies
-and thus different $x_1$ coverage, as reflected in the calculated cross section ratios. 
+and thus different $x_1$ coverage, as reflected in the calculated cross section ratios.
 At $x_2$ increases, the ratio measured by SeaQuest remains above one, and unlike E866, no drop off in the ratio is observed.
+\end{comment}
+
 \begin{figure}[htbp!]
-	\captionsetup[subfigure]{labelformat=empty}
-	\begin{subfigure}{\linewidth}
-		\centering
-		\includegraphics[width=\linewidth]{data_full_xT_syst.pdf}	
-		\phantomcaption
-		\label{subfig:xT_csr_data}
-	\end{subfigure}
-	\begin{subfigure}{\linewidth}
-		\centering
-		\includegraphics[width=\linewidth]{E906_E866_xT_CT18only.pdf}
-		\phantomcaption
-		\label{subfig:xT_csr_exp}
-	\end{subfigure}
-	\caption{Measured $\sigma_{pd}/2\sigma_{pp}$ Drell-Yan cross section ratio from the two SeaQuest datasets compared calculations using 
-		CT18 ~\cite{hou2021} and NNPDF4.0~\cite{ball2022a} (top). As well as comparisons with
-		with E866/NuSea~\cite{towell2001} and calculations using CT18~\cite{hou2021} at different kinematics (bottom).}
+	%	\captionsetup[subfigure]{labelformat=empty}
+	%	\begin{subfigure}{\linewidth}
+	\centering
+	\includegraphics[width=\linewidth]{data_full_xT_syst.pdf}
+	%		\phantomcaption
+	%		\label{subfig:xT_csr_data}
+	%	\end{subfigure}
+	%	\begin{subfigure}{\linewidth}
+	%		\centering
+	%		\includegraphics[width=\linewidth]{E906_E866_xT_CT18only.pdf}
+	%		\phantomcaption
+	%		\label{subfig:xT_csr_exp}
+	%	\end{subfigure}
+	\caption{Measured $\sigma_{pd}/2\sigma_{pp}$ Drell-Yan cross section ratio from the two SeaQuest datasets compared calculations using
+		CT18 ~\cite{hou2021} and NNPDF4.0~\cite{ball2022a}.}% (top). As well as comparisons with
+	%		with E866/NuSea~\cite{towell2001} and calculations using CT18~\cite{hou2021} at different kinematics (bottom).}
 	\label{fig:xT_csr}
 	\todo{which PDFs to use?}
 \end{figure}
 This strongly suggest the $\bar{d}/\bar{u}$ ratio to remain above unity at large $x$.
 
-\todo{break down of systematics}
 The sources of systematic uncertainties are tabulated in \cref{tab:sys_csr}.
-The main uncertainties originate from the modeling of the accidental background ($\delta_{mix}$). 
+The main uncertainties originate from the modeling of the accidental background ($\delta_{mix}$).
 Different methods for generating the accidental background distributions have been studied~\cite{pate2023},
 and the differences are quoted as the systematic uncertainty.
 Other sources of systematic uncertainties include the the efficiency corrections ($\delta_{Eff.\,stat.}$ and $\delta_{Eff.\,param.}$),
@@ -337,13 +314,10 @@ empty flask normalization ($\delta_{Empty}$), and the relative beam luminosity (
 		\input{table/DY-csr/MF-xT.tex}
 	\end{adjustbox}
 \end{table*}
-\todo{consistence of the data(source of systematics)}
 
 \section{Extraction of \texorpdfstring{$\bar{d}\left(x\right)/\bar{u}\left(x\right)$}{dbar(x)/ubar(x)}
   and \texorpdfstring{$\bar{d}\left(x\right)-\bar{u}\left(x\right)$}{dbar(x)-ubar(x)}}
 \label{sec:extraction}
-\todo{Explain the extraction. There are also addition systematics here.}
-\todo{Where to put acceptance? We did show the acceptance in nature paper.}
 In order to compare the results from SeaQuest with predictions from various models,
 an estimate for the $\bar{d}/\bar{u}$ ratio is extracted from the cross section ratio by
 an iterative method, as described in Ref.~\cite{dove2021}.
@@ -407,8 +381,8 @@ As a flavor non-singlet quantity, the integral, $\int^1_0 \left[\bar{d}\left(x\r
 is expected to be independent of $Q^2$, even though the $x$ dependence might differ at different $Q^2$.
 As the perturbative processes should not produce a significant $\bar{d},\,\bar{u}$ difference,
 the $\bar{d}-\bar{u}$ values can provide a direct measure on the non-perturbative contributions.
-The values of $\bar{d}-\bar{u}$ derived from the SeaQuest data are shown in \cref{fig:e906_e866_dbarMubar} and tabulated in \cref{tab:dbarubar},
-and are also compared with results from E866~\cite{towell2001} and HERMES~\cite{ackerstaff1998},
+The values of $\bar{d}-\bar{u}$ derived from the SeaQuest data are also shown in \cref{fig:e906_e866_dbarubar} and tabulated in \cref{tab:dbarubar},
+and are compared with results from E866~\cite{towell2001} and HERMES~\cite{ackerstaff1998},
 and with predictions from meson cloud and statistical models.
 Unlike $\bar{d}/\bar{u}$ ratio, the difference $\bar{d}-\bar{u}$ is insensitive to the flavor-symmetric contributions
 to the sea-quark distributions in these models. Like the ratio, the deduced difference $\bar{d}-\bar{u}$ is also
@@ -417,6 +391,7 @@ It is also worth pointing out that the small $x$ behavior of the $\bar{d}-\bar{u
 semi-inclusive DIS as indicated by the HERMES measurements~\cite{ackerstaff1998}.
 With the advent of the Electron Ion Collider, the flavor asymmetry at small $x$ region, where abundant sea-quarks reside,
 can be further constrained.
+
 \begin{comment}
 The flavor asymmetry $\bar{d}-\bar{u}$ can also be study using lattice techniques
 within the framework of LaMET.
@@ -443,22 +418,25 @@ the result from SeaQuest is inherently smaller.
 		\includegraphics[width=\linewidth]{E906_E866_dbarubar_PDF.pdf}
 	\end{subfigure}
 	\begin{subfigure}{\linewidth}
-		\includegraphics[width=\linewidth]{E906_E866_dbarubar.pdf}
+		%\includegraphics[width=\linewidth]{E906_E866_dbarubar.pdf}
+		\includegraphics[width=\linewidth]{dbub_diff_with_model.pdf}
 	\end{subfigure}
-	\caption{The extracted $\bar{d}/\bar{u}$ from the measured $\sigma_{pd}/2\sigma_{pp}$ Drell-Yan cross section ratio
-		from SeaQuest (red solid circles), E866~\cite{towell2001} (open blue circles).
-		The extracted ratios are compared with CT18~\cite{hou2021} and NNPDF4.0~\cite{ball2022a} global PDF analyses (top)
-		and with predictions from meson cloud model~\cite{alberg2022} and statistical model~\cite{soffer2019} (bottom).}
+	\caption{The extracted $\bar{d}/\bar{u}$ (top) and $\bar{d}-\bar{u}$ (bottom)
+		from the measured $\sigma_{pd}/2\sigma_{pp}$ Drell-Yan cross section ratio
+		from SeaQuest (red solid circles), E866~\cite{towell2001} (open blue circles), and HERMES~\cite{ackerstaff1998} (black triangles).
+		The extracted ratios are compared with CT18~\cite{hou2021} and NNPDF4.0~\cite{ball2022a} global PDF analyses
+		and with predictions from meson cloud model~\cite{alberg2022} and statistical model~\cite{soffer2019}.}
 	\label{fig:e906_e866_dbarubar}
+	\todo{add PDF and model to both figures}
 \end{figure}
 
+\begin{comment}
 \begin{figure}[htpb!]
 	\centering
 	\begin{subfigure}{\linewidth}
 		\includegraphics[width=\linewidth]{dbub_diff_with_PDF.pdf}
 	\end{subfigure}
 	\begin{subfigure}{\linewidth}
-		\includegraphics[width=\linewidth]{dbub_diff_with_model.pdf}
 	\end{subfigure}
 	\caption{The extracted $\bar{d}-\bar{u}$ from from SeaQuest (red solid circles), E866~\cite{towell2001} (open blue circles)
 		and HERMES~\cite{ackerstaff1998} (black triangles).
@@ -467,6 +445,7 @@ the result from SeaQuest is inherently smaller.
 		The bottom panel is also zoomed in on $x>0.1$ in order to emphasis the SeaQuest results.}
 	\label{fig:e906_e866_dbarMubar}
 \end{figure}
+\end{comment}
 
 \begin{comment}
 \section{Measurement of \texorpdfstring{$p+p$}{p+p} and \texorpdfstring{$p+d$}{p+d} Drell-Yan cross section}
@@ -493,7 +472,7 @@ With recent developments in the lattice calculations within the framework of lar
 these results can provide an important benchmark for the lattice calculations in the future.
 \begin{acknowledgments}
 	This work was performed by the SeaQuest Collaboration, whose work was supported in part by the
-	\todo{Add funding information}
+	\todo{Add funding information. For FNAL, should it listed as FRA or FermiForward?}
 \end{acknowledgments}
 \bibliography{reference}
 
