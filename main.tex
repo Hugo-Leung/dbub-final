@@ -158,7 +158,7 @@ corresponding to the annihilation of a beam quark with a target antiquark.
 With the assumption that $\sigma^{pd} \approx \sigma^{pp} + \sigma^{pn}$,
 which neglects small nuclear effects of the deuteron~\cite{kumano1998,ehlers2014},
 and charge symmetry for the parton distributions~\cite{londergan2010} between the proton and the neutron,
-\cref{eq:DYCross} can be approximated as the followning expression
+\cref{eq:DYCross} can be approximated as
 \begin{equation}
 	\frac{\sigma^{pd}}{2\sigma^{pp}} \approx
 	\frac{1}{2} \frac{4+\frac{d\left(x_1\right)}{u\left(x_1\right)}}{4+\frac{d\left(x_1\right)}{u\left(x_1\right)}\frac{\bar d\left(x_2\right)}{\bar u\left(x_2\right)}}
@@ -177,7 +177,7 @@ in the strong coupling constant, $\alpha_s$. % as discussed in Sec.~\ref{sec:ext
 \label{sec:seaquest_spectrometer}
 The SeaQuest spectrometer is  discussed in detail in Ref.~\cite{aidala2019},
 The SeaQuest experiment receives the  proton beam from the Fermilab Main Injector at \SI{120}{\GeV}
-once every minute in 4-second periods (spills), with average intensity of \num{10e4} per RF bucket.
+once every minute in 4-second periods (spills), with average intensity of \num{6e12} per spill.
 The target system consists of two liquid targets (hydrogen and deuterium),
 three solid targets (iron, carbon and tungsten), and two calibration targets (``empty flask'' and ``no target'').
 A solid iron magnet focuses the high mass dimuons into the spectrometer.
@@ -238,7 +238,7 @@ with the exception of the empty-flask data for which the normalization is known,
 were varied in the fit to the mass spectrum.
 The statistical uncertainties of the Monte Carlo and empty-flask date are taken into account using the algorithm described in Ref.~\cite{barlow1993}.
 \Cref{fig:massfit} shows the fit to the $p+p$ dimuon spectrum,
-and the mass distribution are well described by this fitting procedure.
+and the mass distribution is well described by this fitting procedure.
 \begin{figure}[htbp!]
 	\centering
 	\includegraphics[width=\linewidth]{massfit_run56_LH2.pdf}
@@ -329,10 +329,7 @@ an iterative method, as described in Ref.~\cite{dove2021}.
 We first make an estimate for the $\bar{d}/\bar{u}$ ratio over the measured $x_2$
 and calculate the cross section ratio $R$ using a chosen PDF set.
 This PDF set provides all other parton distributions except for the $\bar{d}/\bar{u}$ ratio,
-which is allowed to vary. The $\bar{d}/\bar{u}$ ratio is initialized as
-\begin{equation}
-	\left[\frac{\bar{d}}{\bar{u}}\right]\left(x_2\right) = 2R\left(x_2\right)-1.
-\end{equation}
+which is allowed to vary.
 The $\bar{d}/\bar{u}$ ratio outside the measured $x_T$ range was assumed to be $1.0$,
 and changed to $0.5$ and $2.0$ to estimate the systematic uncertainty arises from this assumption.
 The cross section ratio $R$ is then calculated up to next-to-leading order, as
