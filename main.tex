@@ -112,6 +112,7 @@ and $q_i^{A,B}\left(x_{1,2}\right)$ are the quark distribution functions in hadr
 for quarks carrying a momentum fraction $x_1$ and $x_2$, respectively.
 An analogous notation is used for antiquark distribution functions $\bar q_i^{A,B}\left(x_{1,2}\right)$.
 
+\begin{comment}
 The experiment measures the momenta of the $\mu^+$ and $\mu^-$, $p_{\mu^+}$ and $p_{\mu^-}$.
 From these, the four-momentum $Q$ of virtual photon from the quark-antiquark annihilation is determined,
 $Q = p_{\mu^+} + p_{\mu^-}$.
@@ -130,7 +131,6 @@ The invariant mass-squared of the dimuon, $M^2 = Q^2$, is related to $x_1$, $x_2
 \end{equation}
 where $P_T$ is the transverse momentum of the dimuon.
 
-\begin{comment}
 The Feynman-$x$, $x_F$, of the dimuon is
 \begin{equation}
 	x_F = \frac{P_L}{P_{\text{max}}} = \frac{2P_L}{\sqrt{s}\left(1-M^2/s\right)},
@@ -158,7 +158,7 @@ corresponding to the annihilation of a beam quark with a target antiquark.
 With the assumption that $\sigma^{pd} \approx \sigma^{pp} + \sigma^{pn}$,
 which neglects small nuclear effects of the deuteron~\cite{kumano1998,ehlers2014},
 and charge symmetry for the parton distributions~\cite{londergan2010} between the proton and the neutron,
-\cref{eq:DYCross} can be approximated as the followning expression
+\cref{eq:DYCross} can be approximated as
 \begin{equation}
 	\frac{\sigma^{pd}}{2\sigma^{pp}} \approx
 	\frac{1}{2} \frac{4+\frac{d\left(x_1\right)}{u\left(x_1\right)}}{4+\frac{d\left(x_1\right)}{u\left(x_1\right)}\frac{\bar d\left(x_2\right)}{\bar u\left(x_2\right)}}
@@ -177,9 +177,15 @@ in the strong coupling constant, $\alpha_s$. % as discussed in Sec.~\ref{sec:ext
 \label{sec:seaquest_spectrometer}
 The SeaQuest spectrometer is  discussed in detail in Ref.~\cite{aidala2019},
 The SeaQuest experiment receives the  proton beam from the Fermilab Main Injector at \SI{120}{\GeV}
-once every minute in 4-second periods (spills), with average intensity of \num{10e4} per RF bucket.
+once every minute in 4-second periods (spills), with average intensity of \num{6e12} per spill.
 The target system consists of two liquid targets (hydrogen and deuterium),
 three solid targets (iron, carbon and tungsten), and two calibration targets (``empty flask'' and ``no target'').
+A solid iron magnet focuses the high mass dimuons into the spectrometer.
+The spectrometer consists of four tracking stations, with an open air magnet between station~1 and~2.
+Each tracking station consists of hodoscope planes, which provide fast signals for triggering,
+and drift chambers or proportional tubes, which provide precise hit information for tracking.
+
+\begin{comment}
 The \SI{2.2}{\liter} of liquid target material is held
 in a \SI{50.8}{\cm} long cylindrical vacuum vessel, with a diameter of \SI{3.81}{\cm}.
 The different targets are mounted on a movable table,
@@ -187,6 +193,7 @@ which slides horizontally during the \SI{56}{\s} period between two spills.
 Due to the different density between the liquid targets, the number of spill on the
 hydrogen target per cycle is roughly twice as on deuterium.
 The frequent shifting of targets reduces the systematic uncertainty due to variation in experimental condition over time.
+\end{comment}
 
 The SeaQuest trigger uses discriminated signals from the hodoscope counters.
 The main physics trigger requires a coincidence of two opposite sign muons,
@@ -231,9 +238,7 @@ with the exception of the empty-flask data for which the normalization is known,
 were varied in the fit to the mass spectrum.
 The statistical uncertainties of the Monte Carlo and empty-flask date are taken into account using the algorithm described in Ref.~\cite{barlow1993}.
 \Cref{fig:massfit} shows the fit to the $p+p$ dimuon spectrum,
-and the mass distribution are well described by this fitting procedure.
-The fit to mass spectrum was also preformed in individual kinematic bins in Ref.~\cite{leung2024a},
-and the results are consistent with the combined fit.
+and the mass distribution is well described by this fitting procedure.
 \begin{figure}[htbp!]
 	\centering
 	\includegraphics[width=\linewidth]{massfit_run56_LH2.pdf}
@@ -324,10 +329,7 @@ an iterative method, as described in Ref.~\cite{dove2021}.
 We first make an estimate for the $\bar{d}/\bar{u}$ ratio over the measured $x_2$
 and calculate the cross section ratio $R$ using a chosen PDF set.
 This PDF set provides all other parton distributions except for the $\bar{d}/\bar{u}$ ratio,
-which is allowed to vary. The $\bar{d}/\bar{u}$ ratio is initialized as
-\begin{equation}
-	\left[\frac{\bar{d}}{\bar{u}}\right]\left(x_2\right) = 2R\left(x_2\right)-1.
-\end{equation}
+which is allowed to vary.
 The $\bar{d}/\bar{u}$ ratio outside the measured $x_T$ range was assumed to be $1.0$,
 and changed to $0.5$ and $2.0$ to estimate the systematic uncertainty arises from this assumption.
 The cross section ratio $R$ is then calculated up to next-to-leading order, as
@@ -415,19 +417,19 @@ the result from SeaQuest is inherently smaller.
 \begin{figure}[htpb!]
 	\centering
 	\begin{subfigure}{\linewidth}
-		\includegraphics[width=\linewidth]{E906_E866_dbarubar_PDF.pdf}
+		\includegraphics[width=\linewidth]{E906_E866_dbarubar_PDF_model.pdf}
 	\end{subfigure}
 	\begin{subfigure}{\linewidth}
 		%\includegraphics[width=\linewidth]{E906_E866_dbarubar.pdf}
-		\includegraphics[width=\linewidth]{dbub_diff_with_model.pdf}
+		\includegraphics[width=\linewidth]{dbub_diff.pdf}
 	\end{subfigure}
 	\caption{The extracted $\bar{d}/\bar{u}$ (top) and $\bar{d}-\bar{u}$ (bottom)
 		from the measured $\sigma_{pd}/2\sigma_{pp}$ Drell-Yan cross section ratio
-		from SeaQuest (red solid circles), E866~\cite{towell2001} (open blue circles), and HERMES~\cite{ackerstaff1998} (black triangles).
+		from SeaQuest (red square), E866~\cite{towell2001} (black circles), and HERMES~\cite{ackerstaff1998} (blue triangles).
 		The extracted ratios are compared with CT18~\cite{hou2021} and NNPDF4.0~\cite{ball2022a} global PDF analyses
 		and with predictions from meson cloud model~\cite{alberg2022} and statistical model~\cite{soffer2019}.}
 	\label{fig:e906_e866_dbarubar}
-	\todo{add PDF and model to both figures}
+	\todo{need better color scheme!}
 \end{figure}
 
 \begin{comment}
