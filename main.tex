@@ -7,7 +7,7 @@
 \usepackage{verbatim}
 \usepackage{url}
 \usepackage{subcaption}
-\usepackage[separate-uncertainty=true]{siunitx}
+\usepackage[separate-uncertainty=true,range-units=single,range-phrase=\textendash]{siunitx}
 \usepackage{physics}
 \usepackage[pdfusetitle]{hyperref}
 \usepackage[capitalize]{cleveref}
@@ -23,6 +23,11 @@
 \linenumbers
 \graphicspath{{figures/}}
 \DeclareSIUnit\barn{b}
+
+\pdfstringdefDisableCommands{%
+  \def\,{}%
+  \def\fnref#1{}%
+}
 
 \captionsetup{justification=raggedright,singlelinecheck=false}
 
@@ -51,7 +56,7 @@
 
 \maketitle
 
-\section{Introduction}
+%\section{Introduction}
 The large asymmetry of the distributions of $\bar{d}$ and $\bar{u}$ in the proton was first observed in deep inelastic
 scattering experiments via the violation of the Gottfried sum rule~\cite{amaudruz1991}.
 The Bjorken-$x$ dependence of this light sea-quark asymmetry measured the FNAL E866/NuSea
@@ -79,8 +84,8 @@ identical, the analysis was performed separately for each data set.
 Results obtained from the two data sets are first compared to verify their
 consistency, and then combined for the final results.
 
-\section{The Drell-Yan Process}
-\label{sec:drell-yan}
+%\section{The Drell-Yan Process}
+%\label{sec:drell-yan}
 The SeaQuest experiment detects $\mu^+\mu^-$ pairs (dimuons) produced in the interaction of a proton
 beam with various targets nuclei. The production of massive dimuon pairs are described by the Drell-Yan
 process~\cite{drell1970}. In the Drell-Yan process, the leading order (LO) cross section is given by
@@ -117,10 +122,10 @@ ratio to reveal the flavor asymmetry between $\bar d$ and $\bar u$,
 the actual extraction of the $\bar d\left(x\right) / \bar u\left(x\right)$ ratios
 from the measured $\sigma^{pd}/ 2 \sigma^{pp}$ Drell-Yan cross section ratios is
 made without these simplifying approximations and is carried out in Next-to-Leading Order (NLO)
-in the strong coupling constant, $\alpha_s$. 
+in the strong coupling constant, $\alpha_s$.
 
-\section{The SeaQuest Experiment}
-\label{sec:seaquest_spectrometer}
+%\section{The SeaQuest Experiment}
+%\label{sec:seaquest_spectrometer}
 The SeaQuest spectrometer is  discussed in detail in Ref.~\cite{aidala2019},
 The SeaQuest experiment receives the  proton beam from the Fermilab Main Injector at \SI{120}{\GeV}
 once every minute in 4-second periods (spills), with average intensity of \num{6e12} per spill.
@@ -136,8 +141,8 @@ The main physics trigger requires a coincidence of two opposite sign muons,
 one in the top and one in the bottom halves of the spectrometer.
 A separate trigger only requires one muon track, and it is mainly used for studying the accidental background.
 
-\section{Data Analysis}
-\label{sec:analysis}
+%\section{Data Analysis}
+%\label{sec:analysis}
 Detail discussion on the analysis procedure can be found in earlier publication~\cite{dove2021,dove2023}.
 The muon tracks are reconstructed using the hits in the drift chambers and proportional tubes in each stations.
 After identifying potential hits originating from interactions within the target region,
@@ -199,8 +204,8 @@ The reconstruction inefficiency and DAQ deadtime, which have a small but non-neg
 are also taken into account.
 
 
-\section{Measurement of The \texorpdfstring{$\sigma_{pd}/2\sigma_{pp}$}{pd/2pp} Drell-Yan Cross Section Ratio}
-\label{sec:csr}
+%\section{Measurement of The \texorpdfstring{$\sigma_{pd}/2\sigma_{pp}$}{pd/2pp} Drell-Yan Cross Section Ratio}
+%\label{sec:csr}
 \Cref{fig:xT_csr} shows the measured $\sigma_{pd}/2\sigma_{pp}$ cross section ratio from the comparisons
 of the two datasets from SeaQuest, and the combined analysis is also compared with
 NLO calculations using DYNNLO~\cite{catani2007,catani2009},
@@ -214,30 +219,32 @@ The results from the combined analysis strongly suggest the $\bar{d}/\bar{u}$ ra
 	\centering
 	\includegraphics[width=\linewidth]{data_full_xT_syst.pdf}
 	\caption{Measured $\sigma_{pd}/2\sigma_{pp}$ Drell-Yan cross section ratio from the two SeaQuest datasets compared calculations using
-		CT18 ~\cite{hou2021} and NNPDF4.0~\cite{ball2022a}. 
+		CT18 ~\cite{hou2021} and NNPDF4.0~\cite{ball2022a}.
 		The error bands on the theory calculations correspond to the \SI{68}{\percent} confidence level from the PDFs.}
 	\label{fig:xT_csr}
 	\todo{which PDFs to use?}
 \end{figure}
 
-The sources of systematic uncertainties are tabulated in \cref{tab:sys_csr}.
-The main uncertainties originate from the modeling of the accidental background ($\delta_{mix}$).
+The main uncertainties originate from the modeling of the accidental background (\qtyrange{0.41}{3.82}{\percent}).
 Different methods for generating the accidental background distributions have been studied~\cite{pate2023},
 and the differences are quoted as the systematic uncertainty.
-Other sources of systematic uncertainties include the the efficiency corrections ($\delta_{Eff.\,stat.}$ and $\delta_{Eff.\,param.}$),
-empty flask normalization ($\delta_{Empty}$), and the relative beam luminosity ($\delta_{Beam\,norm.}$).
-\begin{table*}
+Other sources of systematic uncertainties include the the efficiency corrections (\qtyrange{0.46}{0.74}{\percent}),
+empty flask normalization (\qtyrange{0.10}{0.16}{\percent}), and the relative beam luminosity (\SI{2}{\percent}).
+
+\begin{comment}
+\begin{table}
 	\centering
 	\caption{Breakdown of systematic uncertainty for $\sigma_{pd}/2\sigma_{pp}$ ratio in each $x_2$ bins.}
 	\label{tab:sys_csr}
 	\begin{adjustbox}{max width=\linewidth}
-		\input{table/DY-csr/MF-xT.tex}
+		\input{table/DY-csr/MF-xT-new.tex}
 	\end{adjustbox}
-\end{table*}
+\end{table}
+\end{comment}
 
-\section{Extraction of \texorpdfstring{$\bar{d}\left(x\right)/\bar{u}\left(x\right)$}{dbar(x)/ubar(x)}
-  and \texorpdfstring{$\bar{d}\left(x\right)-\bar{u}\left(x\right)$}{dbar(x)-ubar(x)}}
-\label{sec:extraction}
+%\section{Extraction of \texorpdfstring{$\bar{d}\left(x\right)/\bar{u}\left(x\right)$}{dbar(x)/ubar(x)}
+%  and \texorpdfstring{$\bar{d}\left(x\right)-\bar{u}\left(x\right)$}{dbar(x)-ubar(x)}}
+%\label{sec:extraction}
 In order to compare the results from SeaQuest with predictions from various models,
 an estimate for the $\bar{d}/\bar{u}$ ratio is extracted from the cross section ratio by
 an iterative method, as described in Ref.~\cite{dove2021}.
@@ -291,6 +298,24 @@ the uncertainty on the $\bar{d}/\bar{u}$ in these global analyses can be further
 	\end{adjustbox}
 \end{table*}
 
+\begin{figure*}[htpb!]
+	\centering
+	\begin{subfigure}{0.45\linewidth}
+		\includegraphics[width=\linewidth]{E906_E866_dbarubar_PDF_model.pdf}
+	\end{subfigure}
+	\begin{subfigure}{0.45\linewidth}
+		\includegraphics[width=\linewidth]{dbub_diff.pdf}
+	\end{subfigure}
+	\caption{The extracted $\bar{d}/\bar{u}$ (top) and $\bar{d}-\bar{u}$ (bottom)
+		from the measured $\sigma_{pd}/2\sigma_{pp}$ Drell-Yan cross section ratio
+		from SeaQuest (red square), E866~\cite{towell2001} (black circles), and HERMES~\cite{ackerstaff1998} (blue triangles).
+		The extracted ratios are compared with CT18~\cite{hou2021} and NNPDF4.0~\cite{ball2022a} global PDF analyses
+		and with predictions from meson cloud model~\cite{alberg2022} and statistical model~\cite{soffer2019}.
+		The error bands on the PDFs correspond to their \SI{68}{\percent} confidence level.
+	}
+	\label{fig:e906_e866_dbarubar}
+	\todo{need better color scheme!}
+\end{figure*}
 The isovector PDF $\bar{d}-\bar{u}$ over the region $0.13<x<0.45$
 can also be calculated from the extracted $\bar{d}/\bar{u}$ ratio by taking the $\bar{d}+\bar{u}$
 distribution from CT18.
@@ -319,27 +344,9 @@ Hence, when compared with the measured $\int^{1}_{0} \left[\bar{d}\left(x\right)
 from E866 based on the measurements over $0.015<x<0.35$ and extrapolations~\cite{towell2001},
 the result from SeaQuest is inherently smaller.
 
-\begin{figure}[htpb!]
-	\centering
-	\begin{subfigure}{\linewidth}
-		\includegraphics[width=\linewidth]{E906_E866_dbarubar_PDF_model.pdf}
-	\end{subfigure}
-	\begin{subfigure}{\linewidth}
-		\includegraphics[width=\linewidth]{dbub_diff.pdf}
-	\end{subfigure}
-	\caption{The extracted $\bar{d}/\bar{u}$ (top) and $\bar{d}-\bar{u}$ (bottom)
-		from the measured $\sigma_{pd}/2\sigma_{pp}$ Drell-Yan cross section ratio
-		from SeaQuest (red square), E866~\cite{towell2001} (black circles), and HERMES~\cite{ackerstaff1998} (blue triangles).
-		The extracted ratios are compared with CT18~\cite{hou2021} and NNPDF4.0~\cite{ball2022a} global PDF analyses
-		and with predictions from meson cloud model~\cite{alberg2022} and statistical model~\cite{soffer2019}.
-		The error bands on the PDFs correspond to their \SI{68}{\percent} confidence level.
-		}
-	\label{fig:e906_e866_dbarubar}
-	\todo{need better color scheme!}
-\end{figure}
 
-\section{Conclusions}
-\label{sec:Conclusions}
+%\section{Conclusions}
+%\label{sec:Conclusions}
 In summary, we have reported the improved results on the $\sigma_{pd}/2\sigma_{pp}$ Drell-Yen cross section ratio up to $x_2=0.45$,
 based on the analysis of the entire SeaQuest dataset, which supersede the earlier results in Ref.~\cite{dove2021,dove2023}.
 The measured ratio remains above unity, which suggests the $\bar{d}/\bar{u}$ ratio continues to increase at large $x$.
