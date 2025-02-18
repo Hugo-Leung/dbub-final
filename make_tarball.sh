@@ -3,7 +3,7 @@
 OUTNAME="dbub-fnal"
 MAINNAME="main"
 
-files=( "figures/")
+files=( "figures/massfit_run56_LH2.pdf" "figures/data_full_xT_syst.pdf" "figures/E906_E866_dbarubar_PDF_model.pdf" "figures/dbub_diff.pdf")
 WORK_DIR=`mktemp -d`
 
 for name in ${files[@]}; do
