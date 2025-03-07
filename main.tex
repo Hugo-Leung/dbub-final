@@ -102,7 +102,7 @@ and by the STAR collaboration using $W$-boson production in $p+p$ collision
 gave further confirmation of the up-down sea-quark flavor asymmetry at
 the small $x$ region. The surprisingly large flavor asymmetry of the nucleon
 sea has inspired many theoretical work discussed in several review
-articles~\cite{kumano1998,vogt2000a,garvey2001,chang2014}. 
+articles~\cite{kumano1998,vogt2000a,garvey2001,chang2014}.
 
 While the small $x$ region of the sea-quark flavor asymmetry was accurately
 measured by the FNAL E866/NuSea experiment, the highest $x$ data points from
@@ -215,33 +215,37 @@ for studying the accidental background.
 Detail discussion on the analysis procedure can be found in earlier publication~\cite{dove2021,dove2023}.
 The muon tracks are reconstructed using the hits in the drift chambers and proportional tubes in each stations.
 After identifying potential hits originating from interactions within the target region,
-the Kalman filter algorithm~\cite{kalman1960} are used to reconstruct the muon tracks,
-and determine the best estimate of the muon momentum.
-The magnetic field of the two magnets and the energy loss in the solid iron FMag are also taken into account during this stage.
-Pairs of opposite charged muons tracks from the top and bottom sections of the spectrometer are
-matched to determine the interaction vertex using Kalman filter.
+the Kalman filter algorithm~\cite{kalman1960} is used to reconstruct the muon tracks.
+%and determine the best estimate of the muon momentum.
+%The magnetic field of the two magnets and the energy loss in the solid iron FMag are also taken into account during this stage.
+Pairs of oppositely charged muons tracks from the top and bottom sections of the spectrometer are
+matched to determine the interaction vertex using the Kalman filter.
 
-To compare the experimental results with theoretical expectations,
-a GEANT4~\cite{agostinelli2003,allison2006,allison2016} based Monte Carlo simulations has been developed.
-The Drell-Yan event generator is produce a uniform distribution in mass and $x_F$,
-with weights proportional to the theoretical cross section, calculated using CT14 PDFs~\cite{hou2018}.
-The dimuon transverse momentum distribution has been tuned to match the measured distribution.
-Other PDFs, such as the statistical model~\cite{soffer2019}, were used to measure the systematic effects due to input PDFs.
-The efficiency and the resolution of the chambers are taken into account in the simulation
-by dropping a small number of hits, and applying Gaussian smearing to the drift distance of the remaining hits.
-Both the efficiency and the width of the smearing are taken from the data.
+A GEANT4~\cite{agostinelli2003,allison2006,allison2016} based Monte
+Carlo simulations has been developed to compare data with expectations.
+%To compare the experimental results with theoretical expectations,
+%a GEANT4~\cite{agostinelli2003,allison2006,allison2016} based Monte Carlo simulations has been developed.
+The Drell-Yan events are generated with the dimuon mass and $x_F$
+distributions obtained with the CT14 nucleon PDFs~\cite{hou2018}.
+The dimuon transverse momentum distribution is adjusted to match the measured distribution.
+%Other PDFs, such as the statistical model~\cite{soffer2019}, were used to measure the systematic effects due to input PDFs.
+The efficiency and the resolution of the chambers are taken into account in the simulation.
+%by dropping a small number of hits, and applying Gaussian smearing to the drift distance of the remaining hits.
+%Both the efficiency and the width of the smearing are taken from the data.
 An embedding procedure has also been developed to simulate the background hits by embedding each Monte Carlo events
 with hits recorded by the random trigger.
 
-The mass spectrum, as shown in \cref{fig:massfit} can be expressed as a linear combination of different components,
-namely Drell-Yan, charmonium decays, accidental background and background from instruments.
-These different contributions would have distinct mass spectra, for example, the $J/\psi$
+The dimuon mass spectrum, as shown in \cref{fig:massfit} for data collected
+on the liquid hydrogen target for the second part of the experiment, consists
+of various components including the Drell-Yan process, the charmonium
+production, accidental background, and other background sources.
+These different components often have distinct mass spectra, for example, the $J/\psi$
 and $\psi\left(2S\right)$ decays would have sharp distributions centered around their masses.
 Therefore, the data can be fitted to various templates to obtain
 the relative contribution from each sources.
 As input parameters to the fit, the mass distributions for $J/\psi$, $\psi\left(2S\right)$
 and the Drell-Yan are obtained from studying the Monte Carlo simulation. %, as discussed in \cref{subsec:MC}.
-The distribution of accidental coincidence events was made by pairing at random $\mu^+$ and $\mu^-$ collected with the ``single-muon'' trigger
+The mass distribution of accidental coincidence events was made by pairing at random $\mu^+$ and $\mu^-$ collected with the ``single-muon'' trigger
 under the condition that the beam intensities of $\mu^+$ and $\mu^-$ events were comparable.
 The magnitudes of these components,
 with the exception of the empty-flask data for which the normalization is known,
@@ -259,16 +263,16 @@ and the mass distribution is well described by this fitting procedure.
 	\label{fig:massfit}
 \end{figure}
 
-After the mass fit is performed, and the normalization for accidental background has been determined,
+After the mass fit is performed,
 a mass cut ($M>\SI{4.5}{\GeV}$) is applied to remove the $J/\psi$ and $\psi\left(2S\right)$ events.
 The accidental background and empty-flask contributions are then subtracted from the data.
 The remaining events are projected into various kinematic variables, such as $x_1$, $x_2$, $x_F$, and $P_T$.
 Several corrections are applied to extract the final Drell-Yan yields.
-These include the effective luminosity, obtained from the total number of protons on targets passing the BIM cut.
-A target contamination correction is also applied to the \ce{D_2} data due to \ce{H} contamination in the target cell.
-It should be noted that during this analysis,
+These include the deadtime correction for the effective luminosity,
+a target contamination correction is also applied to the \ce{D_2} data due to \ce{H} contamination in the target cell.
+For this analysis,
 a revised correction is used as compared with the earlier work~\cite{dove2021,dove2023},
-resulting in a roughly \SI{2}{\percent} shift in the measured ratios extracted from the first dataset.
+resulting in a roughly \SI{2}{\percent} shift in the measured measured cross section ratios.
 The reconstruction inefficiency and DAQ deadtime, which have a small but non-negligible target dependence,
 are also taken into account.
 
