@@ -1,5 +1,5 @@
 % !TeX root = main.tex
-\documentclass[reprint,aps,unsortedaddress,superscriptaddress,prl,floatfix,showpacs,linenumbers,final]{revtex4-2}
+\documentclass[reprint,aps,unsortedaddress,superscriptaddress,prl,floatfix,showpacs,linenumbers]{revtex4-2}
 \usepackage[utf8]{inputenc}
 \usepackage{float}
 \usepackage{graphicx}
@@ -114,7 +114,7 @@ a \SI{120}{\GeV} proton beam, was performed to shed new light on the flavor asym
 of the proton at the large $x$ region.
 
 Results from the analysis of the first part of the SeaQuest data, corresponding
-to roughly 1/2 of total data collected in the experiment, have been reported
+to roughly half of total data collected in the experiment, have been reported
 in the earlier publications~\cite{dove2021,dove2023}.
 This analysis, adopting two different methods, showed that the
 $\sigma_{pd}/2\sigma_{pp}$ Drell-Yan cross section ratios remain
@@ -291,8 +291,8 @@ are also taken into account.
 %\section{Measurement of The \texorpdfstring{$\sigma_{pd}/2\sigma_{pp}$}{pd/2pp} Drell-Yan Cross Section Ratio}
 %\label{sec:csr}
 The $\sigma_{pd}/2\sigma_{pp}$ cross 
-section ratios obtained from the analysis of the two SeaQuest
-data sets (Part A and Part B) are shown in \Cref{fig:xT_csr}. 
+section ratios obtained from the analysis of the full SeaQuest
+data set are shown in \Cref{fig:xT_csr}. 
 The main systematic uncertainties originate from the modeling of the
 accidental background (\qtyrange{0.41}{3.82}{\percent}).
 Different methods for generating the accidental background distributions
@@ -307,31 +307,36 @@ relative beam luminosity (\SI{2}{\percent}).
 	\centering
 	\includegraphics[width=\linewidth]{data_full_xT_syst.pdf}
 	\caption{Measured $\sigma_{pd}/2\sigma_{pp}$ Drell-Yan cross section ratio from SeaQuest compared calculations using
-		CT18 ~\cite{hou2021} and NNPDF4.0~\cite{ball2022a}.
+		CJ15~\cite{accardi2016a}, CJ22~\cite{accardi2023}, and NNPDF4.0~\cite{ball2022a}.
 		The error bands on the theoretical calculations correspond to the \SI{68}{\percent} confidence level from the PDFs.}
 	\label{fig:xT_csr}
-	\todo{which PDFs to use?}
-	\todo[author=JCPeng,color=red]{use blue and red color for the part A and part B results.
-	Also, change Run 2-3 to Part A and Run 5-6 to Part B}
+	%\todo{which PDFs to use?}
+	%\todo[author=JCPeng,color=red]{use blue and red color for the part A and part B results.
+	%Also, change Run 2-3 to Part A and Run 5-6 to Part B}
 \end{figure}
 
-\Cref{fig:xT_csr} shows that the results from the two separate data sets 
-are largely consistent 
-with each other, except for the lowest $x_2$ bin where the SeaQuest
-spectrometer acceptance is small and more sensitive to the trigger 
-conditions. The results from the two data sets on $\sigma_{pd}/2\sigma_{pp}$
-are combined, as shown in \Cref{fig:xT_csr} and tabulated 
-in \cref{tab:dbarubar}. \Cref{fig:xT_csr} compares the SeaQuest results with
-NLO calculations using DYNNLO~\cite{catani2007,catani2009},
-with nucleon PDFs CT18~\cite{hou2021} and NNPDF4.0~\cite{ball2022a}. Note that
-CT18~\cite{hou2021} was obtained without input from the first 
+%\todo{Update discussion here. Only the combined results are shown}
+The two data sets are analyzed separately, and compared for consistency.
+The final results are obtained by taking an average,
+weighted by the inverse of the total uncertainty squared.
+The results are shown in \Cref{fig:xT_csr} and tabulated in \cref{tab:dbarubar}.
+\Cref{fig:xT_csr} compares the SeaQuest results with
+NLO calculations using DYTurbo~\cite{camarda2020},
+with nucleon PDFs CJ15~\cite{accardi2016a}, CJ22~\cite{accardi2023}, and NNPDF4.0~\cite{ball2022a}.
+Note that CJ15 was obtained without input from the first 
 SeaQuest result~\cite{dove2021}, while the first SeaQuest result was included 
-in the global fit for NNPDF4.0. This accounts for the better agreement between
+in the global fit for CJ22 and NNPDF4.0. This accounts for the better agreement between
 the data and the NNPDF4.0 calculation, although the data tend to be higher than
 the calculation for the large $x$ region. Nevertheless, \Cref{fig:xT_csr}
 shows that both the data and the NNPDF4.0 calculation for the  
 $\sigma_{pd}/2\sigma_{pp}$ cross section ratio are larger than unity for the
 entire measured $x$ region. 
+It is also worth noting that despite both including our earlier results,
+CJ22 and NNPDF4.0 predicted different behavior for the $\sigma_{pd}/2\sigma_{pp}$ ratio.
+In particular, CJ22 suggests the ratio would decrease to unity at $x_2\approx0.4$,
+which is not observed in our updated analysis. 
+This difference further illustrates the importance of this measurement from SeaQuest.
+
 
 \begin{comment}
 \begin{table}
@@ -371,15 +376,15 @@ calculation is less than $10^{-3}$.
 	\end{subfigure}
 	\caption{The extracted $\bar{d}/\bar{u}$ (left) and $\bar{d}-\bar{u}$ (right)
 		from the measured $\sigma_{pd}/2\sigma_{pp}$ Drell-Yan cross section ratio
-		from SeaQuest (red square), E866~\cite{towell2001} (black circles), and HERMES~\cite{ackerstaff1998} (blue triangles).
-		The extracted ratios are compared with CT18~\cite{hou2021} and NNPDF4.0~\cite{ball2022a} global PDF analyses
+		from SeaQuest (black square), E866~\cite{towell2001} (red circles), and HERMES~\cite{ackerstaff1998} (blue triangles).
+		The extracted ratios are compared with CJ15~\cite{accardi2016a}, CJ22~\cite{accardi2023}, and NNPDF4.0~\cite{ball2022a} global PDF analyses
 		and with predictions from meson cloud model~\cite{alberg2022} and statistical model~\cite{soffer2019}.
 		The error bands on the PDFs correspond to their \SI{68}{\percent} confidence level.
 	}
 	\label{fig:e906_e866_dbarubar}
-	\todo{need better color scheme!}
-	\todo[author=JCPeng,color=red]{use black for 
-	SeaQuest data and red for E866}
+	%\todo{need better color scheme!}
+	%\todo[author=JCPeng,color=red]{use black for 
+	%SeaQuest data and red for E866}
 \end{figure*}
 
 The extracted $\bar{d}/\bar{u}$ from the measured SeaQuest cross section ratio,
@@ -394,7 +399,7 @@ The SeaQuest results are also in much better agreement with
 predictions from meson cloud model~\cite{alberg2022}
 and statistical model~\cite{soffer2019}.
 The extracted $\bar{d}/\bar{u}$ ratios are also compared with results 
-from CT18~\cite{hou2021} and NNPDF4.0~\cite{ball2022a}
+from CJ22~\cite{accardi2023} and NNPDF4.0~\cite{ball2022a}
 global analyses in \cref{fig:e906_e866_dbarubar}.
 The inclusion of the SeaQuest earlier result~\cite{dove2021} in the 
 NNPDF4.0 analysis strongly constrains the $\bar{d}/\bar{u}$ ratios
@@ -408,7 +413,8 @@ these global analyses can be further reduced.
 	\centering
 	\caption{Values of $\int_{0.45}^{0.13} \left[\bar{d}\left(x\right) - \bar{u}\left(x\right)\right] \dd{x}$
 		and $\int_{0.45}^{0.13} x\left[\bar{d}\left(x\right) - \bar{u}\left(x\right)\right] \dd{x}$ at $Q^2=\SI{25.5}{\GeV\squared}$ extracted from
-		SeaQuest compared with CT18, NNPDF4.0 PDFs as well as meson cloud and statistical models.}
+		SeaQuest compared with CJ15~\cite{accardi2016a}, CJ22~\cite{accardi2023}, NNPDF4.0~\cite{ball2022a}
+		PDFs as well as meson cloud~\cite{alberg2022} and statistical models~\cite{soffer2019}.}
 	\label{tab:dbarMubar}
 	\begin{adjustbox}{max width=\textwidth}
 		\input{table/dbarubar_int.tex}
