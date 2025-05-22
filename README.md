@@ -1,4 +1,4 @@
-# Improved measurement of flavor asymmetry of the light-quark sea in the proton with Drell-Yan production in p+p and p+d collisions at 120 GeV
+# Final SeaQuest results on the flavor asymmetry of the proton light-quark sea with proton-induced Drell-Yan process
 To compile, simply use 
 
 ```
