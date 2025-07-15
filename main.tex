@@ -101,7 +101,7 @@ HERMES collaboration, using the semi-inclusive DIS reaction~\cite{ackerstaff1998
 and by the STAR collaboration, using $W$-boson production in $p+p$ collision,
 gave further confirmation of the up-down sea-quark flavor asymmetry in
 the small $x$ region. The surprisingly large flavor asymmetry of the nucleon
-sea has inspired many theoretical work discussed in several review
+sea has inspired much theoretical work discussed in several review
 articles~\cite{kumano1998,vogt2000a,garvey2001,chang2014,geesaman2019}.
 
 While the small $x$ region of the sea-quark flavor asymmetry was accurately
@@ -124,7 +124,7 @@ at SeaQuest. Results on the $\sigma_{pd}/2\sigma_{pp}$  cross section ratios
 for charmonium production, reported recently in
 Ref.~\cite{leung2024a}, are also consistent with the flavor asymmetry
 deduced from the Drell-Yan data.
-Several recent global PDF
+Several recent global parton distribution function(PDF)
 analyses~\cite{cocuzza2021,ball2022a,accardi2023,alekhin2023}
 have included these results, in addition to the $W$ boson production data
 from the STAR collaboration~\cite{adam2021}, to better constrain the
@@ -153,7 +153,9 @@ process~\cite{drell1970} with the leading order (LO) cross section given as
 	\sum_{i\in u,d,s,\dots} e_i^2 \left[q_i^A\left(x_1\right) \bar q_i^B\left(x_2\right) + \bar q_i^A\left(x_1\right)
 		q_i^B\left(x_2\right)\right],
 \end{multline}
-where $\alpha$ is the fine-structure constant, $e_i$ is the charge of a quark
+where $\alpha$ is the fine-structure constant, 
+$s$ is the center-of-mass energy squared,
+$e_i$ is the charge of a quark
 with flavor $i$, and $q_i^{A,B}\left(x_{1,2}\right)$ are the quark
 distribution functions in hadrons $A$ and $B$
 for quarks carrying a momentum fraction $x_1$ and $x_2$, respectively.
@@ -212,14 +214,14 @@ for studying the accidental background.
 
 %\section{Data Analysis}
 %\label{sec:analysis}
-Detail discussion on the analysis procedure can be found in earlier publication~\cite{dove2021,dove2023}.
-The muon tracks are reconstructed using the hits in the drift chambers and proportional tubes in each stations.
+The muon tracks are reconstructed using the hits in the drift chambers and proportional tubes in each station.
 After identifying hits potentially originating from interactions within the target region,
 the Kalman filter algorithm~\cite{kalman1960} is used to reconstruct the muon tracks.
 %and determine the best estimate of the muon momentum.
 %The magnetic field of the two magnets and the energy loss in the solid iron FMag are also taken into account during this stage.
 Pairs of oppositely charged muons tracks from the top and bottom sections of the spectrometer are
 matched to determine the interaction vertex using the Kalman filter.
+A detailed description of the analysis procedure can be found in earlier publication~\cite{dove2021,dove2023}.
 
 \begin{figure}[htbp!]
 	\centering
@@ -232,7 +234,7 @@ matched to determine the interaction vertex using the Kalman filter.
 \end{figure}
 
 A GEANT4~\cite{agostinelli2003,allison2006,allison2016} based Monte
-Carlo simulations has been developed to compare data with expectations.
+Carlo simulation has been developed to compare data with expectations.
 %To compare the experimental results with theoretical expectations,
 %a GEANT4~\cite{agostinelli2003,allison2006,allison2016} based Monte Carlo simulations has been developed.
 The Drell-Yan events are generated with the dimuon mass and $x_F$
@@ -252,7 +254,7 @@ production, accidental background, and other background sources.
 These different components often have distinct mass spectra, for example, the $J/\psi$
 and $\psi\left(2S\right)$ decays would have sharp distributions centered around their masses.
 Therefore, the data can be fitted to various templates to obtain
-the relative contribution from each sources.
+the relative contribution from each source.
 As input parameters to the fit, the mass distributions for $J/\psi$, $\psi\left(2S\right)$
 and the Drell-Yan are obtained from studying the Monte Carlo simulation. %, as discussed in \cref{subsec:MC}.
 The mass distribution of accidental coincidence events was made by pairing at random $\mu^+$ and $\mu^-$ collected with the ``single-muon'' trigger
@@ -286,6 +288,7 @@ are also taken into account.
 	\begin{adjustbox}{max width=\textwidth}
 		\input{table/dbarubar.tex}
 	\end{adjustbox}
+	\todo{add mean $M$, $x_1$, etc}
 \end{table*}
 
 %\section{Measurement of The \texorpdfstring{$\sigma_{pd}/2\sigma_{pp}$}{pd/2pp} Drell-Yan Cross Section Ratio}
@@ -313,6 +316,7 @@ relative beam luminosity (\SI{2}{\percent}).
 	%\todo{which PDFs to use?}
 	%\todo[author=JCPeng,color=red]{use blue and red color for the part A and part B results.
 	%Also, change Run 2-3 to Part A and Run 5-6 to Part B}
+	\todo{break this into mutliple figures. Some curves can be moved to the appendix.}
 \end{figure}
 
 %\todo{Update discussion here. Only the combined results are shown}
@@ -445,7 +449,7 @@ The SeaQuest results are in good agreement with NNPDF4.0 and with the model pred
 In summary, we have reported the improved results on the 
 $\sigma_{pd}/2\sigma_{pp}$ Drell-Yen cross section ratio up to $x_2=0.45$,
 based on the analysis of the entire SeaQuest dataset,
-which supersede the earlier results in Ref.~\cite{dove2021,dove2023}.
+which supersedes the earlier results in Ref.~\cite{dove2021,dove2023}.
 The measured ratio remains above unity, 
 which suggests the $\bar{d}/\bar{u}$ ratio continues to increase at large $x$.
 The improved statistical precision presented in this paper will help to 
@@ -454,11 +458,11 @@ These results support the excess of $\bar{d}$ compared to $\bar{u}$ that is obta
 including the meson cloud model and the statistical model.
 %These results are also in better agreement with various model predictions, 
 %including the meson cloud model and the statistical model.
-With recent developments in the lattice calculations within the framework 
+With recent developments in lattice calculations within the framework 
 of large momentum effective theory~\cite{constantinou2021},
 these results can provide an important benchmark for the lattice 
 calculations in the future.
-With the advent of the Electron Ion Collider, the flavor asymmetry at small $x$ region,
+With the advent of the Electron Ion Collider, the flavor asymmetry in the small $x$ region,
 where abundant sea-quarks reside, can be further measured via the semi-inclusive DIS reaction~\cite{ackerstaff1998}.
 
 \begin{acknowledgments}
