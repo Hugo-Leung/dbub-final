@@ -154,7 +154,7 @@ process~\cite{drell1970} with the leading order (LO) cross section given as
 	\sum_{i\in u,d,s,\dots} e_i^2 \left[q_i^A\left(x_1\right) \bar q_i^B\left(x_2\right) + \bar q_i^A\left(x_1\right)
 		q_i^B\left(x_2\right)\right],
 \end{multline}
-where $\alpha$ is the fine-structure constant, 
+where $\alpha$ is the fine-structure constant,
 $s$ is the center-of-mass energy squared,
 $e_i$ is the charge of a quark
 with flavor $i$, and $q_i^{A,B}\left(x_{1,2}\right)$ are the quark
@@ -171,7 +171,7 @@ $\sigma^{pd} \approx \sigma^{pp} + \sigma^{pn}$,
 which neglects small nuclear effects of the
 deuteron~\cite{kumano1998,ehlers2014},
 and charge symmetry for the parton distributions~\cite{londergan2010},
-\cref{eq:DYCross} can be approximated as
+\cref{eq:DYCross} yields the following approximation for the target ratio:
 \begin{equation}
 	\begin{split}
 		\frac{\sigma^{pd}}{2\sigma^{pp}} & \approx
@@ -189,9 +189,8 @@ While \cref{eq:crRatio} illustrates the power of the $\sigma^{pd}/2\sigma^{pp}$ 
 ratio to reveal the flavor asymmetry between $\bar{d}$ and $\bar{u}$,
 the actual extraction of the $\bar{d}\left(x\right) / \bar{u}\left(x\right)$
 ratios from the measured $\sigma^{pd}/ 2 \sigma^{pp}$ Drell-Yan cross
-section ratios is made without these simplifying approximations.
-%and is carried out in Next-to-Leading Order (NLO)
-%in the strong coupling constant, $\alpha_s$.
+section ratios is performed using Next-to-Leading Order (NLO)
+calculation.
 
 The SeaQuest spectrometer is  described in detail in Ref.~\cite{aidala2019}.
 The experiment receives the  proton beam from the Fermilab Main
@@ -240,13 +239,13 @@ Carlo simulation has been developed to compare data with expectations.
 %a GEANT4~\cite{agostinelli2003,allison2006,allison2016} based Monte Carlo simulations has been developed.
 The Drell-Yan events are generated with the dimuon mass and $x_F$
 distributions obtained with the CT14 nucleon PDFs~\cite{hou2018}.
-The dimuon transverse momentum distribution is adjusted to match the measured distribution.
+The dimuon transverse momentum distribution is adjusted to match the measured distribution~\cite{prasad2020,leung2024}.
 %Other PDFs, such as the statistical model~\cite{soffer2019}, were used to measure the systematic effects due to input PDFs.
 The efficiency and the resolution of the chambers are taken into account in the simulation.
 %by dropping a small number of hits, and applying Gaussian smearing to the drift distance of the remaining hits.
 %Both the efficiency and the width of the smearing are taken from the data.
 An embedding procedure has also been developed to simulate the background hits by embedding each Monte Carlo event
-with hits recorded by the random trigger.
+with hits recorded by the random trigger~\cite{dove2020}.
 
 The dimuon mass spectrum, as shown in \cref{fig:massfit} for data collected
 on the liquid hydrogen target for the second part of the experiment, consists
@@ -274,29 +273,29 @@ The accidental background and empty-flask contributions are then subtracted from
 Several corrections are applied to extract the final Drell-Yan yields.
 These include the deadtime correction for the effective luminosity,
 a target contamination correction is also applied for the \ce{D_2} data due to \ce{H} contamination in the target cell.
-For this analysis,
-a revised target contamination correction is used as compared with the earlier work~\cite{dove2021,dove2023},
-resulting in a roughly \SI{2}{\percent} shift in the measured measured cross section ratios.
 The reconstruction inefficiency and data acquisition system deadtime, which have a small but non-negligible target dependence,
 are also taken into account.
+For this analysis,
+a revised target contamination correction is used as compared with the earlier work~\cite{dove2021,dove2023},
+resulting in a roughly \SI{2}{\percent} shift in the measured cross section ratios.
 
 \begin{table*}[htbp!]
 	\centering
 	\caption{The measured $\sigma_{pd}/2\sigma_{pp}$ cross section ratio as well
 		as the extracted $\bar{d}/\bar{u}$ and $\bar{d}-\bar{u}$ for each $x_{2}$ bin.
-		The first uncertainty is statistical and the second systematic.}
+		The first uncertainty is statistical and the second systematic.
+		The average values of kinematic variables in each $x_2$ bin are also shown.}
 	\label{tab:dbarubar}
 	\begin{adjustbox}{max width=\textwidth}
 		\input{table/dbarubar.tex}
 	\end{adjustbox}
-	\todo{add mean $M$, $x_1$, etc}
 \end{table*}
 
 %\section{Measurement of The \texorpdfstring{$\sigma_{pd}/2\sigma_{pp}$}{pd/2pp} Drell-Yan Cross Section Ratio}
 %\label{sec:csr}
-The $\sigma_{pd}/2\sigma_{pp}$ cross 
+The $\sigma_{pd}/2\sigma_{pp}$ cross
 section ratios obtained from the analysis of the full SeaQuest
-data set are shown in \Cref{fig:xT_csr}. 
+data set are shown in \Cref{fig:xT_csr}.
 The main systematic uncertainties originate from the modeling of the
 accidental background (\qtyrange{0.41}{3.82}{\percent}).
 Different methods for generating the accidental background distributions
@@ -317,7 +316,7 @@ relative beam luminosity (\SI{2}{\percent}).
 	%\todo{which PDFs to use?}
 	%\todo[author=JCPeng,color=red]{use blue and red color for the part A and part B results.
 	%Also, change Run 2-3 to Part A and Run 5-6 to Part B}
-	\todo{break this into mutliple figures. Some curves can be moved to the appendix.}
+	%\todo{break this into mutliple figures. Some curves can be moved to the appendix.}
 \end{figure}
 
 %\todo{Update discussion here. Only the combined results are shown}
@@ -328,18 +327,18 @@ The results are shown in \Cref{fig:xT_csr} and tabulated in \cref{tab:dbarubar}.
 \Cref{fig:xT_csr} compares the SeaQuest results with
 NLO calculations using DYTurbo~\cite{camarda2020},
 with nucleon PDFs CJ15~\cite{accardi2016a}, CJ22~\cite{accardi2023}, and NNPDF4.0~\cite{ball2022a}.
-Note that CJ15 was obtained without input from the first 
-SeaQuest result~\cite{dove2021}, while the first SeaQuest result was included 
+Note that CJ15 was obtained without input from the first
+SeaQuest result~\cite{dove2021}, while the first SeaQuest result was included
 in the global fit for CJ22 and NNPDF4.0. This accounts for the better agreement between
 the data and the NNPDF4.0 calculation, although the data tend to be higher than
 the calculation for the large $x$ region. Nevertheless, \Cref{fig:xT_csr}
-shows that both the data and the NNPDF4.0 calculation for the  
+shows that both the data and the NNPDF4.0 calculation for the
 $\sigma_{pd}/2\sigma_{pp}$ cross section ratio are larger than unity for the
-entire measured $x$ region. 
+entire measured $x$ region.
 It is also worth noting that despite both including our earlier results,
 CJ22 and NNPDF4.0 predicted different behavior for the $\sigma_{pd}/2\sigma_{pp}$ ratio.
 In particular, CJ22 suggests the ratio would decrease to unity at $x_2\approx0.4$,
-which is not observed in our updated analysis. 
+which is not observed in our updated analysis.
 This difference further illustrates the importance of this measurement from SeaQuest.
 
 
@@ -354,63 +353,58 @@ This difference further illustrates the importance of this measurement from SeaQ
 \end{table}
 \end{comment}
 
-%\section{Extraction of \texorpdfstring{$\bar{d}\left(x\right)/\bar{u}\left(x\right)$}{dbar(x)/ubar(x)}
-%  and \texorpdfstring{$\bar{d}\left(x\right)-\bar{u}\left(x\right)$}{dbar(x)-ubar(x)}}
-%\label{sec:extraction}
-To facilitate the comparison between SeaQuest result with predictions 
-from various models, the $\bar{d}(x)/\bar{u}(x)$ ratio is extracted from the 
-cross section ratio by an iterative method, as described in 
+To facilitate the comparison between SeaQuest result with predictions
+from various models, the $\bar{d}(x)/\bar{u}(x)$ ratio is extracted from the
+cross section ratio by an iterative method, as described in
 Ref.~\cite{dove2021}.
-We first estimate the $\bar{d}/\bar{u}$ ratio over the measured $x_2$
+We first estimate the $\bar{d}(x)/\bar{u}(x)$ ratio over the measured $x_2$
 and calculate the cross section ratio $R$ using a chosen PDF set.
 This PDF set provides all parton distributions including the
-$\bar{d}(x)+\bar{u}(x)$, except that the $\bar{d}(x)/\bar{u}(x)$ 
+$\bar{d}(x)+\bar{u}(x)$, except that the $\bar{d}(x)/\bar{u}(x)$
 ratios are allowed to vary.
+The calculated cross section is weighted by the spectrometer acceptance calculated using Monte Carlo simulations.
+The acceptance is tabulated in \cref{tab:acceptance}.
 The cross section ratios $R$ are then calculated up to next-to-leading order
-as a function of $x_2$ and compared with the data. The $\bar{d}(x)/\bar{u}(x)$ 
+as a function of $x_2$ and compared with the data. The $\bar{d}(x)/\bar{u}(x)$
 ratios are then adjusted until the difference between data and
 calculation is less than $10^{-3}$.
 
 \begin{figure*}[htpb!]
 	\centering
 	\begin{subfigure}{0.45\linewidth}
-		\includegraphics[width=\linewidth]{E906_E866_dbarubar_PDF_model.pdf}
+		\includegraphics[width=\linewidth]{E906_E866_dbarubar_PDF.pdf}
 	\end{subfigure}
 	\begin{subfigure}{0.45\linewidth}
-		\includegraphics[width=\linewidth]{dbub_diff.pdf}
+		\includegraphics[width=\linewidth]{dbub_diff_with_PDF.pdf}
 	\end{subfigure}
-	\caption{The extracted $\bar{d}/\bar{u}$ (left) and $\bar{d}-\bar{u}$ (right)
+	\caption{The extracted $\bar{d}(x)/\bar{u}(x)$ (left) and $\bar{d}(x)-\bar{u}(x)$ (right)
 		from the measured $\sigma_{pd}/2\sigma_{pp}$ Drell-Yan cross section ratio
 		from SeaQuest (black square), E866~\cite{towell2001} (red circles), and HERMES~\cite{ackerstaff1998} (blue triangles).
-		The extracted ratios are compared with CJ15~\cite{accardi2016a}, CJ22~\cite{accardi2023}, and NNPDF4.0~\cite{ball2022a} global PDF analyses
-		and with predictions from meson cloud model~\cite{alberg2022} and statistical model~\cite{soffer2019}.
+		The extracted ratios are compared with CJ22~\cite{accardi2023}, and NNPDF4.0~\cite{ball2022a} global PDF analyses.
+		%and with predictions from meson cloud model~\cite{alberg2022} and statistical model~\cite{soffer2019}.
 		The error bands on the PDFs correspond to their \SI{68}{\percent} confidence level.
 	}
 	\label{fig:e906_e866_dbarubar}
-	%\todo{need better color scheme!}
-	%\todo[author=JCPeng,color=red]{use black for 
-	%SeaQuest data and red for E866}
 \end{figure*}
 
-The extracted $\bar{d}/\bar{u}$ from the measured SeaQuest cross section ratio,
+The extracted $\bar{d}(x)/\bar{u}(x)$ from the measured SeaQuest cross section ratio,
 using the CT18 PDFs as the basis, are shown in \cref{fig:e906_e866_dbarubar}
 and tabulated in \cref{tab:dbarubar}.
-While the SeaQuest results are consistent with previous E866 
+While the SeaQuest results are consistent with previous E866
 results~\cite{towell2001} at low $x$,
-the extracted $\bar{d}/\bar{u}$ ratios from the SeaQuest measurement 
+the extracted $\bar{d}(x)/\bar{u}(x)$ ratios from the SeaQuest measurement
 continue to rise as $x$ increases,
 and is in tension with the E866 result.
-The SeaQuest results are also in much better agreement with 
-predictions from meson cloud model~\cite{alberg2022}
-and statistical model~\cite{soffer2019}.
-The extracted $\bar{d}/\bar{u}$ ratios are also compared with results 
+The SeaQuest results are also in much better agreement with
+predictions from the meson cloud model~\cite{alberg2022}
+and the statistical model~\cite{soffer2019}.
+The extracted $\bar{d}(x)/\bar{u}(x)$ ratios are also compared with results
 from CJ22~\cite{accardi2023} and NNPDF4.0~\cite{ball2022a}
 global analyses in \cref{fig:e906_e866_dbarubar}.
-The inclusion of the SeaQuest earlier result~\cite{dove2021} in the 
-NNPDF4.0 analysis strongly constrains the $\bar{d}/\bar{u}$ ratios
-to remain above unity at large $x$.
-With the improved statistical accuracy from the combined analysis 
-presented in this paper, the uncertainty on the $\bar{d}/\bar{u}$ in 
+NNPDF4.0 and the CJ22 global analyses, which both include the earlier SeaQuest results~\cite{dove2021},
+both prefer the $\bar{d}(x)/\bar{u}(x)>1$ in the large $x$ region covered by the SeaQuest measurement.
+With the improved statistical accuracy from the combined analysis
+presented in this paper, the uncertainty on the $\bar{d}(x)/\bar{u}(x)$ in
 these global analyses can be further reduced.
 
 
@@ -419,9 +413,9 @@ these global analyses can be further reduced.
 	\caption{Values of $\int_{0.45}^{0.13} \left[\bar{d}\left(x\right) - \bar{u}\left(x\right)\right] \dd{x}$
 		and $\int_{0.45}^{0.13} x\left[\bar{d}\left(x\right) - \bar{u}\left(x\right)\right] \dd{x}$ at $Q^2=\SI{25.5}{\GeV\squared}$ extracted from
 		SeaQuest compared with CJ15~\cite{accardi2016a}, CJ22~\cite{accardi2023}, NNPDF4.0~\cite{ball2022a}
-		PDFs as well as meson cloud~\cite{alberg2022} and statistical models~\cite{soffer2019}.}
+		PDFs as well as the meson cloud~\cite{alberg2022} and the statistical models~\cite{soffer2019}.}
 	\label{tab:dbarMubar}
-	\begin{adjustbox}{max width=\textwidth}
+	\begin{adjustbox}{max width=\linewidth}
 		\input{table/dbarubar_int.tex}
 	\end{adjustbox}
 \end{table*}
@@ -429,39 +423,38 @@ these global analyses can be further reduced.
 The isovector quantity, $\bar{d}(x) - \bar{u}(x)$,
 is of interest since the perturbative processes should not produce any significant difference between $\bar{d}(x)$ and $\bar{u}(x)$.
 Hence, $\bar{d}(x) - \bar{u}(x)$ can provide a direct measure of the non-perturbative contribution to the proton sea.
-Moreover, recent advances in lattice QCD advances have enabled the calculation of $\bar{d}(x) - \bar{u}(x)$, to be compared with the data.
+%Moreover, recent advances in lattice QCD advances have enabled the calculation of $\bar{d}(x) - \bar{u}(x)$, to be compared with the data.
 From the $\bar{d}(x) / \bar{u}(x)$ ratios extracted from SeaQuest,
-we have calculated $\bar{d}(x) - \bar u(x)$ by taking the $\bar{d}(x) + \bar{u}(x)$ values from the CT18 proton PDFs. 
-The values of $\bar{d}(x)-\bar{u}(x)$ derived from the SeaQuest data are 
+we have calculated $\bar{d}(x) - \bar u(x)$ by taking the $\bar{d}(x) + \bar{u}(x)$ values from the CT18 proton PDFs.
+The values of $\bar{d}(x)-\bar{u}(x)$ derived from the SeaQuest data are
 shown in \cref{fig:e906_e866_dbarubar} and tabulated in \cref{tab:dbarubar},
-and are compared with results from E866~\cite{towell2001} and 
-HERMES~\cite{ackerstaff1998}, and with predictions from meson cloud and statistical models.
+and are compared with results from E866~\cite{towell2001} and
+HERMES~\cite{ackerstaff1998}.
+The derived $\bar{d}(x)-\bar{u}(x)$ are also compared with predictions from the meson cloud and the statistical models in \cref{fig:e906_e866_dbarubar_model}.
 Like the $\bar{d}(x) / \bar{u}(x)$ ratio, the deduced $\bar{d}-\bar{u}$ is also in good agreement with both models.
 
-The SeaQuest data can also be used to calculate two integrals: 
+The SeaQuest data can also be used to calculate two integrals:
 $\int^{0.45}_{0.13} \left[\bar{d}\left(x\right) - \bar{u}\left(x\right) \right]\dd{x}$,
-which describes the integrated sea-quark flavor asymmetry, and 
+which describes the integrated sea-quark flavor asymmetry, and
 $\int^{0.45}_{0.13} x\left[\bar{d}\left(x\right) - \bar{u}\left(x\right) \right]\dd{x}$,
-which represents the difference in the momentum fractions carried 
+which represents the difference in the momentum fractions carried
 by $\bar{u}$ and $\bar{d}$ quarks.
 These values are listed in \cref{tab:dbarMubar}, and compared with different PDFs and models.
 The SeaQuest results are in good agreement with NNPDF4.0 and with the model predictions.
 
-In summary, we have reported the improved results on the 
+In summary, we have reported the improved results on the
 $\sigma_{pd}/2\sigma_{pp}$ Drell-Yen cross section ratio up to $x_2=0.45$,
 based on the analysis of the entire SeaQuest dataset,
 which supersedes the earlier results in Ref.~\cite{dove2021,dove2023}.
-The measured ratio remains above unity, 
-which suggests the $\bar{d}/\bar{u}$ ratio continues to increase at large $x$.
-The improved statistical precision presented in this paper will help to 
+The measured ratio remains above unity,
+which suggests the $\bar{d}(x)/\bar{u}(x)$ ratio continues to increase at large $x$.
+The improved statistical precision presented in this paper will help to
 further constrain the light sea-quark asymmetry in future global analysis.
 These results support the excess of $\bar{d}$ compared to $\bar{u}$ that is obtained in various model predictions,
 including the meson cloud model and the statistical model.
-%These results are also in better agreement with various model predictions, 
-%including the meson cloud model and the statistical model.
-With recent developments in lattice calculations within the framework 
+With recent developments in lattice calculations within the framework
 of large momentum effective theory~\cite{constantinou2021},
-these results can provide an important benchmark for the lattice 
+these results can provide an important benchmark for the lattice
 calculations in the future.
 With the advent of the Electron Ion Collider, the flavor asymmetry in the small $x$ region,
 where abundant sea-quarks reside, can be further measured via the semi-inclusive DIS reaction~\cite{ackerstaff1998}.
@@ -473,6 +466,24 @@ where abundant sea-quarks reside, can be further measured via the semi-inclusive
 \bibliography{reference}
 
 \appendix
+\section{End Matter}
 \input{table/acceptance_table.tex}
+
+\begin{figure*}[htpb!]
+\centering
+	\begin{subfigure}{0.45\linewidth}
+		\includegraphics[width=\linewidth]{E906_E866_dbarubar_model.pdf}
+	\end{subfigure}
+	\begin{subfigure}{0.45\linewidth}
+		\includegraphics[width=\linewidth]{dbub_diff_with_model.pdf}
+	\end{subfigure}
+	\caption{The extracted $\bar{d}(x)/\bar{u}(x)$ (left) and $\bar{d}(x)-\bar{u}(x)$ (right)
+		from the measured $\sigma_{pd}/2\sigma_{pp}$ Drell-Yan cross section ratio
+		from SeaQuest (black square), E866~\cite{towell2001} (red circles), and HERMES~\cite{ackerstaff1998} (blue triangles).
+		The extracted ratios are compared with predictions from the meson cloud model~\cite{alberg2022} and the statistical model~\cite{soffer2019}.
+		%The error bands on the PDFs correspond to their \SI{68}{\percent} confidence level.
+	}
+	\label{fig:e906_e866_dbarubar_model}
+\end{figure*}
 \end{document}
 
