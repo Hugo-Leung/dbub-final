@@ -143,6 +143,11 @@ identical, the analysis was performed separately for each part of the
 data sets.
 Results obtained from the two data sets are first compared to check their
 consistency, and then combined for the final results.
+The results from the two data sets, except for the smallest $x_2$ point, are found to in good agreement,
+with differences less than $1\sigma$.
+The flavor asymmetry is very well constrained for the smallest $x_2$ bin by previous experiments,
+and the final result on the measured cross section at the smallest $x_2$ bin is in better agreement
+with theory expectation than the individual data set.
 
 The SeaQuest experiment detects $\mu^+\mu^-$ pairs (dimuons) produced in
 the interaction of a proton beam with various targets nuclei. The production
@@ -331,15 +336,15 @@ Note that CJ15 was obtained without input from the first
 SeaQuest result~\cite{dove2021}, while the first SeaQuest result was included
 in the global fit for CJ22 and NNPDF4.0. This accounts for the better agreement between
 the data and the NNPDF4.0 calculation, although the data tend to be higher than
-the calculation for the large $x$ region. Nevertheless, \Cref{fig:xT_csr}
+the calculation for the large $x$ region. 
+Nevertheless, \Cref{fig:xT_csr}
 shows that both the data and the NNPDF4.0 calculation for the
 $\sigma_{pd}/2\sigma_{pp}$ cross section ratio are larger than unity for the
 entire measured $x$ region.
-It is also worth noting that despite both including our earlier results,
+Despite both including both including our earlier results,
 CJ22 and NNPDF4.0 predicted different behavior for the $\sigma_{pd}/2\sigma_{pp}$ ratio.
-In particular, CJ22 suggests the ratio would decrease to unity at $x_2\approx0.4$,
-which is not observed in our updated analysis.
-This difference further illustrates the importance of this measurement from SeaQuest.
+With the improved statistics in the updated analysis, and improved statistical accuracy,
+the constrain on the light sea-quark asymmetry in future global analysis can be further improved. 
 
 
 \begin{comment}
@@ -377,11 +382,17 @@ calculation is less than $10^{-3}$.
 	\begin{subfigure}{0.45\linewidth}
 		\includegraphics[width=\linewidth]{dbub_diff_with_PDF.pdf}
 	\end{subfigure}
+	\begin{subfigure}{0.45\linewidth}
+		\includegraphics[width=\linewidth]{E906_E866_dbarubar_model.pdf}
+	\end{subfigure}
+	\begin{subfigure}{0.45\linewidth}
+		\includegraphics[width=\linewidth]{dbub_diff_with_model.pdf}
+	\end{subfigure}
 	\caption{The extracted $\bar{d}(x)/\bar{u}(x)$ (left) and $\bar{d}(x)-\bar{u}(x)$ (right)
 		from the measured $\sigma_{pd}/2\sigma_{pp}$ Drell-Yan cross section ratio
 		from SeaQuest (black square), E866~\cite{towell2001} (red circles), and HERMES~\cite{ackerstaff1998} (blue triangles).
-		The extracted ratios are compared with CJ22~\cite{accardi2023}, and NNPDF4.0~\cite{ball2022a} global PDF analyses.
-		%and with predictions from meson cloud model~\cite{alberg2022} and statistical model~\cite{soffer2019}.
+		The extracted ratios are compared with CJ22~\cite{accardi2023}, and NNPDF4.0~\cite{ball2022a} global PDF analyses (top),
+		and with predictions from meson cloud model~\cite{alberg2022} and statistical model~\cite{soffer2019} (bottom).
 		The error bands on the PDFs correspond to their \SI{68}{\percent} confidence level.
 	}
 	\label{fig:e906_e866_dbarubar}
@@ -430,7 +441,7 @@ The values of $\bar{d}(x)-\bar{u}(x)$ derived from the SeaQuest data are
 shown in \cref{fig:e906_e866_dbarubar} and tabulated in \cref{tab:dbarubar},
 and are compared with results from E866~\cite{towell2001} and
 HERMES~\cite{ackerstaff1998}.
-The derived $\bar{d}(x)-\bar{u}(x)$ are also compared with predictions from the meson cloud and the statistical models in \cref{fig:e906_e866_dbarubar_model}.
+The derived $\bar{d}(x)-\bar{u}(x)$ are also compared with predictions from the meson cloud and the statistical models in \cref{fig:e906_e866_dbarubar}.
 Like the $\bar{d}(x) / \bar{u}(x)$ ratio, the deduced $\bar{d}-\bar{u}$ is also in good agreement with both models.
 
 The SeaQuest data can also be used to calculate two integrals:
@@ -469,6 +480,7 @@ where abundant sea-quarks reside, can be further measured via the semi-inclusive
 \section{End Matter}
 \input{table/acceptance_table.tex}
 
+\begin{comment}
 \begin{figure*}[htpb!]
 \centering
 	\begin{subfigure}{0.45\linewidth}
@@ -485,5 +497,6 @@ where abundant sea-quarks reside, can be further measured via the semi-inclusive
 	}
 	\label{fig:e906_e866_dbarubar_model}
 \end{figure*}
+\end{comment}
 \end{document}
 
