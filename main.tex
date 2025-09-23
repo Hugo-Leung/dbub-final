@@ -1,7 +1,7 @@
 % !TeX root = main.tex
 \documentclass[reprint,aps,unsortedaddress,superscriptaddress,prl,floatfix,showpacs,linenumbers]{revtex4-2}
 \usepackage[utf8]{inputenc}
-\usepackage{float}
+%\usepackage{float}
 \usepackage{graphicx}
 \usepackage{amsmath,amsthm,amssymb}
 \usepackage{verbatim}
@@ -83,9 +83,9 @@ due to the comparable masses for the up and down quarks.
 
 Evidence for the asymmetry of the $\bar{u}$ and $\bar{d}$ sea-quark
 distributions in the proton was first found in
-deep-inelastic scattering experiments~\cite{stein1975,amaudruz1991} via
+deep-inelastic scattering experiments~\cite{stein1975,amaudruz1991,arneodo1994} via
 the observation of the violation
-of the Gottfried Sum Rule~\cite{gottfried1967}. Feynman and Field
+of the Gottfried Sum Rule~\cite{gottfried1967}. Field and Feynman
 attributed the asymmetry observed in the early SLAC DIS data to the Pauli
 Exclusion Principle~\cite{field1977}. It was pointed out~\cite{ellis1991}
 that an independent experimental technique to probe this flavor asymmetry is
@@ -96,7 +96,7 @@ of this flavor asymmetry.
 The Drell-Yan cross section ratios,
 $\sigma_{pd}/2\sigma_{pp}$, have been measured by the CERN NA51 experiment at
 \SI{400}{\GeV} for a single value of $x$~\cite{NA51:1994xrz}, and by the FNAL
-E866/NuSea experiment for the $0.015 < x < 0.35$ region with a \SI{800}{\GeV}
+E866/NuSea experiment for the $0.015 < x < 0.35$ region with an \SI{800}{\GeV}
 proton beam~\cite{hawker1998,peng1998,towell2001}. Subsequent measurements by the
 HERMES collaboration, using the semi-inclusive DIS reaction~\cite{ackerstaff1998},
 and by the STAR collaboration, using $W$-boson production in $p+p$ collisions,
@@ -130,7 +130,7 @@ analyses~\cite{cocuzza2021,ball2022a,accardi2023,alekhin2023}
 have included these results, in addition to the $W$ boson production data
 from the STAR collaboration~\cite{adam2021}, to better constrain the
 flavor asymmetry of $\bar u$ and $\bar d$ in the proton. The SeaQuest
-flavor asymmetry data have also been compared to predictions from the
+flavor asymmetry data have also been compared with the predictions from the
 statistical model~\cite{soffer2019} and pion-cloud model~\cite{alberg2022}.
 
 In this paper, we report the final results on the Drell-Yan measurements,
@@ -143,11 +143,6 @@ identical, the analysis was performed separately for each part of the
 data sets.
 Results obtained from the two data sets are first compared to check their
 consistency, and then combined for the final results.
-The results from the two data sets, except for the smallest $x_2$ point, are found to be in good agreement,
-with differences less than $1\sigma$.
-The flavor asymmetry is very well constrained for the smallest $x_2$ bin by previous experiments,
-and the final result on the measured cross section at the smallest $x_2$ bin is in better agreement
-with theoretical expectations than the individual data sets.
 
 The SeaQuest experiment detects $\mu^+\mu^-$ pairs (dimuons) produced in
 the interaction of a proton beam with various target nuclei. The production
@@ -298,7 +293,7 @@ resulting in a roughly \SI{2}{\percent} shift in the measured cross section rati
 %\section{Measurement of The \texorpdfstring{$\sigma_{pd}/2\sigma_{pp}$}{pd/2pp} Drell-Yan Cross Section Ratio}
 %\label{sec:csr}
 The $\sigma_{pd}/2\sigma_{pp}$ cross
-section ratios obtained from the analysis of the full SeaQuest
+section ratios versus $x_2$ obtained from the analysis of the full SeaQuest
 data set are shown in \Cref{fig:xT_csr}.
 The main systematic uncertainties originate from modeling the
 accidental background (\qtyrange{0.41}{3.82}{\percent}).
@@ -314,7 +309,7 @@ relative beam luminosity (\SI{2}{\percent}).
 	\centering
 	\includegraphics[width=\linewidth]{data_full_xT_syst.pdf}
 	\caption{Measured $\sigma_{pd}/2\sigma_{pp}$ Drell-Yan cross section ratio from SeaQuest compared calculations using
-		CJ15~\cite{accardi2016a}, CJ22~\cite{accardi2023}, and NNPDF4.0~\cite{ball2022a}.
+		 CJ22~\cite{accardi2023}, and NNPDF4.0~\cite{ball2022a}.
 		The error bands on the theoretical calculations correspond to the \SI{68}{\percent} confidence level from the PDFs.}
 	\label{fig:xT_csr}
 	%\todo{which PDFs to use?}
@@ -327,13 +322,18 @@ relative beam luminosity (\SI{2}{\percent}).
 The two data sets are analyzed separately, and compared for consistency.
 The final results are obtained by taking an average,
 weighted by the inverse of the total uncertainty squared.
+Except for the smallest $x_2$ point, the results from the teo data sets are found to be in good agreement,
+with differences less than $1\sigma$.
+The flavor asymmetry is very well constrained for the smallest $x_2$ bin by previous experiments,
+and the final result on the measured cross section at the smallest $x_2$ bin is in better agreement
+with theoretical expectations than the individual data sets.
 The results are shown in \Cref{fig:xT_csr} and tabulated in \cref{tab:dbarubar}.
 \Cref{fig:xT_csr} compares the SeaQuest results with
 NLO calculations using DYTurbo~\cite{camarda2020},
-with nucleon PDFs CJ15~\cite{accardi2016a}, CJ22~\cite{accardi2023}, and NNPDF4.0~\cite{ball2022a}.
-Note that CJ15 was obtained without input from the first
-SeaQuest result~\cite{dove2021}, while the first SeaQuest result was included
-in the global fit for CJ22 and NNPDF4.0. This accounts for the better agreement between
+with nucleon PDFs  CJ22~\cite{accardi2023}, and NNPDF4.0~\cite{ball2022a}.
+Both PDFs are obtained from global analyses including
+the earlier SeaQuest results~\cite{dove2021}.
+This accounts for the better agreement between
 the data and the NNPDF4.0 calculation, although the data tend to be higher than
 the calculation for the large $x$ region. 
 Nevertheless, \Cref{fig:xT_csr}
@@ -375,16 +375,10 @@ calculation is less than $10^{-3}$.
 \begin{figure*}[htpb!]
 	\centering
 	\begin{subfigure}{0.45\linewidth}
-		\includegraphics[width=\linewidth]{E906_E866_dbarubar_PDF.pdf}
+		\includegraphics[width=\linewidth]{E906_E866_dbarubar.pdf}
 	\end{subfigure}
 	\begin{subfigure}{0.45\linewidth}
-		\includegraphics[width=\linewidth]{dbub_diff_with_PDF.pdf}
-	\end{subfigure}
-	\begin{subfigure}{0.45\linewidth}
-		\includegraphics[width=\linewidth]{E906_E866_dbarubar_model.pdf}
-	\end{subfigure}
-	\begin{subfigure}{0.45\linewidth}
-		\includegraphics[width=\linewidth]{dbub_diff_with_model.pdf}
+		\includegraphics[width=\linewidth]{dbub_diff_with_pdf_model_2pane.pdf}
 	\end{subfigure}
 	\caption{The extracted $\bar{d}(x)/\bar{u}(x)$ (left) and $\bar{d}(x)-\bar{u}(x)$ (right)
 		from the measured $\sigma_{pd}/2\sigma_{pp}$ Drell-Yan cross section ratio
@@ -404,10 +398,7 @@ results~\cite{towell2001} at low $x$,
 the extracted $\bar{d}(x)/\bar{u}(x)$ ratios from the SeaQuest measurement
 continue to rise as $x$ increases,
 and are in tension with the E866 result.
-The SeaQuest results are also in much better agreement with
-predictions from the meson cloud model~\cite{alberg2022}
-and the statistical model~\cite{soffer2019}.
-The extracted $\bar{d}(x)/\bar{u}(x)$ ratios are also compared with results
+The extracted $\bar{d}(x)/\bar{u}(x)$ ratios are compared with results
 from CJ22~\cite{accardi2023} and NNPDF4.0~\cite{ball2022a}
 global analyses in \cref{fig:e906_e866_dbarubar}.
 NNPDF4.0 and the CJ22 global analyses, which both include the earlier SeaQuest results~\cite{dove2021},
@@ -415,13 +406,16 @@ both prefer $\bar{d}(x)/\bar{u}(x)>1$ in the large $x$ region covered by the Sea
 With the improved statistical accuracy from the combined analysis
 presented in this paper, the uncertainty on $\bar{d}(x)/\bar{u}(x)$ in
 these global analyses can be further reduced.
+The SeaQuest results are also in much better agreement with
+predictions from the meson cloud model~\cite{alberg2022}
+and the statistical model~\cite{soffer2019}.
 
 \begin{table*}[htbp!]
 	\centering
-	\caption{Values of $\int_{0.45}^{0.13} \left[\bar{d}\left(x\right) - \bar{u}\left(x\right)\right] \dd{x}$
+	\caption{Values of $\int^{0.45}_{0.13} \left[\bar{d}\left(x\right) - \bar{u}\left(x\right)\right] \dd{x}$
 		and $\int_{0.45}^{0.13} x\left[\bar{d}\left(x\right) - \bar{u}\left(x\right)\right] \dd{x}$ at $Q^2=\SI{25.5}{\GeV\squared}$ extracted from
-		SeaQuest compared with CJ15~\cite{accardi2016a}, CJ22~\cite{accardi2023}, NNPDF4.0~\cite{ball2022a}
-		PDFs as well as the meson cloud~\cite{alberg2022} and the statistical models~\cite{soffer2019}.}
+		SeaQuest compared with  CJ22~\cite{accardi2023}, NNPDF4.0~\cite{ball2022a}
+		PDFs as well as the statistical models~\cite{soffer2019} and the meson cloud~\cite{alberg2022}.}
 	\label{tab:dbarMubar}
 	\begin{adjustbox}{max width=\linewidth}
 		\input{table/dbarubar_int.tex}
