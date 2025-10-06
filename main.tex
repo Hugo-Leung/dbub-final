@@ -267,7 +267,7 @@ and the mass distribution is well described by this fitting procedure.
 
 After the mass fit is performed,
 a mass cut ($M>\SI{4.5}{\GeV}$) is applied to remove the $J/\psi$ and $\psi\left(2S\right)$ events.
-The remaining events are projected into various kinematic variables, such as $x_1$, $x_2$, $x_F$, and $P_T$.
+The remaining events are projected into various kinematic variables, such as $x_1$, $x_2$ and $x_F$. % and $P_T$. % comment out PT until I have the results
 The accidental background and empty-flask contributions are then subtracted from the data.
 Several corrections are applied to extract the final Drell-Yan yields.
 These include the deadtime correction for the effective luminosity,
@@ -294,7 +294,8 @@ resulting in a roughly \SI{2}{\percent} shift in the measured cross section rati
 %\label{sec:csr}
 The $\sigma_{pd}/2\sigma_{pp}$ cross
 section ratios versus $x_2$ obtained from the analysis of the full SeaQuest
-data set are shown in \Cref{fig:xT_csr}.
+data set are shown in \cref{fig:xT_csr}. 
+The ratios as functions of other variables are shown in \cref{fig:csr_x1_xF} in the End Matter.
 The main systematic uncertainties originate from modeling the
 accidental background (\qtyrange{0.41}{3.82}{\percent}).
 Different methods for generating the accidental background distributions
@@ -322,23 +323,21 @@ relative beam luminosity (\SI{2}{\percent}).
 The two data sets are analyzed separately, and compared for consistency.
 The final results are obtained by taking an average,
 weighted by the inverse of the total uncertainty squared.
-Except for the smallest $x_2$ point, the results from the teo data sets are found to be in good agreement,
+Except for the smallest $x_2$ point, the results from the two data sets are in good agreement,
 with differences less than $1\sigma$.
 The flavor asymmetry is very well constrained for the smallest $x_2$ bin by previous experiments,
 and the final result on the measured cross section at the smallest $x_2$ bin is in better agreement
 with theoretical expectations than the individual data sets.
-The results are shown in \Cref{fig:xT_csr} and tabulated in \cref{tab:dbarubar}.
+The results are shown in \cref{fig:xT_csr} and tabulated in \cref{tab:dbarubar}.
 \Cref{fig:xT_csr} compares the SeaQuest results with
 NLO calculations using DYTurbo~\cite{camarda2020},
 with nucleon PDFs  CJ22~\cite{accardi2023}, and NNPDF4.0~\cite{ball2022a}.
 Both PDFs are obtained from global analyses including
 the earlier SeaQuest results~\cite{dove2021}.
-This accounts for the better agreement between
-the data and the NNPDF4.0 calculation, although the data tend to be higher than
-the calculation for the large $x$ region. 
-Nevertheless, \Cref{fig:xT_csr}
+This partly explains the better agreement between the data and the NNPDF4.0 calculation. Nevertheless, the data tend to lie above the calculation at large $x$.
+Nevertheless, \cref{fig:xT_csr}
 shows that both the data and the NNPDF4.0 calculation for the
-$\sigma_{pd}/2\sigma_{pp}$ cross section ratio are larger than unity for the
+$\sigma_{pd}/2\sigma_{pp}$ cross section ratio exceed unity over the
 entire measured $x$ region.
 Despite both including our earlier results,
 CJ22 and NNPDF4.0 predicted different behavior for the $\sigma_{pd}/2\sigma_{pp}$ ratio.
@@ -358,7 +357,7 @@ the constraint on the light sea-quark asymmetry in future global analyses can be
 
 To facilitate comparison between the SeaQuest result and predictions
 from various models, the $\bar{d}(x)/\bar{u}(x)$ ratio is extracted from the
-cross section ratio by an iterative method, as described in
+cross section ratio using an iterative method described in
 Ref.~\cite{dove2021}.
 We first estimate the $\bar{d}(x)/\bar{u}(x)$ ratio over the measured $x_2$
 and calculate the cross section ratio $R$ using a chosen PDF set.
@@ -367,9 +366,9 @@ $\bar{d}(x)+\bar{u}(x)$, except that the $\bar{d}(x)/\bar{u}(x)$
 ratio is allowed to vary.
 The calculated cross section is weighted by the spectrometer acceptance, determined using Monte Carlo simulations.
 The acceptance is tabulated in \cref{tab:acceptance}.
-The cross section ratios $R$ are then calculated up to next-to-leading order
-as a function of $x_2$ and compared with the data. The $\bar{d}(x)/\bar{u}(x)$
-ratios are then adjusted until the difference between data and
+The cross section ratios $R$ are then computed at next-to-leading order
+as functions of $x_2$ and compared with the data. The $\bar{d}(x)/\bar{u}(x)$
+ratios are adjusted until the difference between data and
 calculation is less than $10^{-3}$.
 
 \begin{figure*}[htpb!]
@@ -412,8 +411,8 @@ and the statistical model~\cite{soffer2019}.
 
 \begin{table*}[htbp!]
 	\centering
-	\caption{Values of $\int^{0.45}_{0.13} \left[\bar{d}\left(x\right) - \bar{u}\left(x\right)\right] \dd{x}$
-		and $\int_{0.45}^{0.13} x\left[\bar{d}\left(x\right) - \bar{u}\left(x\right)\right] \dd{x}$ at $Q^2=\SI{25.5}{\GeV\squared}$ extracted from
+	\caption{Values of $\int_{0.13}^{0.45} \left[\bar{d}\left(x\right) - \bar{u}\left(x\right)\right] \dd{x}$
+		and $\int_{0.13}^{0.45} x\left[\bar{d}\left(x\right) - \bar{u}\left(x\right)\right] \dd{x}$ at $Q^2=\SI{25.5}{\GeV\squared}$ extracted from
 		SeaQuest compared with  CJ22~\cite{accardi2023}, NNPDF4.0~\cite{ball2022a}
 		PDFs as well as the statistical models~\cite{soffer2019} and the meson cloud~\cite{alberg2022}.}
 	\label{tab:dbarMubar}
@@ -470,6 +469,31 @@ where abundant sea quarks reside, can be further measured via the semi-inclusive
 \appendix
 \section{End Matter}
 \input{table/acceptance_table.tex}
+\begin{figure*}[htbp!]
+	\begin{subfigure}{0.45\linewidth}
+		\includegraphics[width=\linewidth]{data_full_xB_syst.pdf}
+	\end{subfigure}
+	\begin{subfigure}{0.45\linewidth}
+		\includegraphics[width=\linewidth]{data_full_xF_syst.pdf}
+	\end{subfigure}
+	\caption{Measured $\sigma_{pd}/2\sigma_{pp}$ Drell-Yan cross section ratio as functions of $x_1$ (left), and $x_F$ (right) 
+		from SeaQuest compared calculations using
+		CJ22~\cite{accardi2023}, and NNPDF4.0~\cite{ball2022a}.
+		The error bands on the theoretical calculations correspond to the \SI{68}{\percent} confidence level from the PDFs.}
+	\label{fig:csr_x1_xF}
+\end{figure*}
+
+%\todo{Need to add tables for csr vs $x_1$ and $x_F$}
+\begin{table*}
+	\begin{center}
+		\caption{The measured $\sigma_{pd}/2\sigma_{pp}$ cross section ratio as functions of $x_1$ and $x_F$.
+			The first uncertainty is statistical and the second systematic.}
+		\label{tab:csr_x1_xF}
+		\begin{adjustbox}{max width=\linewidth}
+			\input{table/xB_csr.tex}
+		\end{adjustbox}
+	\end{center}
+\end{table*}
 
 \begin{comment}
 \begin{figure*}[htpb!]
