@@ -10,6 +10,8 @@
 \usepackage[separate-uncertainty=true,range-units=single,range-phrase=\textendash]{siunitx}
 \usepackage{physics}
 \usepackage[pdfusetitle]{hyperref}
+% Explicit PDF metadata: set a concise author string (overrides any placeholder \author entries)
+\hypersetup{pdfauthor={C. H. Leung et al. (FNAL E906/SeaQuest Collaboration)}}
 \usepackage[capitalize]{cleveref}
 \usepackage[obeyFinal]{todonotes}
 \setuptodonotes{inline}
@@ -28,12 +30,11 @@
 
 \pdfstringdefDisableCommands{%
   \def\,{}%
-  \def\fnref#1{}%
 }
 
 \captionsetup{justification=raggedright,singlelinecheck=false}
 
-\usepackage[most]{tcolorbox}
+%\usepackage[most]{tcolorbox}
 
 %\let\includegraphicsold\includegraphics
 %\renewcommand{\includegraphics}[2][]{\tcbox{\includegraphicsold[#1]{#2}}}
@@ -466,6 +467,8 @@ where abundant sea quarks reside, can be further measured via the semi-inclusive
 \end{acknowledgments}
 \bibliography{reference}
 
+\clearpage
+\onecolumngrid
 \appendix
 \section{End Matter}
 \input{table/acceptance_table.tex}
@@ -484,7 +487,7 @@ where abundant sea quarks reside, can be further measured via the semi-inclusive
 \end{figure*}
 
 %\todo{Need to add tables for csr vs $x_1$ and $x_F$}
-\begin{table*}
+\begin{table*}[htbp!]
 	\begin{center}
 		\caption{The measured $\sigma_{pd}/2\sigma_{pp}$ cross section ratio as functions of $x_1$ and $x_F$.
 			The first uncertainty is statistical and the second systematic.}
