@@ -1,7 +1,6 @@
 % !TeX root = main.tex
 \documentclass[reprint,aps,unsortedaddress,superscriptaddress,prl,floatfix,showpacs,linenumbers]{revtex4-2}
 \usepackage[utf8]{inputenc}
-%\usepackage{float}
 \usepackage{graphicx}
 \usepackage{amsmath,amsthm,amssymb}
 \usepackage{verbatim}
@@ -33,11 +32,6 @@
 }
 
 \captionsetup{justification=raggedright,singlelinecheck=false}
-
-%\usepackage[most]{tcolorbox}
-
-%\let\includegraphicsold\includegraphics
-%\renewcommand{\includegraphics}[2][]{\tcbox{\includegraphicsold[#1]{#2}}}
 
 \begin{document}
 
@@ -164,7 +158,7 @@ for quarks carrying a momentum fraction $x_1$ and $x_2$, respectively.
 An analogous notation is used for antiquark distribution functions
 $\bar q_i^{A,B}\left(x_{1,2}\right)$.
 For fixed-target experiments like SeaQuest, the spectrometers have
-large acceptance only for the positive $x_F$ ($x_F = x_1 - x_2$) region. %Can we really say this?
+large acceptance only for the positive $x_F$ ($x_F = 2P_z/\sqrt(s)\left(1-M^2/s\right)$) region. %Can we really say this?
 Thus, the Drell-Yan cross section is dominated by
 the first term, corresponding to the annihilation of a beam quark with
 a target antiquark. Assuming
@@ -217,10 +211,8 @@ for studying the accidental background.
 The muon tracks are reconstructed using the hits in the drift chambers and proportional tubes in each station.
 After identifying hits potentially originating from interactions within the target region,
 the Kalman filter algorithm~\cite{kalman1960} is used to reconstruct the muon tracks.
-%and determine the best estimate of the muon momentum.
-%The magnetic field of the two magnets and the energy loss in the solid iron FMag are also taken into account during this stage.
-Pairs of oppositely charged muon tracks from the top and bottom sections of the spectrometer are
-matched to determine the interaction vertex using the Kalman filter.
+A Kalman filter algorithm~\cite{kalman1960} is used to reconstruct muon trajectories and momenta from hits in the drift chambers and proportional tubes.
+Hits originating in the target region are first selected; the Kalman filter is then applied to determine the best-fit tracks and the interaction vertex.
 A detailed description of the analysis procedure can be found in earlier publications~\cite{dove2021,dove2023}.
 
 \begin{figure}[htbp!]
@@ -268,7 +260,7 @@ and the mass distribution is well described by this fitting procedure.
 
 After the mass fit is performed,
 a mass cut ($M>\SI{4.5}{\GeV}$) is applied to remove the $J/\psi$ and $\psi\left(2S\right)$ events.
-The remaining events are projected into various kinematic variables, such as $x_1$, $x_2$ and $x_F$. % and $P_T$. % comment out PT until I have the results
+The remaining events are projected into various kinematic variables, such as $x_1$, $x_2$, and $x_F$. % and $P_T$. % comment out PT until I have the results
 The accidental background and empty-flask contributions are then subtracted from the data.
 Several corrections are applied to extract the final Drell-Yan yields.
 These include the deadtime correction for the effective luminosity,
@@ -345,17 +337,6 @@ CJ22 and NNPDF4.0 predicted different behavior for the $\sigma_{pd}/2\sigma_{pp}
 With the increased statistics in the updated analysis,
 the constraint on the light sea-quark asymmetry in future global analyses can be further improved.
 
-\begin{comment}
-\begin{table}
-	\centering
-	\caption{Breakdown of systematic uncertainty for $\sigma_{pd}/2\sigma_{pp}$ ratio in each $x_2$ bins.}
-	\label{tab:sys_csr}
-	\begin{adjustbox}{max width=\linewidth}
-		\input{table/DY-csr/MF-xT-new.tex}
-	\end{adjustbox}
-\end{table}
-\end{comment}
-
 To facilitate comparison between the SeaQuest result and predictions
 from various models, the $\bar{d}(x)/\bar{u}(x)$ ratio is extracted from the
 cross section ratio using an iterative method described in
@@ -425,7 +406,6 @@ and the statistical model~\cite{soffer2019}.
 The isovector quantity $\bar{d}(x) - \bar{u}(x)$,
 is of interest since perturbative processes should not produce any significant difference between $\bar{d}(x)$ and $\bar{u}(x)$.
 Hence, $\bar{d}(x) - \bar{u}(x)$ can provide a direct measure of the non-perturbative contribution to the proton sea.
-%Moreover, recent advances in lattice QCD advances have enabled the calculation of $\bar{d}(x) - \bar{u}(x)$, to be compared with the data.
 From the $\bar{d}(x) / \bar{u}(x)$ ratios extracted from SeaQuest,
 we have calculated $\bar{d}(x) - \bar u(x)$ by taking the $\bar{d}(x) + \bar{u}(x)$ values from the CT18 proton PDFs.
 The values of $\bar{d}(x)-\bar{u}(x)$ derived from the SeaQuest data are
@@ -486,7 +466,6 @@ where abundant sea quarks reside, can be further measured via the semi-inclusive
 	\label{fig:csr_x1_xF}
 \end{figure*}
 
-%\todo{Need to add tables for csr vs $x_1$ and $x_F$}
 \begin{table*}[htbp!]
 	\begin{center}
 		\caption{The measured $\sigma_{pd}/2\sigma_{pp}$ cross section ratio as functions of $x_1$ and $x_F$.
@@ -498,23 +477,5 @@ where abundant sea quarks reside, can be further measured via the semi-inclusive
 	\end{center}
 \end{table*}
 
-\begin{comment}
-\begin{figure*}[htpb!]
-\centering
-	\begin{subfigure}{0.45\linewidth}
-		\includegraphics[width=\linewidth]{E906_E866_dbarubar_model.pdf}
-	\end{subfigure}
-	\begin{subfigure}{0.45\linewidth}
-		\includegraphics[width=\linewidth]{dbub_diff_with_model.pdf}
-	\end{subfigure}
-	\caption{The extracted $\bar{d}(x)/\bar{u}(x)$ (left) and $\bar{d}(x)-\bar{u}(x)$ (right)
-		from the measured $\sigma_{pd}/2\sigma_{pp}$ Drell-Yan cross section ratio
-		from SeaQuest (black square), E866~\cite{towell2001} (red circles), and HERMES~\cite{ackerstaff1998} (blue triangles).
-		The extracted ratios are compared with predictions from the meson cloud model~\cite{alberg2022} and the statistical model~\cite{soffer2019}.
-		%The error bands on the PDFs correspond to their \SI{68}{\percent} confidence level.
-	}
-	\label{fig:e906_e866_dbarubar_model}
-\end{figure*}
-\end{comment}
 \end{document}
 
