@@ -8,10 +8,11 @@
 \usepackage{subcaption}
 \usepackage[separate-uncertainty=true,range-units=single,range-phrase=\textendash]{siunitx}
 \usepackage{physics}
+\usepackage{zref-clever}
+\zcsetup{cap,abbrev,nameinlink=false}
 \usepackage[pdfusetitle]{hyperref}
 % Explicit PDF metadata: set a concise author string (overrides any placeholder \author entries)
 \hypersetup{pdfauthor={C. H. Leung et al. (FNAL E906/SeaQuest Collaboration)}}
-\usepackage[capitalize]{cleveref}
 \usepackage[obeyFinal]{todonotes}
 \setuptodonotes{inline}
 \usepackage{adjustbox}
@@ -162,7 +163,7 @@ $\sigma^{pd} \approx \sigma^{pp} + \sigma^{pn}$,
 which neglects small nuclear effects of the
 deuteron~\cite{kumano1998,ehlers2014},
 and charge symmetry for the parton distributions~\cite{londergan2010},
-\cref{eq:DYCross} yields the following approximation for the target ratio:
+\zcref{eq:DYCross} yields the following approximation for the target ratio:
 \begin{equation}
 	\begin{split}
 		\frac{\sigma^{pd}}{2\sigma^{pp}} & \approx
@@ -176,7 +177,7 @@ and charge symmetry for the parton distributions~\cite{londergan2010},
 	\label{eq:crRatio}
 \end{equation}
 
-While \cref{eq:crRatio} illustrates the power of the $\sigma^{pd}/2\sigma^{pp}$ Drell-Yan cross section
+While \zcref{eq:crRatio} illustrates the power of the $\sigma^{pd}/2\sigma^{pp}$ Drell-Yan cross section
 ratio to reveal the flavor asymmetry between $\bar{d}$ and $\bar{u}$,
 the actual extraction of the $\bar{d}\left(x\right) / \bar{u}\left(x\right)$
 ratios from the measured $\sigma^{pd}/ 2 \sigma^{pp}$ Drell-Yan cross
@@ -230,7 +231,7 @@ The efficiency and the resolution of the chambers are taken into account in the 
 An embedding procedure has also been developed to simulate the background hits by embedding each Monte Carlo event
 with hits recorded by the random trigger~\cite{dove2020}.
 
-The dimuon mass spectrum, as shown in \cref{fig:massfit} for data collected
+The dimuon mass spectrum, as shown in \zcref{fig:massfit} for data collected
 on the liquid hydrogen target for the second part of the experiment, consists
 of various components including the Drell-Yan process, the charmonium
 production, accidental background, and other background sources.
@@ -239,14 +240,14 @@ and $\psi\left(2S\right)$ decays would have sharp distributions centered around 
 Therefore, the data can be fitted to various templates to obtain
 the relative contribution from each source.
 As input parameters to the fit, the mass distributions for $J/\psi$, $\psi\left(2S\right)$
-and the Drell-Yan are obtained from studying the Monte Carlo simulation. %, as discussed in \cref{subsec:MC}.
+and the Drell-Yan are obtained from studying the Monte Carlo simulation. %, as discussed in \zcref{subsec:MC}.
 The mass distribution of accidental coincidence events was made by pairing at random $\mu^+$ and $\mu^-$ collected with the ``single-muon'' trigger
 under the condition that the beam intensities of $\mu^+$ and $\mu^-$ events were comparable.
 The magnitudes of these components,
 with the exception of the empty-flask data for which the normalization is known,
 were varied in the fit to the mass spectrum.
 The statistical uncertainties of the Monte Carlo and empty-flask data are taken into account using the algorithm described in Ref.~\cite{barlow1993}.
-\Cref{fig:massfit} shows the fit to the $p+p$ dimuon spectrum,
+\zcref[S]{fig:massfit} shows the fit to the $p+p$ dimuon spectrum,
 and the mass distribution is well described by this fitting procedure.
 
 After the mass fit is performed,
@@ -278,8 +279,8 @@ resulting in a roughly \SI{2}{\percent} shift in the measured cross section rati
 %\label{sec:csr}
 The $\sigma_{pd}/2\sigma_{pp}$ cross
 section ratios versus $x_2$ obtained from the analysis of the full SeaQuest
-data set are shown in \cref{fig:xT_csr}. 
-The ratios as functions of other variables are shown in \cref{fig:csr_x1_xF} in the End Matter.
+data set are shown in \zcref{fig:xT_csr}. 
+The ratios as functions of other variables are shown in \zcref{fig:csr_x1_xF} in the End Matter.
 The main systematic uncertainties originate from modeling the
 accidental background (\qtyrange{0.41}{3.82}{\percent}).
 Different methods for generating the accidental background distributions
@@ -307,14 +308,14 @@ with differences less than $1\sigma$.
 The flavor asymmetry is very well constrained for the smallest $x_2$ bin by previous experiments,
 and the final result on the measured cross section at the smallest $x_2$ bin is in better agreement
 with theoretical expectations than the individual data sets.
-The results are shown in \cref{fig:xT_csr} and tabulated in \cref{tab:dbarubar}.
-\Cref{fig:xT_csr} compares the SeaQuest results with
+The results are shown in \zcref{fig:xT_csr} and tabulated in \zcref{tab:dbarubar}.
+\zcref[S]{fig:xT_csr} compares the SeaQuest results with
 NLO calculations using DYTurbo~\cite{camarda2020},
 with nucleon PDFs  CJ22~\cite{accardi2023}, and NNPDF4.0~\cite{ball2022a}.
 Both PDFs are obtained from global analyses including
 the earlier SeaQuest results~\cite{dove2021}.
 This partly explains the better agreement between the data and the NNPDF4.0 calculation. Nevertheless, the data tend to lie above the calculation at large $x$.
-Nevertheless, \cref{fig:xT_csr}
+Nevertheless, \zcref{fig:xT_csr}
 shows that both the data and the NNPDF4.0 calculation for the
 $\sigma_{pd}/2\sigma_{pp}$ cross section ratio exceed unity over the
 entire measured $x$ region.
@@ -333,7 +334,7 @@ This PDF set provides all parton distributions including the
 $\bar{d}(x)+\bar{u}(x)$, except that the $\bar{d}(x)/\bar{u}(x)$
 ratio is allowed to vary.
 The calculated cross section is weighted by the spectrometer acceptance, determined using Monte Carlo simulations.
-The acceptance is tabulated in \cref{tab:acceptance}.
+The acceptance is tabulated in \zcref{tab:acceptance}.
 The cross section ratios $R$ are then computed at next-to-leading order
 as functions of $x_2$ and compared with the data. The $\bar{d}(x)/\bar{u}(x)$
 ratios are adjusted until the difference between data and
@@ -358,8 +359,8 @@ calculation is less than $10^{-3}$.
 \end{figure*}
 
 The extracted $\bar{d}(x)/\bar{u}(x)$ from the measured SeaQuest cross section ratio,
-using the CT18 PDFs as the basis, is shown in \cref{fig:e906_e866_dbarubar}
-and tabulated in \cref{tab:dbarubar}.
+using the CT18 PDFs as the basis, is shown in \zcref{fig:e906_e866_dbarubar}
+and tabulated in \zcref{tab:dbarubar}.
 While the SeaQuest results are consistent with previous E866
 results~\cite{towell2001} at low $x$,
 the extracted $\bar{d}(x)/\bar{u}(x)$ ratios from the SeaQuest measurement
@@ -367,7 +368,7 @@ continue to rise as $x$ increases,
 and are in tension with the E866 result.
 The extracted $\bar{d}(x)/\bar{u}(x)$ ratios are compared with results
 from CJ22~\cite{accardi2023} and NNPDF4.0~\cite{ball2022a}
-global analyses in \cref{fig:e906_e866_dbarubar}.
+global analyses in \zcref{fig:e906_e866_dbarubar}.
 NNPDF4.0 and the CJ22 global analyses, which both include the earlier SeaQuest results~\cite{dove2021},
 both prefer $\bar{d}(x)/\bar{u}(x)>1$ in the large $x$ region covered by the SeaQuest measurement.
 With the improved statistical accuracy from the combined analysis
@@ -395,10 +396,10 @@ Hence, $\bar{d}(x) - \bar{u}(x)$ can provide a direct measure of the non-perturb
 From the $\bar{d}(x) / \bar{u}(x)$ ratios extracted from SeaQuest,
 we have calculated $\bar{d}(x) - \bar u(x)$ by taking the $\bar{d}(x) + \bar{u}(x)$ values from the CT18 proton PDFs.
 The values of $\bar{d}(x)-\bar{u}(x)$ derived from the SeaQuest data are
-shown in \cref{fig:e906_e866_dbarubar} and tabulated in \cref{tab:dbarubar},
+shown in \zcref{fig:e906_e866_dbarubar} and tabulated in \zcref{tab:dbarubar},
 and are compared with results from E866~\cite{towell2001} and
 HERMES~\cite{ackerstaff1998}.
-The derived $\bar{d}(x)-\bar{u}(x)$ are also compared with predictions from the meson cloud and the statistical models in \cref{fig:e906_e866_dbarubar}.
+The derived $\bar{d}(x)-\bar{u}(x)$ are also compared with predictions from the meson cloud and the statistical models in \zcref{fig:e906_e866_dbarubar}.
 Like the $\bar{d}(x) / \bar{u}(x)$ ratio, the deduced $\bar{d}-\bar{u}$ is also in good agreement with both models.
 
 The SeaQuest data can also be used to calculate two integrals:
@@ -407,7 +408,7 @@ which describe the integrated sea-quark flavor asymmetry, and
 $\int^{0.45}_{0.13} x\left[\bar{d}\left(x\right) - \bar{u}\left(x\right) \right]\dd{x}$,
 which represents the difference in the momentum fractions carried
 by $\bar{u}$ and $\bar{d}$ quarks.
-These values are listed in \cref{tab:dbarMubar}, and compared with different PDFs and models.
+These values are listed in \zcref{tab:dbarMubar}, and compared with different PDFs and models.
 The SeaQuest results are in good agreement with NNPDF4.0 and with the model predictions.
 
 In summary, we have reported the improved results on the
