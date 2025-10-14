@@ -1,0 +1,172 @@
+import sys, os, tempfile, shutil
+import argparse
+from pylatexenc import latexwalker
+import subprocess
+from pathlib import Path
+
+def main():
+    args = argparse.ArgumentParser(prog="make_tarball.py", 
+                                   description="try to make a tarball for journal submission")
+    args.add_argument("filename", help="Name of the main tex file")
+    args.add_argument("-b", "--buildDir", help="/path/to/build/dir")
+    args.add_argument("--bbl", action='store_true', default=False, help="To include the bbl file")
+    args.add_argument("-o", help="output name")
+    parse_args= args.parse_args()
+    #print(parse_args)
+    # open file in readOnly and test for errors
+    if (not os.path.isfile(parse_args.filename)):
+        print(parse_args.filename," not found")
+        sys.exit(1)
+    if (not os.access(parse_args.filename, os.R_OK)):
+        print(parse_args.filename," not readable")
+        sys.exit(1)
+    if (not parse_args.filename.endswith(".tex")):
+        print(parse_args.filename," is not a tex file")
+        sys.exit(1)
+    try:
+        file = open(parse_args.filename, "r")
+    except:
+        print("unable to open ",parse_args.filename)
+        sys.exit(1)
+    # parse the tex file
+    tex = latexwalker.LatexWalker(file.read())
+    if tex is None:
+        print("Could not open the main tex file")
+        sys.exit(1)
+    graphics = []
+    graphics_path = []
+    nodelist = tex.get_latex_nodes()[0]
+    for n in nodelist:
+        if n.isNodeType(latexwalker.LatexEnvironmentNode):
+            if n.envname=="document":
+                print ("Found document environment")
+                for nn in n.nodelist:
+                    if nn.isNodeType(latexwalker.LatexEnvironmentNode):
+                        if nn.envname=="figure" or nn.envname=="figure*":
+                            print("Found figure environment")
+                            graphics.extend(getGraphicsNodes(nn.nodelist))
+        elif n.isNodeType(latexwalker.LatexMacroNode):
+            if n.macroname=="graphicspath":
+                print("Found graphicspath")
+                n_next = nodelist[nodelist.index(n)+1]
+                graphics_path.extend(getGraphicsPath(n_next.nodelist))
+    
+    
+
+    #print(graphics_path)
+    #print(graphics)
+    tempPath = tempfile.mkdtemp()
+    if tempPath is None:
+        print("Cannot make tempdir")
+        sys.exit(1)
+    # use latexpand to combine all latex files
+    path_obj = Path(parse_args.filename)
+    pathToFile = str(path_obj.parent)
+    baseName=path_obj.stem
+    outName = baseName
+    if parse_args.o != None:
+        outName = parse_args.o
+    graphics_path=checkPathList(graphics_path,pathToFile)
+    print(graphics_path)
+    full_list = getFullPath(graphics_path,graphics)
+    print(full_list)
+    for f in full_list:
+        full_tmpPath=os.path.join(tempPath,os.path.basename(f))
+        if (os.path.isfile(full_tmpPath)):
+            print("Duplicate files named ",os.path.basename(f))
+            print("This behavior has not been implemented")
+            sys.exit(1)
+        shutil.copy(f,tempPath)
+
+    cmd =["latexpand"]
+    if parse_args.bbl:
+        search_path = [pathToFile]
+        if parse_args.buildDir != None:
+            search_path.append (parse_args.buildDir)
+        for s in search_path:
+            tmpPath=os.path.join(s,(baseName+".bbl"))
+            if os.path.isfile(tmpPath):
+                cmd.extend(["--expand-bbl",tmpPath])
+                break
+    cmd.extend(["--output",os.path.join(tempPath,(outName+".tex"))])
+    cmd.append(parse_args.filename)
+    print(" ".join(cmd))
+    try:
+        subprocess.run(cmd, check=True)
+    except subprocess.CalledProcessError as e:
+        print("Error running latexpand")
+        shutil.rmtree(tempPath)
+        sys.exit(1)
+    # make tarball
+    curDir = os.getcwd()
+    os.chdir(tempPath)
+    cmd = ["tar","-czf",os.path.join(curDir,(outName+".tar.gz")),"."]
+    print(" ".join(cmd))
+    try:
+        subprocess.run(cmd, check=True)
+    except subprocess.CalledProcessError as e:
+        print("Error making tarball")
+        os.chdir(curDir)
+        shutil.rmtree(tempPath)
+        sys.exit(1)
+    os.chdir(curDir)
+    shutil.rmtree(tempPath)
+    
+    pass
+
+def getGraphicsNodes(nodelist):
+    graphics=[]
+    for node in nodelist:
+        if node.isNodeType(latexwalker.LatexMacroNode) and (node.macroname=="includegraphics" or node.macroname=="includegraphics*"):
+            groupNodes=node.nodeargs
+            for gn in groupNodes:
+                for n in gn.nodelist:
+                    print("Found ",n.chars)
+                    if(os.path.dirname(n.chars)):
+                        print("The latex source code contain figures: ",n.chars)
+                        print("I haven't implement updating source code")
+                        sys.exit(1)
+                    graphics.append(n.chars)
+        if node.isNodeType(latexwalker.LatexEnvironmentNode) and node.envname=="subfigure":
+            graphics.extend(getGraphicsNodes(node.nodelist))
+    return graphics
+
+def getGraphicsPath(nodelist):
+    paths=[]
+    for node in nodelist:
+        if node.isNodeType(latexwalker.LatexGroupNode):
+            paths.extend(getGraphicsPath(node.nodelist))
+        elif node.isNodeType(latexwalker.LatexCharsNode):
+            paths.append(node.chars)
+            print("Append path: ",node.chars)
+    return paths
+
+def getFullPath(path_list, graphics_list):
+    full_list=[]
+    subfix_list=["",".pdf", ".png", ".jpeg", ".jpg", ".eps"]
+    for p in path_list:
+        for g in graphics_list:
+            for s in subfix_list:
+                tmpPath = os.path.join(p,(g+s))
+                if os.path.isfile(tmpPath):
+                    full_list.append(tmpPath)
+    return full_list
+
+def checkPathList(path_list, pathToTex):
+    checked_list=[]
+    #check if every element in path_list is unique, and make sure pathToTex is in path_list
+    cwd_obj=Path(pathToTex)
+    found_cwd=False
+    for p in path_list:
+        p_obj=Path(os.path.join(pathToTex,p))
+        if(p_obj==cwd_obj):
+            found_cwd=True
+        if (p_obj.is_dir() and not str(p_obj) in checked_list):
+            checked_list.append(str(p_obj))
+    if not found_cwd and cwd_obj.is_dir():
+        checked_list.append(str(cwd_obj))
+    return checked_list
+
+
+if __name__ == "__main__":
+    main()
