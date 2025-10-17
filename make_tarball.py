@@ -9,9 +9,9 @@ def main():
     args = argparse.ArgumentParser(prog="make_tarball.py", 
                                    description="try to make a tarball for journal submission")
     args.add_argument("filename", help="Name of the main tex file")
-    args.add_argument("-b", "--buildDir", help="/path/to/build/dir")
+    args.add_argument("-B", "--buildDir", help="/path/to/build/dir")
     args.add_argument("--bbl", action='store_true', default=False, help="To include the bbl file")
-    args.add_argument("-o", help="output name")
+    args.add_argument("-O", "--outName", help="output name")
     parse_args= args.parse_args()
     #print(parse_args)
     # open file in readOnly and test for errors
@@ -59,8 +59,8 @@ def main():
                 graphics_path.extend(getGraphicsPath(n_next.nodelist))
                 
     
-    tempPath = tempfile.TemporaryDirectory()
-    if tempPath is None:
+    tmpDir_obj = tempfile.TemporaryDirectory()
+    if tmpDir_obj is None:
         print("Cannot make tempdir")
         sys.exit(1)
     # use latexpand to combine all latex files
@@ -68,14 +68,14 @@ def main():
     pathToFile = str(path_obj.parent)
     baseName=path_obj.stem
     outName = baseName
-    if parse_args.o != None:
-        outName = parse_args.o
+    if parse_args.outName != None:
+        outName = parse_args.outName
     graphics_path=checkPathList(graphics_path,pathToFile)
     #print(graphics_path)
     full_list = getFullPath(graphics_path,graphics)
     #print(full_list)
     for f in full_list:
-        full_tmpPath=os.path.join(tempPath.name,os.path.basename(f))
+        full_tmpPath=os.path.join(tmpDir_obj.name,os.path.basename(f))
         if (os.path.isfile(full_tmpPath)):
             print("Duplicate files named ",os.path.basename(f))
             print("This behavior has not been implemented")
@@ -95,7 +95,7 @@ def main():
     else:
         bib_list=getBibFile(bib_list,pathToFile)
         for b in bib_list:
-            full_tmpPath=os.path.join(tempPath.name, os.path.basename(b))
+            full_tmpPath=os.path.join(tmpDir_obj.name, os.path.basename(b))
             if (os.path.isfile(full_tmpPath)):
                 print("Duplicate files named ",os.path.basename(b))
                 print("This behavior has not been implemented" )
@@ -103,18 +103,18 @@ def main():
             shutil.copy(b,full_tmpPath)
 
 
-    cmd.extend(["--output",os.path.join(tempPath.name,(outName+".tex"))])
+    cmd.extend(["--output",os.path.join(tmpDir_obj.name,(outName+".tex"))])
     cmd.append(parse_args.filename)
     print(" ".join(cmd))
     try:
         subprocess.run(cmd, check=True)
     except subprocess.CalledProcessError as e:
         print("Error running latexpand")
-        tempPath.cleanup()
+        tmpDir_obj.cleanup()
         sys.exit(1)
     # make tarball
     curDir = os.getcwd()
-    os.chdir(tempPath.name)
+    os.chdir(tmpDir_obj.name)
     cmd = ["tar","-czf",os.path.join(curDir,(outName+".tar.gz")),"."]
     print(" ".join(cmd))
     try:
@@ -122,10 +122,10 @@ def main():
     except subprocess.CalledProcessError as e:
         print("Error making tarball")
         os.chdir(curDir)
-        tempPath.cleanup
+        tmpDir_obj.cleanup
         sys.exit(1)
     os.chdir(curDir)
-    tempPath.cleanup()
+    tmpDir_obj.cleanup()
     
     pass
 
