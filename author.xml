@@ -1,0 +1,734 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE collaborationauthorlist SYSTEM "author.dtd">
+<collaborationauthorlist xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:cal="http://inspirehep.net/info/HepNames/tools/authors_xml/">
+  <cal:creationDate>2025-11-18 17:15:44.194817</cal:creationDate>
+  <cal:publicationReference>Final SeaQuest results on the flavor asymmetry of the proton light-quark sea with proton-induced Drell-Yan process</cal:publicationReference>
+  <cal:collaborations>
+    <cal:collaboration id="E906">
+      <foaf:name>FNAL E906/SeaQuest Collaboration</foaf:name>
+      <cal:experimentNumber>FNAL-E-906</cal:experimentNumber>
+    </cal:collaboration>
+  </cal:collaborations>
+  <cal:organizations>
+    <foaf:Organization id="ANL">
+      <foaf:name>Argonne National Laboratory</foaf:name>
+      <cal:orgName source="ROR">https://ror.org/05gvnxz63</cal:orgName>
+      <cal:orgAddress>Physics Division, Argonne National Laboratory, Lemont, Illinois 60439, USA</cal:orgAddress>
+    </foaf:Organization>
+    <foaf:Organization id="AS">
+      <foaf:name>Academia Sinica</foaf:name>
+      <cal:orgName source="ROR">https://ror.org/05bxb3784</cal:orgName>
+      <cal:orgAddress>Institute of Physics, Academia Sinica, Taipei,11529, Taiwan</cal:orgAddress>
+    </foaf:Organization>
+    <foaf:Organization id="RIKEN">
+      <foaf:name>RIKEN Nishina Center for Accelerator-Based Science</foaf:name>
+      <cal:orgName source="ROR">https://ror.org/05tqx4s13</cal:orgName>
+      <cal:orgAddress>RIKEN Nishina Center for Accelerator-Based Science, Wako, Saitama 351-0198, Japan</cal:orgAddress>
+    </foaf:Organization>
+    <foaf:Organization id="UIUC">
+      <foaf:name>University of Illinois Urbana-Champaign</foaf:name>
+      <cal:orgName source="ROR">https://ror.org/047426m28</cal:orgName>
+      <cal:orgAddress>Department of Physics, University of Illinois at Urbana-Champaign, Urbana, Illinois 61801, USA</cal:orgAddress>
+    </foaf:Organization>
+    <foaf:Organization id="Tokyo">
+      <foaf:name>Tokyo Institute of Technology</foaf:name>
+      <cal:orgName source="ROR">https://ror.org/0112mx960</cal:orgName>
+      <cal:orgAddress>Department of Physics, Tokyo Institute of Technology, Meguro-ku, Tokyo 152-8550, Japan</cal:orgAddress>
+    </foaf:Organization>
+    <foaf:Organization id="LANL">
+      <foaf:name>Los Alamos National Laboratory</foaf:name>
+      <cal:orgName source="ROR">https://ror.org/01e41cf67</cal:orgName>
+      <cal:orgAddress>Los Alamos National Laboratory, Los Alamos, New Mexico 87545, US</cal:orgAddress>
+    </foaf:Organization>
+    <foaf:Organization id="normal">
+      <foaf:name>National Kaohsiung Normal University</foaf:name>
+      <cal:orgName source="ROR">https://ror.org/04tsc8g87</cal:orgName>
+      <cal:orgAddress>Department of Physics, National Kaohsiung Normal University, Kaohsiung 824, Taiwan</cal:orgAddress>
+    </foaf:Organization>
+    <foaf:Organization id="Colorado">
+      <foaf:name>University of Colorado</foaf:name>
+      <cal:orgName source="ROR">https://ror.org/054spjc55</cal:orgName>
+      <cal:orgAddress>Department of Physics, University of Colorado, Boulder, Colorado 80309, USA</cal:orgAddress>
+    </foaf:Organization>
+    <foaf:Organization id="Michigan">
+      <foaf:name>University of Michigan</foaf:name>
+      <cal:orgName source="ROR">https://ror.org/00jmfr291</cal:orgName>
+      <cal:orgAddress>Randall Laboratory of Physics, University of Michigan, Ann Arbor, Michigan 48109, USA</cal:orgAddress>
+    </foaf:Organization>
+    <foaf:Organization id="FNAL">
+      <foaf:name>Fermi National Accelerator Laboratory</foaf:name>
+      <cal:orgName source="ROR">https://ror.org/020hgte69</cal:orgName>
+      <cal:orgAddress>Fermi National Accelerator Laboratory, Batavia, Illinois 60510, USA</cal:orgAddress>
+    </foaf:Organization>
+    <foaf:Organization id="ACU">
+      <foaf:name>Abilene Christian University</foaf:name>
+      <cal:orgName source="ROR">https://ror.org/004srrf86</cal:orgName>
+      <cal:orgAddress>Department of Engineering and Physics, Abilene Christian University, Abilene, Texas 79699 USA</cal:orgAddress>
+    </foaf:Organization>
+    <foaf:Organization id="Yamagata">
+      <foaf:name>Yamagata University</foaf:name>
+      <cal:orgName source="ROR">https://ror.org/00xy44n04</cal:orgName>
+      <cal:orgAddress>Department of Physics, Yamagata University, Yamagata City, Yamagata 990-8560, Japan</cal:orgAddress>
+    </foaf:Organization>
+    <foaf:Organization id="KEK">
+      <foaf:name>KEK</foaf:name>
+      <cal:orgName source="ROR">https://ror.org/01g5y5k24</cal:orgName>
+      <cal:orgAddress>Institute of Particle and Nuclear Studies, KEK, High Energy Accelerator Research Organization, Tsukuba, Ibaraki 305-0801, Japan</cal:orgAddress>
+    </foaf:Organization>
+    <foaf:Organization id="Rutgers">
+      <foaf:name>Rutgers, The State University of New Jersey</foaf:name>
+      <cal:orgName source="ROR">https://ror.org/05vt9qd57</cal:orgName>
+      <cal:orgAddress>Department of Physics and Astronomy, Rutgers, The State University of New Jersey, Piscataway, New Jersey 08854, USA</cal:orgAddress>
+    </foaf:Organization>
+    <foaf:Organization id="National">
+      <foaf:name>National Central University</foaf:name>
+      <cal:orgName source="ROR">https://ror.org/00944ve71</cal:orgName>
+      <cal:orgAddress>Department of Physics, National Central University, Jhongli District, Taoyuan City 32001,Taiwan</cal:orgAddress>
+    </foaf:Organization>
+    <foaf:Organization id="UVa">
+      <foaf:name>University of Virginia</foaf:name>
+      <cal:orgName source="ROR">https://ror.org/0153tk833</cal:orgName>
+      <cal:orgAddress>University of Virginia, Charlottesville, VA, 22904 USA</cal:orgAddress>
+    </foaf:Organization>
+    <foaf:Organization id="Maryland">
+      <foaf:name>University of Maryland</foaf:name>
+      <cal:orgName source="ROR">https://ror.org/047s2c258</cal:orgName>
+      <cal:orgAddress>Department of Physics, University of Maryland, College Park, Maryland 20742, USA</cal:orgAddress>
+    </foaf:Organization>
+    <foaf:Organization id="nmsu">
+      <foaf:name>New Mexico State University</foaf:name>
+      <cal:orgName source="ROR">https://ror.org/00hpz7z43</cal:orgName>
+      <cal:orgAddress>Department of Physics, New Mexico State University, Las Cruces, NM 88003 USA</cal:orgAddress>
+    </foaf:Organization>
+    <foaf:Organization id="jlab">
+      <foaf:name>Thomas Jefferson National Accelerator Facility</foaf:name>
+      <cal:orgName source="ROR">https://ror.org/02vwzrd76</cal:orgName>
+      <cal:orgAddress>Thomas Jefferson National Accelerator Facility, Newport News, Virginia 23606, USA</cal:orgAddress>
+    </foaf:Organization>
+    <foaf:Organization id="lbnl">
+      <foaf:name>Lawrence Berkeley National Laboratory</foaf:name>
+      <cal:orgName source="ROR">https://ror.org/02jbv0t02</cal:orgName>
+      <cal:orgAddress>Lawrence Berkeley National Laboratory, Berkeley, California, 94720 USA</cal:orgAddress>
+    </foaf:Organization>
+    <foaf:Organization id="caltech">
+      <foaf:name>California Institute of Technology</foaf:name>
+      <cal:orgName source="ROR">https://ror.org/05dxps055</cal:orgName>
+      <cal:orgAddress>Kellogg Radiation Laboratory, California Institute of Technology, Pasadena, California 91125, USA</cal:orgAddress>
+    </foaf:Organization>
+    <foaf:Organization id="pensacola">
+      <foaf:name>Pensacola State College</foaf:name>
+      <cal:orgName source="ROR">https://ror.org/051kxxw69</cal:orgName>
+      <cal:orgAddress>Pensacola State College, Pensacola, FL 32504, USA</cal:orgAddress>
+    </foaf:Organization>
+    <foaf:Organization id="uconn">
+      <foaf:name>University of Connecticut</foaf:name>
+      <cal:orgName source="ROR">https://ror.org/02der9h97</cal:orgName>
+      <cal:orgAddress>University of Connecticut, Storrs, CT 06269, USA</cal:orgAddress>
+    </foaf:Organization>
+    <foaf:Organization id="nihon">
+      <foaf:name>Nihon University</foaf:name>
+      <cal:orgName source="ROR">https://ror.org/05jk51a88</cal:orgName>
+      <cal:orgAddress>Nihon University, College of Science and Technology, Chiyoda-ku, Tokyo 101-8308, Japan</cal:orgAddress>
+    </foaf:Organization>
+    <foaf:Organization id="aps">
+      <foaf:name>APS</foaf:name>
+      <cal:orgName source="ROR">https://ror.org/04qxsr837</cal:orgName>
+      <cal:orgAddress>APS, Argonne National Laboratory, Lemont, Illinois 60439, USA</cal:orgAddress>
+    </foaf:Organization>
+    <foaf:Organization id="tsinghua">
+      <foaf:name>Tsinghua University</foaf:name>
+      <cal:orgName source="ROR">https://ror.org/03cve4549</cal:orgName>
+      <cal:orgAddress>Department of Physics, Tsinghua University, Beijing 100084, China</cal:orgAddress>
+    </foaf:Organization>
+    <foaf:Organization id="GWU">
+      <foaf:name>George Washington University</foaf:name>
+      <cal:orgName source="ROR">https://ror.org/00y4zzh67</cal:orgName>
+      <cal:orgAddress>George Washington University, Washington, DC 20052, USA</cal:orgAddress>
+    </foaf:Organization>
+    <foaf:Organization id="Memphis">
+      <foaf:name>The University of Memphis</foaf:name>
+      <cal:orgName source="ROR">https://ror.org/01cq23130</cal:orgName>
+      <cal:orgAddress>Department of Physics and Materials Science, The University of Memphis, Memphis, TN 38152</cal:orgAddress>
+    </foaf:Organization>
+  </cal:organizations>
+  <cal:authors>
+    <foaf:Person>
+      <foaf:name>Ching Him Leung</foaf:name>
+      <foaf:familyName>Leung</foaf:familyName>
+      <cal:authorNamePaper>C. H. Leung</cal:authorNamePaper>
+      <cal:authorCollaboration collaborationid="E906" position="Contact person" />
+      <cal:authorAffiliations>
+        <cal:authorAffiliation organizationid="UIUC" />
+        <cal:authorAffiliation organizationid="jlab" connection="Present Address" />
+      </cal:authorAffiliations>
+      <cal:authorids>
+        <cal:authorid source="ORCID">0000-0001-7907-3728</cal:authorid>
+      </cal:authorids>
+    </foaf:Person>
+    <foaf:Person>
+      <foaf:name>Jason Dove</foaf:name>
+      <foaf:familyName>Dove</foaf:familyName>
+      <cal:authorNamePaper>J. Dove</cal:authorNamePaper>
+      <cal:authorCollaboration collaborationid="E906" />
+      <cal:authorAffiliations>
+        <cal:authorAffiliation organizationid="UIUC" />
+      </cal:authorAffiliations>
+    </foaf:Person>
+    <foaf:Person>
+      <foaf:name>Kei Nagai</foaf:name>
+      <foaf:familyName>Nagai</foaf:familyName>
+      <cal:authorNamePaper>K. Nagai</cal:authorNamePaper>
+      <cal:authorCollaboration collaborationid="E906" />
+      <cal:authorAffiliations>
+        <cal:authorAffiliation organizationid="LANL" />
+        <cal:authorAffiliation organizationid="AS" />
+        <cal:authorAffiliation organizationid="Tokyo" />
+        <cal:authorAffiliation organizationid="Memphis" connection="Present Address" />
+      </cal:authorAffiliations>
+      <cal:authorids>
+        <cal:authorid source="ORCID">0000-0002-5336-8306</cal:authorid>
+      </cal:authorids>
+    </foaf:Person>
+    <foaf:Person>
+      <foaf:name>Kenichi Nakano</foaf:name>
+      <foaf:familyName>Nakano</foaf:familyName>
+      <cal:authorNamePaper>K. Nakano</cal:authorNamePaper>
+      <cal:authorCollaboration collaborationid="E906" />
+      <cal:authorAffiliations>
+        <cal:authorAffiliation organizationid="UVa" />
+        <cal:authorAffiliation organizationid="RIKEN" />
+      </cal:authorAffiliations>
+      <cal:authorids>
+        <cal:authorid source="ORCID">0000-0002-8925-2233</cal:authorid>
+      </cal:authorids>
+    </foaf:Person>
+    <foaf:Person>
+      <foaf:name>Shivangi Prasad</foaf:name>
+      <foaf:familyName>Prasad</foaf:familyName>
+      <cal:authorNamePaper>S. Prasad</cal:authorNamePaper>
+      <cal:authorCollaboration collaborationid="E906" />
+      <cal:authorAffiliations>
+        <cal:authorAffiliation organizationid="UIUC" />
+        <cal:authorAffiliation organizationid="ANL" />
+      </cal:authorAffiliations>
+      <cal:authorids>
+        <cal:authorid source="ORCID">0000-0003-3404-0062</cal:authorid>
+      </cal:authorids>
+    </foaf:Person>
+    <foaf:Person>
+      <foaf:name>Arun Tadepalli</foaf:name>
+      <foaf:familyName>Tadepalli</foaf:familyName>
+      <cal:authorNamePaper>A. S. Tadepalli</cal:authorNamePaper>
+      <cal:authorCollaboration collaborationid="E906" />
+      <cal:authorAffiliations>
+        <cal:authorAffiliation organizationid="Rutgers" />
+        <cal:authorAffiliation organizationid="jlab" connection="Present Address" />
+      </cal:authorAffiliations>
+    </foaf:Person>
+    <foaf:Person>
+      <foaf:name>Christine Aidala</foaf:name>
+      <foaf:familyName>Aidala</foaf:familyName>
+      <cal:authorNamePaper>C. A. Aidala</cal:authorNamePaper>
+      <cal:authorCollaboration collaborationid="E906" />
+      <cal:authorAffiliations>
+        <cal:authorAffiliation organizationid="Michigan" />
+        <cal:authorAffiliation organizationid="LANL" />
+      </cal:authorAffiliations>
+      <cal:authorids>
+        <cal:authorid source="ORCID">0000-0001-9540-4988</cal:authorid>
+      </cal:authorids>
+    </foaf:Person>
+    <foaf:Person>
+      <foaf:name>John Arrington</foaf:name>
+      <foaf:familyName>Arrington</foaf:familyName>
+      <cal:authorNamePaper>J. Arrington</cal:authorNamePaper>
+      <cal:authorCollaboration collaborationid="E906" />
+      <cal:authorAffiliations>
+        <cal:authorAffiliation organizationid="ANL" />
+        <cal:authorAffiliation organizationid="lbnl" connection="Present Address" />
+      </cal:authorAffiliations>
+      <cal:authorids>
+        <cal:authorid source="ORCID">0000-0002-0702-1328</cal:authorid>
+      </cal:authorids>
+    </foaf:Person>
+    <foaf:Person>
+      <foaf:name>Catherine Ayuso</foaf:name>
+      <foaf:familyName>Ayuso</foaf:familyName>
+      <cal:authorNamePaper>C. Ayuso</cal:authorNamePaper>
+      <cal:authorCollaboration collaborationid="E906" />
+      <cal:authorAffiliations>
+        <cal:authorAffiliation organizationid="Michigan" />
+        <cal:authorAffiliation organizationid="FNAL" />
+      </cal:authorAffiliations>
+    </foaf:Person>
+    <foaf:Person>
+      <foaf:name>Wen-Chen Chang</foaf:name>
+      <foaf:familyName>Chang</foaf:familyName>
+      <cal:authorNamePaper>W. C. Chang</cal:authorNamePaper>
+      <cal:authorCollaboration collaborationid="E906" />
+      <cal:authorAffiliations>
+        <cal:authorAffiliation organizationid="AS" />
+      </cal:authorAffiliations>
+      <cal:authorids>
+        <cal:authorid source="ORCID">0000-0002-1695-7830</cal:authorid>
+      </cal:authorids>
+    </foaf:Person>
+    <foaf:Person>
+      <foaf:name>Andrew Chen</foaf:name>
+      <foaf:familyName>Chen</foaf:familyName>
+      <cal:authorNamePaper>A. Chen</cal:authorNamePaper>
+      <cal:authorCollaboration collaborationid="E906" />
+      <cal:authorAffiliations>
+        <cal:authorAffiliation organizationid="UIUC" />
+      </cal:authorAffiliations>
+      <cal:authorids>
+        <cal:authorid source="ORCID">0000-0002-1243-7029</cal:authorid>
+      </cal:authorids>
+    </foaf:Person>
+    <foaf:Person>
+      <foaf:name>David Christian</foaf:name>
+      <foaf:familyName>Christian</foaf:familyName>
+      <cal:authorNamePaper>D. C. Christian</cal:authorNamePaper>
+      <cal:authorCollaboration collaborationid="E906" />
+      <cal:authorAffiliations>
+        <cal:authorAffiliation organizationid="FNAL" />
+      </cal:authorAffiliations>
+      <cal:authorids>
+        <cal:authorid source="ORCID">0000-0003-1275-6510</cal:authorid>
+      </cal:authorids>
+    </foaf:Person>
+    <foaf:Person>
+      <foaf:name>Donald F. Geesaman</foaf:name>
+      <foaf:familyName>Geesaman</foaf:familyName>
+      <cal:authorNamePaper>D. F. Geesaman</cal:authorNamePaper>
+      <cal:authorCollaboration collaborationid="E906" />
+      <cal:authorAffiliations>
+        <cal:authorAffiliation organizationid="ANL" />
+      </cal:authorAffiliations>
+      <cal:authorids>
+        <cal:authorid source="ORCID">0000-0003-2557-3131</cal:authorid>
+      </cal:authorids>
+    </foaf:Person>
+    <foaf:Person>
+      <foaf:name>Ronald Gilman</foaf:name>
+      <foaf:familyName>Gilman</foaf:familyName>
+      <cal:authorNamePaper>R. Gilman</cal:authorNamePaper>
+      <cal:authorCollaboration collaborationid="E906" />
+      <cal:authorAffiliations>
+        <cal:authorAffiliation organizationid="Rutgers" />
+      </cal:authorAffiliations>
+      <cal:authorids>
+        <cal:authorid source="ORCID">0000-0002-7106-2845</cal:authorid>
+      </cal:authorids>
+    </foaf:Person>
+    <foaf:Person>
+      <foaf:name>Yuji Goto</foaf:name>
+      <foaf:familyName>Goto</foaf:familyName>
+      <cal:authorNamePaper>Y. Goto</cal:authorNamePaper>
+      <cal:authorCollaboration collaborationid="E906" />
+      <cal:authorAffiliations>
+        <cal:authorAffiliation organizationid="RIKEN" />
+      </cal:authorAffiliations>
+      <cal:authorids>
+        <cal:authorid source="ORCID">0000-0002-2973-7458</cal:authorid>
+      </cal:authorids>
+    </foaf:Person>
+    <foaf:Person>
+      <foaf:name>Rurngsheng Guo</foaf:name>
+      <foaf:familyName>Guo</foaf:familyName>
+      <cal:authorNamePaper>R. S. Guo</cal:authorNamePaper>
+      <cal:authorCollaboration collaborationid="E906" />
+      <cal:authorAffiliations>
+        <cal:authorAffiliation organizationid="normal" />
+      </cal:authorAffiliations>
+    </foaf:Person>
+    <foaf:Person>
+      <foaf:name>Tyler Hague</foaf:name>
+      <foaf:familyName>Hague</foaf:familyName>
+      <cal:authorNamePaper>T. J. Hague</cal:authorNamePaper>
+      <cal:authorCollaboration collaborationid="E906" />
+      <cal:authorAffiliations>
+        <cal:authorAffiliation organizationid="ACU" />
+        <cal:authorAffiliation organizationid="jlab" connection="Present Address" />
+      </cal:authorAffiliations>
+      <cal:authorids>
+        <cal:authorid source="ORCID">0000-0003-1288-4045</cal:authorid>
+      </cal:authorids>
+    </foaf:Person>
+    <foaf:Person>
+      <foaf:name>Roy Holt</foaf:name>
+      <foaf:familyName>Holt</foaf:familyName>
+      <cal:authorNamePaper>R. J. Holt</cal:authorNamePaper>
+      <cal:authorCollaboration collaborationid="E906" />
+      <cal:authorAffiliations>
+        <cal:authorAffiliation organizationid="ANL" />
+        <cal:authorAffiliation organizationid="caltech" connection="Present Address" />
+      </cal:authorAffiliations>
+      <cal:authorids>
+        <cal:authorid source="ORCID">0000-0001-9225-9914</cal:authorid>
+      </cal:authorids>
+    </foaf:Person>
+    <foaf:Person>
+      <foaf:name>Md Forhad Hossain</foaf:name>
+      <foaf:familyName>Hossain</foaf:familyName>
+      <cal:authorNamePaper>M. F. Hossain</cal:authorNamePaper>
+      <cal:authorCollaboration collaborationid="E906" />
+      <cal:authorAffiliations>
+        <cal:authorAffiliation organizationid="nmsu" />
+        <cal:authorAffiliation organizationid="UVa" />
+      </cal:authorAffiliations>
+      <cal:authorids>
+        <cal:authorid source="ORCID">0000-0002-6467-1394</cal:authorid>
+      </cal:authorids>
+    </foaf:Person>
+    <foaf:Person>
+      <foaf:name>Edward Kinney</foaf:name>
+      <foaf:familyName>Kinney</foaf:familyName>
+      <cal:authorNamePaper>E. R. Kinney</cal:authorNamePaper>
+      <cal:authorCollaboration collaborationid="E906" />
+      <cal:authorAffiliations>
+        <cal:authorAffiliation organizationid="Colorado" />
+      </cal:authorAffiliations>
+      <cal:authorids>
+        <cal:authorid source="ORCID">0000-0002-4176-5283</cal:authorid>
+      </cal:authorids>
+    </foaf:Person>
+    <foaf:Person>
+      <foaf:name>Andi Klein</foaf:name>
+      <foaf:familyName>Klein</foaf:familyName>
+      <cal:authorNamePaper>A. Klein</cal:authorNamePaper>
+      <cal:authorCollaboration collaborationid="E906" />
+      <cal:authorAffiliations>
+        <cal:authorAffiliation organizationid="LANL" />
+      </cal:authorAffiliations>
+    </foaf:Person>
+    <foaf:Person>
+      <foaf:name>David Kleinjan</foaf:name>
+      <foaf:familyName>Kleinjan</foaf:familyName>
+      <cal:authorNamePaper>D. Kleinjan</cal:authorNamePaper>
+      <cal:authorCollaboration collaborationid="E906" />
+      <cal:authorAffiliations>
+        <cal:authorAffiliation organizationid="LANL" />
+      </cal:authorAffiliations>
+      <cal:authorids>
+        <cal:authorid source="ORCID">0000-0002-2737-0859</cal:authorid>
+      </cal:authorids>
+    </foaf:Person>
+    <foaf:Person>
+      <foaf:name>Chatura Kuruppu</foaf:name>
+      <foaf:familyName>Kuruppu</foaf:familyName>
+      <cal:authorNamePaper>C. D. Kuruppu</cal:authorNamePaper>
+      <cal:authorCollaboration collaborationid="E906" />
+      <cal:authorAffiliations>
+        <cal:authorAffiliation organizationid="nmsu" />
+      </cal:authorAffiliations>
+      <cal:authorids>
+        <cal:authorid source="ORCID">0000-0003-2772-1978</cal:authorid>
+      </cal:authorids>
+    </foaf:Person>
+    <foaf:Person>
+      <foaf:name>Po-Ju Lin</foaf:name>
+      <foaf:familyName>Lin</foaf:familyName>
+      <cal:authorNamePaper>P.-J. Lin</cal:authorNamePaper>
+      <cal:authorCollaboration collaborationid="E906" />
+      <cal:authorAffiliations>
+        <cal:authorAffiliation organizationid="Colorado" />
+        <cal:authorAffiliation organizationid="AS" />
+        <cal:authorAffiliation organizationid="National" />
+      </cal:authorAffiliations>
+      <cal:authorids>
+        <cal:authorid source="ORCID">0000-0001-7073-6839</cal:authorid>
+      </cal:authorids>
+    </foaf:Person>
+    <foaf:Person>
+      <foaf:name>Kun Liu</foaf:name>
+      <foaf:familyName>Liu</foaf:familyName>
+      <cal:authorNamePaper>K. Liu</cal:authorNamePaper>
+      <cal:authorCollaboration collaborationid="E906" />
+      <cal:authorAffiliations>
+        <cal:authorAffiliation organizationid="LANL" />
+      </cal:authorAffiliations>
+      <cal:authorids>
+        <cal:authorid source="ORCID">0000-0002-6676-8165</cal:authorid>
+      </cal:authorids>
+    </foaf:Person>
+    <foaf:Person>
+      <foaf:name>Ming Liu</foaf:name>
+      <foaf:familyName>Liu</foaf:familyName>
+      <cal:authorNamePaper>M. X. Liu</cal:authorNamePaper>
+      <cal:authorCollaboration collaborationid="E906" />
+      <cal:authorAffiliations>
+        <cal:authorAffiliation organizationid="LANL" />
+      </cal:authorAffiliations>
+    </foaf:Person>
+    <foaf:Person>
+      <foaf:name>Wolfgang Lorenzon</foaf:name>
+      <foaf:familyName>Lorenzon</foaf:familyName>
+      <cal:authorNamePaper>W. Lorenzon</cal:authorNamePaper>
+      <cal:authorCollaboration collaborationid="E906" />
+      <cal:authorAffiliations>
+        <cal:authorAffiliation organizationid="Michigan" />
+      </cal:authorAffiliations>
+      <cal:authorids>
+        <cal:authorid source="ORCID">0000-0003-0657-8463</cal:authorid>
+      </cal:authorids>
+    </foaf:Person>
+    <foaf:Person>
+      <foaf:name>Randall McClellan</foaf:name>
+      <foaf:familyName>McClellan</foaf:familyName>
+      <cal:authorNamePaper>R. E. McClellan</cal:authorNamePaper>
+      <cal:authorCollaboration collaborationid="E906" />
+      <cal:authorAffiliations>
+        <cal:authorAffiliation organizationid="UIUC" />
+        <cal:authorAffiliation organizationid="pensacola" connection="Present Address" />
+      </cal:authorAffiliations>
+      <cal:authorids>
+        <cal:authorid source="ORCID">0000-0003-0629-4065</cal:authorid>
+      </cal:authorids>
+    </foaf:Person>
+    <foaf:Person>
+      <foaf:name>Patrick McGaughey</foaf:name>
+      <foaf:familyName>McGaughey</foaf:familyName>
+      <cal:authorNamePaper>P. L. McGaughey</cal:authorNamePaper>
+      <cal:authorCollaboration collaborationid="E906" />
+      <cal:authorAffiliations>
+        <cal:authorAffiliation organizationid="LANL" />
+      </cal:authorAffiliations>
+    </foaf:Person>
+    <foaf:Person>
+      <foaf:name>Michelle Mesquita de Medeiros</foaf:name>
+      <foaf:familyName>Mesquita de Medeiros </foaf:familyName>
+      <cal:authorNamePaper>M. M. Medeiros </cal:authorNamePaper>
+      <cal:authorCollaboration collaborationid="E906" />
+      <cal:authorAffiliations>
+        <cal:authorAffiliation organizationid="ANL" />
+      </cal:authorAffiliations>
+    </foaf:Person>
+    <foaf:Person>
+      <foaf:name>Yoshiyuki Miyachi</foaf:name>
+      <foaf:familyName>Miyachi</foaf:familyName>
+      <cal:authorNamePaper>Y. Miyachi</cal:authorNamePaper>
+      <cal:authorCollaboration collaborationid="E906" />
+      <cal:authorAffiliations>
+        <cal:authorAffiliation organizationid="Yamagata" />
+      </cal:authorAffiliations>
+      <cal:authorids>
+        <cal:authorid source="ORCID">0000-0002-8502-3177</cal:authorid>
+      </cal:authorids>
+    </foaf:Person>
+    <foaf:Person>
+      <foaf:name>Shou Miyasaka</foaf:name>
+      <foaf:familyName>Miyasaka</foaf:familyName>
+      <cal:authorNamePaper>S. Miyasaka</cal:authorNamePaper>
+      <cal:authorCollaboration collaborationid="E906" />
+      <cal:authorAffiliations>
+        <cal:authorAffiliation organizationid="Tokyo" />
+      </cal:authorAffiliations>
+      <cal:authorids>
+        <cal:authorid source="ORCID">0009-0004-1293-5679</cal:authorid>
+      </cal:authorids>
+    </foaf:Person>
+    <foaf:Person>
+      <foaf:name>Kazutaka Nakahara</foaf:name>
+      <foaf:familyName>Nakahara</foaf:familyName>
+      <cal:authorNamePaper>K. Nakahara</cal:authorNamePaper>
+      <cal:authorCollaboration collaborationid="E906" />
+      <cal:authorAffiliations>
+        <cal:authorAffiliation organizationid="Maryland" />
+      </cal:authorAffiliations>
+    </foaf:Person>
+    <foaf:Person>
+      <foaf:name>Jen-Chieh Peng</foaf:name>
+      <foaf:familyName>Peng</foaf:familyName>
+      <cal:authorNamePaper>J. C. Peng</cal:authorNamePaper>
+      <cal:authorCollaboration collaborationid="E906" />
+      <cal:authorAffiliations>
+        <cal:authorAffiliation organizationid="UIUC" />
+      </cal:authorAffiliations>
+      <cal:authorids>
+        <cal:authorid source="ORCID">0000-0003-4198-9030</cal:authorid>
+      </cal:authorids>
+    </foaf:Person>
+    <foaf:Person>
+      <foaf:name>Andrew Puckett</foaf:name>
+      <foaf:familyName>Puckett</foaf:familyName>
+      <cal:authorNamePaper>A. J. R. Puckett</cal:authorNamePaper>
+      <cal:authorCollaboration collaborationid="E906" />
+      <cal:authorAffiliations>
+        <cal:authorAffiliation organizationid="LANL" />
+        <cal:authorAffiliation organizationid="uconn" connection="Present Address" />
+      </cal:authorAffiliations>
+    </foaf:Person>
+    <foaf:Person>
+      <foaf:name>Abinash Pun</foaf:name>
+      <foaf:familyName>Pun</foaf:familyName>
+      <cal:authorNamePaper>A. Pun</cal:authorNamePaper>
+      <cal:authorCollaboration collaborationid="E906" />
+      <cal:authorAffiliations>
+        <cal:authorAffiliation organizationid="nmsu" />
+      </cal:authorAffiliations>
+    </foaf:Person>
+    <foaf:Person>
+      <foaf:name>Paul Reimer</foaf:name>
+      <foaf:familyName>Reimer</foaf:familyName>
+      <cal:authorNamePaper>P. E. Reimer</cal:authorNamePaper>
+      <cal:authorCollaboration collaborationid="E906" position="Spokesperson" />
+      <cal:authorAffiliations>
+        <cal:authorAffiliation organizationid="ANL" />
+      </cal:authorAffiliations>
+      <cal:authorids>
+        <cal:authorid source="ORCID">0000-0002-0301-2176</cal:authorid>
+      </cal:authorids>
+    </foaf:Person>
+    <foaf:Person>
+      <foaf:name>Florian Sanftl</foaf:name>
+      <foaf:familyName>Sanftl</foaf:familyName>
+      <cal:authorNamePaper>F. Sanftl</cal:authorNamePaper>
+      <cal:authorCollaboration collaborationid="E906" />
+      <cal:authorAffiliations>
+        <cal:authorAffiliation organizationid="Tokyo" />
+      </cal:authorAffiliations>
+    </foaf:Person>
+    <foaf:Person>
+      <foaf:name>Shinya Sawada</foaf:name>
+      <foaf:familyName>Sawada</foaf:familyName>
+      <cal:authorNamePaper>S. Sawada</cal:authorNamePaper>
+      <cal:authorCollaboration collaborationid="E906" />
+      <cal:authorAffiliations>
+        <cal:authorAffiliation organizationid="KEK" />
+      </cal:authorAffiliations>
+      <cal:authorids>
+        <cal:authorid source="ORCID">0000-0002-7122-1690</cal:authorid>
+      </cal:authorids>
+    </foaf:Person>
+    <foaf:Person>
+      <foaf:name>Takahiro Sawada</foaf:name>
+      <foaf:familyName>Sawada</foaf:familyName>
+      <cal:authorNamePaper>T. Sawada</cal:authorNamePaper>
+      <cal:authorCollaboration collaborationid="E906" />
+      <cal:authorAffiliations>
+        <cal:authorAffiliation organizationid="Michigan" />
+      </cal:authorAffiliations>
+      <cal:authorids>
+        <cal:authorid source="ORCID">0000-0001-5726-7150</cal:authorid>
+      </cal:authorids>
+    </foaf:Person>
+    <foaf:Person>
+      <foaf:name>Marshall Scott</foaf:name>
+      <foaf:familyName>Scott</foaf:familyName>
+      <cal:authorNamePaper>M. B. C. Scott</cal:authorNamePaper>
+      <cal:authorCollaboration collaborationid="E906" />
+      <cal:authorAffiliations>
+        <cal:authorAffiliation organizationid="Michigan" />
+        <cal:authorAffiliation organizationid="ANL" />
+        <cal:authorAffiliation organizationid="GWU" connection="Present Address" />
+      </cal:authorAffiliations>
+      <cal:authorids>
+        <cal:authorid source="ORCID">0000-0003-1105-1033</cal:authorid>
+      </cal:authorids>
+    </foaf:Person>
+    <foaf:Person>
+      <foaf:name>Toshi-Aki Shibata</foaf:name>
+      <foaf:familyName>Shibata</foaf:familyName>
+      <cal:authorNamePaper>T.-A. Shibata</cal:authorNamePaper>
+      <cal:authorCollaboration collaborationid="E906" />
+      <cal:authorAffiliations>
+        <cal:authorAffiliation organizationid="Tokyo" />
+        <cal:authorAffiliation organizationid="RIKEN" />
+        <cal:authorAffiliation organizationid="nihon" connection="Present Address" />
+      </cal:authorAffiliations>
+      <cal:authorids>
+        <cal:authorid source="ORCID">0009-0005-5498-4804</cal:authorid>
+      </cal:authorids>
+    </foaf:Person>
+    <foaf:Person>
+      <foaf:name>Da-Shung Su</foaf:name>
+      <foaf:familyName>Su</foaf:familyName>
+      <cal:authorNamePaper>D.-S. Su</cal:authorNamePaper>
+      <cal:authorCollaboration collaborationid="E906" />
+      <cal:authorAffiliations>
+        <cal:authorAffiliation organizationid="AS" />
+      </cal:authorAffiliations>
+      <cal:authorids>
+        <cal:authorid source="ORCID">0000-0002-8381-7846</cal:authorid>
+      </cal:authorids>
+    </foaf:Person>
+    <foaf:Person>
+      <foaf:name>Rusty Towell</foaf:name>
+      <foaf:familyName>Towell</foaf:familyName>
+      <cal:authorNamePaper>R. Towell</cal:authorNamePaper>
+      <cal:authorCollaboration collaborationid="E906" />
+      <cal:authorAffiliations>
+        <cal:authorAffiliation organizationid="ACU" />
+      </cal:authorAffiliations>
+      <cal:authorids>
+        <cal:authorid source="ORCID">0000-0003-3640-7008</cal:authorid>
+      </cal:authorids>
+    </foaf:Person>
+    <foaf:Person>
+      <foaf:name>Sho Uemura</foaf:name>
+      <foaf:familyName>Uemura</foaf:familyName>
+      <cal:authorNamePaper>S. Uemura</cal:authorNamePaper>
+      <cal:authorCollaboration collaborationid="E906" />
+      <cal:authorAffiliations>
+        <cal:authorAffiliation organizationid="LANL" />
+        <cal:authorAffiliation organizationid="FNAL" connection="Present Address" />
+      </cal:authorAffiliations>
+      <cal:authorids>
+        <cal:authorid source="ORCID">0000-0003-3458-4625</cal:authorid>
+      </cal:authorids>
+    </foaf:Person>
+    <foaf:Person>
+      <foaf:name>Suyin Grass Wang</foaf:name>
+      <foaf:familyName>Wang</foaf:familyName>
+      <cal:authorNamePaper>S. G. Wang</cal:authorNamePaper>
+      <cal:authorCollaboration collaborationid="E906" />
+      <cal:authorAffiliations>
+        <cal:authorAffiliation organizationid="AS" />
+        <cal:authorAffiliation organizationid="normal" />
+        <cal:authorAffiliation organizationid="FNAL" />
+        <cal:authorAffiliation organizationid="aps" connection="Present Address" />
+      </cal:authorAffiliations>
+      <cal:authorids>
+        <cal:authorid source="ORCID">0000-0001-8474-9817</cal:authorid>
+      </cal:authorids>
+    </foaf:Person>
+    <foaf:Person>
+      <foaf:name>Jinyuan Wu</foaf:name>
+      <foaf:familyName>Wu</foaf:familyName>
+      <cal:authorNamePaper>J. Wu</cal:authorNamePaper>
+      <cal:authorCollaboration collaborationid="E906" />
+      <cal:authorAffiliations>
+        <cal:authorAffiliation organizationid="FNAL" />
+      </cal:authorAffiliations>
+      <cal:authorids>
+        <cal:authorid source="ORCID">0000-0003-4432-9521</cal:authorid>
+      </cal:authorids>
+    </foaf:Person>
+    <foaf:Person>
+      <foaf:name>Noah Wuerfel</foaf:name>
+      <foaf:familyName>Wuerfel</foaf:familyName>
+      <cal:authorNamePaper>N. Wuerfel</cal:authorNamePaper>
+      <cal:authorCollaboration collaborationid="E906" />
+      <cal:authorAffiliations>
+        <cal:authorAffiliation organizationid="Michigan" />
+      </cal:authorAffiliations>
+      <cal:authorids>
+        <cal:authorid source="ORCID">0000-0001-9872-5330</cal:authorid>
+      </cal:authorids>
+    </foaf:Person>
+    <foaf:Person>
+      <foaf:name>Zhihong Ye</foaf:name>
+      <foaf:familyName>Ye</foaf:familyName>
+      <cal:authorNamePaper>Z. H. Ye</cal:authorNamePaper>
+      <cal:authorCollaboration collaborationid="E906" />
+      <cal:authorAffiliations>
+        <cal:authorAffiliation organizationid="ANL" />
+        <cal:authorAffiliation organizationid="tsinghua" connection="Present Address" />
+      </cal:authorAffiliations>
+      <cal:authorids>
+        <cal:authorid source="ORCID">0000-0002-1873-2344</cal:authorid>
+      </cal:authorids>
+    </foaf:Person>
+  </cal:authors>
+</collaborationauthorlist>

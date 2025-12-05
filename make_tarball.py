@@ -5,12 +5,16 @@ import subprocess
 from pathlib import Path
 from pylatexenc import latexwalker
 
+def list_of_strings(arg):
+    return arg.split(',')
+
 def main():
     args = argparse.ArgumentParser(prog="make_tarball.py", 
                                    description="try to make a tarball for journal submission")
     args.add_argument("filename", help="Name of the main tex file")
     args.add_argument("-B", "--buildDir", help="/path/to/build/dir")
     args.add_argument("--bbl", action='store_true', default=False, help="To include the bbl file")
+    args.add_argument("-F","--FileList", type=list_of_strings, help="Extra files to be included")
     args.add_argument("-O", "--outName", help="output name")
     parse_args= args.parse_args()
     #print(parse_args)
@@ -81,6 +85,21 @@ def main():
             print("This behavior has not been implemented")
             sys.exit(1)
         shutil.copy(f,full_tmpPath)
+
+    if parse_args.FileList != None:
+        extra_files=parse_args.FileList
+        for ef in extra_files:
+            full_ef=os.path.join(pathToFile,ef)
+            if os.path.isfile(full_ef):
+                full_tmpPath=os.path.join(tmpDir_obj.name,os.path.basename(ef))
+                if (os.path.isfile(full_tmpPath)):
+                    print("Duplicate files named ",os.path.basename(ef))
+                    print("This behavior has not been implemented")
+                    sys.exit(1)
+                shutil.copy(full_ef,full_tmpPath)
+            else:
+                print("Extra file ",ef," not found")
+                sys.exit(1)
 
     cmd =["latexpand"]
     if parse_args.bbl:

@@ -12,9 +12,7 @@
 \zcsetup{cap,abbrev,nameinlink=false}
 \usepackage[pdfusetitle]{hyperref}
 % Explicit PDF metadata: set a concise author string (overrides any placeholder \author entries)
-\hypersetup{pdfauthor={C.H. Leung et al. (FNAL E906/SeaQuest Collaboration)}}
-\usepackage[obeyFinal]{todonotes}
-\setuptodonotes{inline}
+\hypersetup{pdfauthor={C. H. Leung et al. (FNAL E906/SeaQuest Collaboration)}}
 \usepackage{adjustbox}
 \usepackage{multirow}
 \usepackage{lineno}
@@ -123,7 +121,7 @@ for charmonium production, reported recently in
 Ref.~\cite{leung2024a}, are also consistent with the flavor asymmetry
 deduced from the Drell-Yan data.
 Several recent global parton distribution function (PDF)
-analyses~\cite{cocuzza2021,ball2022a,accardi2023,alekhin2023}
+analyses~\cite{cocuzza2021,ball2022a,accardi2023,alekhin2023,harland-lang2025}
 have included these results, in addition to the $W$ boson production data
 from the STAR collaboration~\cite{adam2021}, to better constrain the
 flavor asymmetry of $\bar u$ and $\bar d$ in the proton. The SeaQuest
@@ -156,8 +154,8 @@ for quarks carrying a momentum fraction $x_1$ and $x_2$, respectively.
 An analogous notation is used for antiquark distribution functions
 $\bar q_i^{A,B}\left(x_{1,2}\right)$.
 For fixed-target experiments like SeaQuest, the spectrometers have
-large acceptance only for the positive $x_F$ ($x_F = 2P_L/\sqrt{s}\left(1-M^2/s\right)$) region,
-where $p_L$ is the longitudinal momentum of the dimuon in the hadron-hadron center of mass frame,
+large acceptance only for the positive $x_F$ ($x_F = 2p_L/\sqrt{s}\left(1-M^2/s\right)$) region,
+where $p_L$ is the longitudinal momentum of the dimuon in the hadron-hadron center-of-mass frame,
 and $M$ is the dimuon mass.
 Thus, the Drell-Yan cross section is dominated by
 the first term, corresponding to the annihilation of a beam quark with
@@ -264,7 +262,7 @@ The reconstruction inefficiency and data acquisition system deadtime, which have
 are also taken into account.
 For this analysis,
 a revised target contamination correction is used as compared with the earlier work~\cite{dove2021,dove2023},
-resulting in a roughly \SI{2}{\percent} shift upwards in the measured cross section ratios.
+resulting in a roughly \SI{2}{\percent} upward shift in the measured cross section ratios.
 
 \begin{table*}[htbp!]
 	\centering
@@ -317,8 +315,7 @@ NLO calculations using DYTurbo~\cite{camarda2020},
 with nucleon PDFs  CJ22~\cite{accardi2023}, and NNPDF4.0~\cite{ball2022a}.
 Both PDFs are obtained from global analyses including
 the earlier SeaQuest results~\cite{dove2021}.
-This partly explains the better agreement between the data and the NNPDF4.0 calculation,
-despite the data tend to lie above the calculation at large $x$.
+This partly explains the better agreement between the data and the NNPDF4.0 calculation, although the data tend to lie above the calculation at large $x$.
 Nevertheless, \zcref{fig:xT_csr}
 shows that both the data and the NNPDF4.0 calculation for the
 $\sigma_{pd}/2\sigma_{pp}$ cross section ratio exceed unity over the
@@ -344,17 +341,17 @@ calculation is less than $10^{-3}$.
 
 \begin{figure*}[htpb!]
 	\centering
-	\begin{subfigure}{0.45\linewidth}
+	\begin{subfigure}{0.49\linewidth}
 		\includegraphics[width=\linewidth]{E906_E866_dbarubar.pdf}
 	\end{subfigure}
-	\begin{subfigure}{0.45\linewidth}
+	\begin{subfigure}{0.49\linewidth}
 		\includegraphics[width=\linewidth]{dbub_diff_with_pdf_model_2pane.pdf}
 	\end{subfigure}
 	\caption{The extracted $\bar{d}(x)/\bar{u}(x)$ (left) and $\bar{d}(x)-\bar{u}(x)$ (right)
 		from the measured $\sigma_{pd}/2\sigma_{pp}$ Drell-Yan cross section ratio
 		from SeaQuest (black square), E866~\cite{towell2001} (red circles), and HERMES~\cite{ackerstaff1998} (blue triangles).
 		The extracted ratios are compared with CJ22~\cite{accardi2023}, and NNPDF4.0~\cite{ball2022a} global PDF analyses (top),
-		and with predictions from meson cloud model~\cite{alberg2022} and statistical model~\cite{soffer2019} (bottom).
+		and with predictions from statistical model~\cite{soffer2019} and meson cloud model~\cite{alberg2022} (bottom).
 		The error bands on the PDFs correspond to their \SI{68}{\percent} confidence level.
 	}
 	\label{fig:e906_e866_dbarubar}
@@ -431,19 +428,26 @@ With the advent of the Electron Ion Collider, the flavor asymmetry in the small 
 where abundant sea quarks reside, can be further measured via the semi-inclusive DIS reaction~\cite{ackerstaff1998}.
 
 \begin{acknowledgments}
-	We thank G.~T.~Garvey for contributions to the early stages of this experiment. % Separate ack for G. Garvey. 
+	We thank the late G.~T.~Garvey for contributions to the early stages of this experiment. % Separate ack for G. Garvey. 
 	We also thank the Fermilab Accelerator Division and Particle Physics Division for their support of this experiment. % AD and PPD
 	This work was performed by the SeaQuest Collaboration, whose work was supported in part by the
 	U.S. Department of Energy, Office of Nuclear Physics under contract No.\ 
 	DE-AC02-06CH11357; % P. E. Reimer
 	the US National Science Foundation under Grants No.\ 
-	2013002, %E. R. Kinney
-	2110229, %W. Lorenzon 
-	2111046; % J. C. Peng 
+	PHY\ 2013002, %E. R. Kinney
+	PHY\ 2110229, %W. Lorenzon 
+	PHY\ 2111046, %J. C. Peng 
+	PHY\ 2209348, %R. Gilman 1/2
+	PHY\ 2309922, %C. A. Aidala
+	PHY\ 2514181; %R. Gilman 2/2
 	the JSPS (Japan) KAKENHI through Grants No.\ 21244028, No.\ 25247037, No.\ 25800133, No.\ 18H03694, No.\ 20K04000, No.\ 22H01244, No.\ 23K22515, No.\ 25K07341; % T.-A. Shibata
 	and the National Science and Technology Council of Taiwan (R.O.C.). %W. C. Chang
 	Fermilab is managed by FermiForward Discovery Group, LLC, acting under Contract No.\ 89243024CSC000002. %https://techpubs.fnal.gov/
 \end{acknowledgments}
+
+\paragraph{Data availability.}
+The data that support the findings of this article are openly available \cite{hepdata}.
+
 \bibliography{reference}
 
 \clearpage
