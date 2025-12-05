@@ -19,7 +19,6 @@
 \usepackage{cmap}
 \usepackage[version=4]{mhchem}
 \usepackage{makecell}
-\usepackage{comment}
 \usepackage{orcidlink}
 \usepackage{diagbox}
 \linenumbers
@@ -55,8 +54,6 @@
 
 
 \maketitle
-
-%\section{Introduction}
 
 Following the discovery of the point-like constituents in the proton in
 deep-inelastic scattering (DIS) experiments, evidence for a nucleon sea,
@@ -204,8 +201,6 @@ one in the top half and one in the bottom half of the spectrometer.
 A separate trigger only requires one muon track, and it is mainly used
 for studying the accidental background.
 
-%\section{Data Analysis}
-%\label{sec:analysis}
 The muon tracks are reconstructed using the hits in the drift chambers and proportional tubes in each station.
 After identifying hits potentially originating from interactions within the target region,
 the Kalman filter algorithm~\cite{kalman1960} is used to reconstruct the muon tracks.
@@ -253,7 +248,7 @@ and the mass distribution is well described by this fitting procedure.
 
 After the mass fit is performed,
 a mass cut ($M>\SI{4.5}{\GeV}$) is applied to remove the $J/\psi$ and $\psi\left(2S\right)$ events.
-The remaining events are projected into various kinematic variables, such as $x_1$, $x_2$, and $x_F$. % and $P_T$. % comment out PT until I have the results
+The remaining events are projected into various kinematic variables, such as $x_1$, $x_2$, and $x_F$. 
 The accidental background and empty-flask contributions are then subtracted from the data.
 Several corrections are applied to extract the final Drell-Yan yields.
 These include the deadtime correction for the effective luminosity,
@@ -276,8 +271,6 @@ resulting in a roughly \SI{2}{\percent} upward shift in the measured cross secti
 	\end{adjustbox}
 \end{table*}
 
-%\section{Measurement of The \texorpdfstring{$\sigma_{pd}/2\sigma_{pp}$}{pd/2pp} Drell-Yan Cross Section Ratio}
-%\label{sec:csr}
 The $\sigma_{pd}/2\sigma_{pp}$ cross
 section ratios versus $x_2$ obtained from the analysis of the full SeaQuest
 data set are shown in \zcref{fig:xT_csr}. 
