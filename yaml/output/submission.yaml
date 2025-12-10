@@ -1,0 +1,32 @@
+name: "table 1"
+description: The measured $\sigma_{pd}/2\sigma_{pp}$ cross section ratio as well as the extracted $\bar{d}/\bar{u}$ and $\bar{d}-\bar{u}$ for each $x_{2}$ bin.
+keywords:
+- {name: reactions, values: [P P --> MU+ MU- X, P DEU --> MU+ MU- X]}
+- {name: observables, values: [SIG/SIG]}
+- {name: cmenergies, values: [15]}
+data_file: table1.yaml
+---
+name: "table 3"
+description: The acceptance of the spectrometer for different $x_1$ and $x_2$ bins.
+keywords:
+- {name: reactions, values: [P P --> MU+ MU- X, P DEU --> MU+ MU- X]}
+- {name: observables, values: [ACC]}
+- {name: cmenergies, values: [15]}
+data_file: table3.yaml
+---
+name: "table 4 x1"
+description: The measured $\sigma_{pd}/2\sigma_{pp}$ cross section ratio as functions of $x_1$
+keywords:
+- {name: reactions, values: [P P --> MU+ MU- X, P DEU --> MU+ MU- X]}
+- {name: observables, values: [SIG/SIG]}
+- {name: cmenergies, values: [15]}
+data_file: table4_x1.yaml
+---
+name: "table 4 xF"
+description: The measured $\sigma_{pd}/2\sigma_{pp}$ cross section ratio as functions of $x_F$
+keywords:
+- {name: reactions, values: [P P --> MU+ MU- X, P DEU --> MU+ MU- X]}
+- {name: observables, values: [SIG/SIG]}
+- {name: cmenergies, values: [15]}
+data_file: table4_xF.yaml
+---
