@@ -4,6 +4,7 @@ import argparse
 import subprocess
 from pathlib import Path
 from pylatexenc import latexwalker
+import tarfile
 
 def list_of_strings(arg):
     return arg.split(',')
@@ -132,18 +133,10 @@ def main():
         tmpDir_obj.cleanup()
         sys.exit(1)
     # make tarball
-    curDir = os.getcwd()
-    os.chdir(tmpDir_obj.name)
-    cmd = ["tar","-czf",os.path.join(curDir,(outName+".tar.gz")),"."]
-    print(" ".join(cmd))
-    try:
-        subprocess.run(cmd, check=True)
-    except subprocess.CalledProcessError as e:
-        print("Error making tarball")
-        os.chdir(curDir)
-        tmpDir_obj.cleanup
-        sys.exit(1)
-    os.chdir(curDir)
+    tar = tarfile.open(os.path.join(os.getcwd(),(outName+".tar.gz")), "w:gz")
+    for filename in os.listdir(tmpDir_obj.name):
+        tar.add(os.path.join(tmpDir_obj.name, filename), arcname=filename)
+    tar.close()
     tmpDir_obj.cleanup()
     
     pass
