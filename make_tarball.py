@@ -135,7 +135,8 @@ def main():
     # make tarball
     tar = tarfile.open(os.path.join(os.getcwd(),(outName+".tar.gz")), "w:gz")
     for filename in os.listdir(tmpDir_obj.name):
-        tar.add(os.path.join(tmpDir_obj.name, filename), arcname=filename)
+        if not filename.startswith('.'):
+            tar.add(os.path.join(tmpDir_obj.name, filename), arcname=filename)
     tar.close()
     tmpDir_obj.cleanup()
     

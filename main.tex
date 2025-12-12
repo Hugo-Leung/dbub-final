@@ -3,7 +3,6 @@
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
 \usepackage{amsmath,amsthm,amssymb}
-\usepackage{verbatim}
 \usepackage{url}
 \usepackage{subcaption}
 \usepackage[separate-uncertainty=true,range-units=single,range-phrase=\textendash]{siunitx}
@@ -15,13 +14,11 @@
 \hypersetup{pdfauthor={C. H. Leung et al. (FNAL E906/SeaQuest Collaboration)}}
 \usepackage{adjustbox}
 \usepackage{multirow}
-\usepackage{lineno}
 \usepackage{cmap}
 \usepackage[version=4]{mhchem}
 \usepackage{makecell}
 \usepackage{orcidlink}
 \usepackage{diagbox}
-\linenumbers
 \graphicspath{{figures/}}
 \DeclareSIUnit\barn{b}
 
@@ -40,16 +37,16 @@
 \date{\today}
 
 \begin{abstract}
-    The Fermilab E906/SeaQuest collaboration performed measurements of the Drell-Yan process using
-    \SI{120}{\GeV} proton beams bombarding liquid hydrogen and liquid deuterium targets.
-    A combined analysis of all collected data was performed to obtain the final results for the $\sigma_{pd}/2\sigma_{pp}$ Drell-Yan cross
-    section ratio covering the kinematic region of $0.13 < x < 0.45$.
-    The $x$-dependencies of $\bar{d}\left(x\right) / \bar{u}\left(x\right)$ and $\bar{d}\left(x\right) - \bar{u}\left(x\right)$
-    are extracted from these cross section ratios.
-    It is found that $\bar{d}\left(x\right)$ is greater than $\bar{u}\left(x\right)$ over the entire measured $x$
-    range, with improved statistical accuracy compared to previous measurements.
-    The new results on $\bar{d}\left(x\right) / \bar{u}\left(x\right)$ and $\bar{d}\left(x\right) - \bar{u}\left(x\right)$
-    are compared to various parton distribution functions and theoretical calculations.
+	The Fermilab E906/SeaQuest collaboration performed measurements of the Drell-Yan process using
+	\SI{120}{\GeV} proton beams bombarding liquid hydrogen and liquid deuterium targets.
+	A combined analysis of all collected data was performed to obtain the final results for the $\sigma_{pd}/2\sigma_{pp}$ Drell-Yan cross
+	section ratio covering the kinematic region of $0.13 < x < 0.45$.
+	The $x$-dependencies of $\bar{d}\left(x\right) / \bar{u}\left(x\right)$ and $\bar{d}\left(x\right) - \bar{u}\left(x\right)$
+	are extracted from these cross section ratios.
+	It is found that $\bar{d}\left(x\right)$ is greater than $\bar{u}\left(x\right)$ over the entire measured $x$
+	range, with improved statistical accuracy compared to previous measurements.
+	The new results on $\bar{d}\left(x\right) / \bar{u}\left(x\right)$ and $\bar{d}\left(x\right) - \bar{u}\left(x\right)$
+	are compared to various parton distribution functions and theoretical calculations.
 \end{abstract}
 
 
@@ -248,7 +245,7 @@ and the mass distribution is well described by this fitting procedure.
 
 After the mass fit is performed,
 a mass cut ($M>\SI{4.5}{\GeV}$) is applied to remove the $J/\psi$ and $\psi\left(2S\right)$ events.
-The remaining events are projected into various kinematic variables, such as $x_1$, $x_2$, and $x_F$. 
+The remaining events are projected into various kinematic variables, such as $x_1$, $x_2$, and $x_F$.
 The accidental background and empty-flask contributions are then subtracted from the data.
 Several corrections are applied to extract the final Drell-Yan yields.
 These include the deadtime correction for the effective luminosity,
@@ -273,7 +270,7 @@ resulting in a roughly \SI{2}{\percent} upward shift in the measured cross secti
 
 The $\sigma_{pd}/2\sigma_{pp}$ cross
 section ratios versus $x_2$ obtained from the analysis of the full SeaQuest
-data set are shown in \zcref{fig:xT_csr}. 
+data set are shown in \zcref{fig:xT_csr}.
 The ratios as functions of other variables are shown in \zcref{fig:csr_x1_xF} in the End Matter.
 The main systematic uncertainties originate from modeling the
 accidental background (\qtyrange{0.41}{3.82}{\percent}).
@@ -289,7 +286,7 @@ relative beam luminosity (\SI{2}{\percent}).
 	\centering
 	\includegraphics[width=\linewidth]{data_full_xT_syst.pdf}
 	\caption{Measured $\sigma_{pd}/2\sigma_{pp}$ Drell-Yan cross section ratio from SeaQuest compared calculations using
-		 CJ22~\cite{accardi2023}, and NNPDF4.0~\cite{ball2022a}.
+		CJ22~\cite{accardi2023}, and NNPDF4.0~\cite{ball2022a}.
 		The error bands on the theoretical calculations correspond to the \SI{68}{\percent} confidence level from the PDFs.}
 	\label{fig:xT_csr}
 \end{figure}
@@ -426,9 +423,9 @@ where abundant sea quarks reside, can be further measured via the semi-inclusive
 	and N.~C.~R.~Makins for contributions to the execution of the experiment. % N. C. R. Makins
 	We also thank the Fermilab Accelerator Division and Particle Physics Division for their support of this experiment. % AD and PPD
 	This work was performed by the SeaQuest Collaboration, whose work was supported in part by the
-	U.S. Department of Energy, Office of Nuclear Physics under contract No.\ 
+	U.S. Department of Energy, Office of Nuclear Physics under contract No.\
 	DE-AC02-06CH11357; % P. E. Reimer
-	the US National Science Foundation under Grants No.\ 
+	the US National Science Foundation under Grants No.\
 	PHY\ 2013002, %E. R. Kinney
 	PHY\ 2110229, %W. Lorenzon 
 	PHY\ 2111046, %J. C. Peng 
@@ -457,7 +454,7 @@ The data that support the findings of this article are openly available~\cite{he
 	\begin{subfigure}{0.45\linewidth}
 		\includegraphics[width=\linewidth]{data_full_xF_syst.pdf}
 	\end{subfigure}
-	\caption{Measured $\sigma_{pd}/2\sigma_{pp}$ Drell-Yan cross section ratio as functions of $x_1$ (left), and $x_F$ (right) 
+	\caption{Measured $\sigma_{pd}/2\sigma_{pp}$ Drell-Yan cross section ratio as functions of $x_1$ (left), and $x_F$ (right)
 		from SeaQuest compared calculations using
 		CJ22~\cite{accardi2023}, and NNPDF4.0~\cite{ball2022a}.
 		The error bands on the theoretical calculations correspond to the \SI{68}{\percent} confidence level from the PDFs.}
