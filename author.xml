@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE collaborationauthorlist SYSTEM "author.dtd">
 <collaborationauthorlist xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:cal="http://inspirehep.net/info/HepNames/tools/authors_xml/">
-  <cal:creationDate>2025-12-10 13:21:52.757393</cal:creationDate>
+  <cal:creationDate>2025-12-15 16:04:48.927382</cal:creationDate>
   <cal:publicationReference>Final SeaQuest results on the flavor asymmetry of the proton light-quark sea with proton-induced Drell-Yan process</cal:publicationReference>
   <cal:collaborations>
     <cal:collaboration id="E906">
@@ -95,6 +95,11 @@
       <cal:orgName source="ROR">https://ror.org/047s2c258</cal:orgName>
       <cal:orgAddress>Department of Physics, University of Maryland, College Park, Maryland 20742, USA</cal:orgAddress>
     </foaf:Organization>
+    <foaf:Organization id="msstate">
+      <foaf:name>Mississippi State University</foaf:name>
+      <cal:orgName source="ROR">https://ror.org/0432jq872</cal:orgName>
+      <cal:orgAddress>Department of Physics and Astronomy, Mississippi State University, Mississippi State, Mississippi 39762, USA</cal:orgAddress>
+    </foaf:Organization>
     <foaf:Organization id="nmsu">
       <foaf:name>New Mexico State University</foaf:name>
       <cal:orgName source="ROR">https://ror.org/00hpz7z43</cal:orgName>
@@ -109,6 +114,11 @@
       <foaf:name>Lawrence Berkeley National Laboratory</foaf:name>
       <cal:orgName source="ROR">https://ror.org/02jbv0t02</cal:orgName>
       <cal:orgAddress>Lawrence Berkeley National Laboratory, Berkeley, California 94720 USA</cal:orgAddress>
+    </foaf:Organization>
+    <foaf:Organization id="fiu">
+      <foaf:name>Florida International University</foaf:name>
+      <cal:orgName source="ROR">https://ror.org/02gz6gg07</cal:orgName>
+      <cal:orgAddress>Physics Department, Florida International University, Miami, Florida, 33199, USA</cal:orgAddress>
     </foaf:Organization>
     <foaf:Organization id="caltech">
       <foaf:name>California Institute of Technology</foaf:name>
@@ -261,6 +271,15 @@
       </cal:authorAffiliations>
     </foaf:Person>
     <foaf:Person>
+      <foaf:name>Cecily Barker</foaf:name>
+      <foaf:familyName>Barker</foaf:familyName>
+      <cal:authorNamePaper>C. L. Barker</cal:authorNamePaper>
+      <cal:authorCollaboration collaborationid="E906" />
+      <cal:authorAffiliations>
+        <cal:authorAffiliation organizationid="ACU" />
+      </cal:authorAffiliations>
+    </foaf:Person>
+    <foaf:Person>
       <foaf:name>Wen-Chen Chang</foaf:name>
       <foaf:familyName>Chang</foaf:familyName>
       <cal:authorNamePaper>W. C. Chang</cal:authorNamePaper>
@@ -294,6 +313,28 @@
       </cal:authorAffiliations>
       <cal:authorids>
         <cal:authorid source="ORCID">0000-0003-1275-6510</cal:authorid>
+      </cal:authorids>
+    </foaf:Person>
+    <foaf:Person>
+      <foaf:name>Bryan Dannowitz</foaf:name>
+      <foaf:familyName>Dannowitz</foaf:familyName>
+      <cal:authorNamePaper>B. P. Dannowitz</cal:authorNamePaper>
+      <cal:authorCollaboration collaborationid="E906" />
+      <cal:authorAffiliations>
+        <cal:authorAffiliation organizationid="UIUC" />
+      </cal:authorAffiliations>
+    </foaf:Person>
+    <foaf:Person>
+      <foaf:name>Lamiaa El Fassi</foaf:name>
+      <foaf:familyName>El Fassi</foaf:familyName>
+      <cal:authorNamePaper>L. El Fassi</cal:authorNamePaper>
+      <cal:authorCollaboration collaborationid="E906" />
+      <cal:authorAffiliations>
+        <cal:authorAffiliation organizationid="msstate" />
+        <cal:authorAffiliation organizationid="Rutgers" />
+      </cal:authorAffiliations>
+      <cal:authorids>
+        <cal:authorid source="ORCID">0000-0003-3647-3136</cal:authorid>
       </cal:authorids>
     </foaf:Person>
     <foaf:Person>
@@ -342,6 +383,19 @@
       </cal:authorAffiliations>
     </foaf:Person>
     <foaf:Person>
+      <foaf:name>Lei Guo</foaf:name>
+      <foaf:familyName>Guo</foaf:familyName>
+      <cal:authorNamePaper>L. Guo</cal:authorNamePaper>
+      <cal:authorCollaboration collaborationid="E906" />
+      <cal:authorAffiliations>
+        <cal:authorAffiliation organizationid="LANL" />
+        <cal:authorAffiliation organizationid="fiu" connection="Present Address" />
+      </cal:authorAffiliations>
+      <cal:authorids>
+        <cal:authorid source="ORCID">0009-0002-3562-0552</cal:authorid>
+      </cal:authorids>
+    </foaf:Person>
+    <foaf:Person>
       <foaf:name>Tyler Hague</foaf:name>
       <foaf:familyName>Hague</foaf:familyName>
       <cal:authorNamePaper>T. J. Hague</cal:authorNamePaper>
@@ -378,6 +432,18 @@
       </cal:authorAffiliations>
       <cal:authorids>
         <cal:authorid source="ORCID">0000-0002-6467-1394</cal:authorid>
+      </cal:authorids>
+    </foaf:Person>
+    <foaf:Person>
+      <foaf:name>Larry Donald Isenhower</foaf:name>
+      <foaf:familyName>Isenhower</foaf:familyName>
+      <cal:authorNamePaper>L. D. Isenhower</cal:authorNamePaper>
+      <cal:authorCollaboration collaborationid="E906" />
+      <cal:authorAffiliations>
+        <cal:authorAffiliation organizationid="ACU" />
+      </cal:authorAffiliations>
+      <cal:authorids>
+        <cal:authorid source="ORCID">0000-0002-8237-5636</cal:authorid>
       </cal:authorids>
     </foaf:Person>
     <foaf:Person>
@@ -516,6 +582,18 @@
       </cal:authorids>
     </foaf:Person>
     <foaf:Person>
+      <foaf:name>Daniel Morton</foaf:name>
+      <foaf:familyName>Morton</foaf:familyName>
+      <cal:authorNamePaper>D. H. Morton</cal:authorNamePaper>
+      <cal:authorCollaboration collaborationid="E906" />
+      <cal:authorAffiliations>
+        <cal:authorAffiliation organizationid="Michigan" />
+      </cal:authorAffiliations>
+      <cal:authorids>
+        <cal:authorid source="ORCID">0000-0003-3813-1375</cal:authorid>
+      </cal:authorids>
+    </foaf:Person>
+    <foaf:Person>
       <foaf:name>Kazutaka Nakahara</foaf:name>
       <foaf:familyName>Nakahara</foaf:familyName>
       <cal:authorNamePaper>K. Nakahara</cal:authorNamePaper>
@@ -556,6 +634,18 @@
       </cal:authorAffiliations>
     </foaf:Person>
     <foaf:Person>
+      <foaf:name>Bryan Ramson</foaf:name>
+      <foaf:familyName>Ramson</foaf:familyName>
+      <cal:authorNamePaper>B. J. Ramson</cal:authorNamePaper>
+      <cal:authorCollaboration collaborationid="E906" />
+      <cal:authorAffiliations>
+        <cal:authorAffiliation organizationid="Michigan" />
+      </cal:authorAffiliations>
+      <cal:authorids>
+        <cal:authorid source="ORCID">0000-0002-0925-3405</cal:authorid>
+      </cal:authorids>
+    </foaf:Person>
+    <foaf:Person>
       <foaf:name>Paul Reimer</foaf:name>
       <foaf:familyName>Reimer</foaf:familyName>
       <cal:authorNamePaper>P. E. Reimer</cal:authorNamePaper>
@@ -565,6 +655,19 @@
       </cal:authorAffiliations>
       <cal:authorids>
         <cal:authorid source="ORCID">0000-0002-0301-2176</cal:authorid>
+      </cal:authorids>
+    </foaf:Person>
+    <foaf:Person>
+      <foaf:name>Joshua Rubin</foaf:name>
+      <foaf:familyName>Rubin</foaf:familyName>
+      <cal:authorNamePaper>J. G. Rubin</cal:authorNamePaper>
+      <cal:authorCollaboration collaborationid="E906" />
+      <cal:authorAffiliations>
+        <cal:authorAffiliation organizationid="ANL" />
+        <cal:authorAffiliation organizationid="Michigan" />
+      </cal:authorAffiliations>
+      <cal:authorids>
+        <cal:authorid source="ORCID">0000-0002-9408-297X</cal:authorid>
       </cal:authorids>
     </foaf:Person>
     <foaf:Person>
@@ -638,6 +741,18 @@
       </cal:authorAffiliations>
       <cal:authorids>
         <cal:authorid source="ORCID">0000-0002-8381-7846</cal:authorid>
+      </cal:authorids>
+    </foaf:Person>
+    <foaf:Person>
+      <foaf:name>Mae Teo</foaf:name>
+      <foaf:familyName>Teo</foaf:familyName>
+      <cal:authorNamePaper>M. Teo</cal:authorNamePaper>
+      <cal:authorCollaboration collaborationid="E906" />
+      <cal:authorAffiliations>
+        <cal:authorAffiliation organizationid="UIUC" />
+      </cal:authorAffiliations>
+      <cal:authorids>
+        <cal:authorid source="ORCID">0000-0001-8855-0178</cal:authorid>
       </cal:authorids>
     </foaf:Person>
     <foaf:Person>
