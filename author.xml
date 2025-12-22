@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE collaborationauthorlist SYSTEM "author.dtd">
 <collaborationauthorlist xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:cal="http://inspirehep.net/info/HepNames/tools/authors_xml/">
-  <cal:creationDate>2025-12-22 08:24:42.049957</cal:creationDate>
+  <cal:creationDate>2025-12-22 16:41:51.710974</cal:creationDate>
   <cal:publicationReference>Final SeaQuest results on the flavor asymmetry of the proton light-quark sea with proton-induced Drell-Yan process</cal:publicationReference>
   <cal:collaborations>
     <cal:collaboration id="E906">
@@ -13,151 +13,181 @@
     <foaf:Organization id="ANL">
       <foaf:name>Argonne National Laboratory</foaf:name>
       <cal:orgName source="ROR">https://ror.org/05gvnxz63</cal:orgName>
+      <cal:orgName source="INSPIRE">Argonne</cal:orgName>
       <cal:orgAddress>Physics Division, Argonne National Laboratory, Lemont, Illinois 60439, USA</cal:orgAddress>
     </foaf:Organization>
     <foaf:Organization id="AS">
       <foaf:name>Academia Sinica</foaf:name>
       <cal:orgName source="ROR">https://ror.org/05bxb3784</cal:orgName>
+      <cal:orgName source="INSPIRE">Taiwan, Inst. Phys.</cal:orgName>
       <cal:orgAddress>Institute of Physics, Academia Sinica, Taipei, 11529, Taiwan</cal:orgAddress>
     </foaf:Organization>
     <foaf:Organization id="RIKEN">
       <foaf:name>RIKEN Nishina Center for Accelerator-Based Science</foaf:name>
       <cal:orgName source="ROR">https://ror.org/05tqx4s13</cal:orgName>
+      <cal:orgName source="INSPIRE">Nishina Ctr., RIKEN</cal:orgName>
       <cal:orgAddress>RIKEN Nishina Center for Accelerator-Based Science, Wako, Saitama 351-0198, Japan</cal:orgAddress>
     </foaf:Organization>
     <foaf:Organization id="UIUC">
       <foaf:name>University of Illinois Urbana-Champaign</foaf:name>
       <cal:orgName source="ROR">https://ror.org/047426m28</cal:orgName>
+      <cal:orgName source="INSPIRE">Illinois U., Urbana</cal:orgName>
       <cal:orgAddress>Department of Physics, University of Illinois at Urbana-Champaign, Urbana, Illinois 61801, USA</cal:orgAddress>
     </foaf:Organization>
     <foaf:Organization id="Tokyo">
       <foaf:name>Tokyo Institute of Technology</foaf:name>
       <cal:orgName source="ROR">https://ror.org/0112mx960</cal:orgName>
+      <cal:orgName source="INSPIRE">Tokyo Inst. Tech.</cal:orgName>
       <cal:orgAddress>Department of Physics, Tokyo Institute of Technology, Meguro-ku, Tokyo 152-8550, Japan</cal:orgAddress>
     </foaf:Organization>
     <foaf:Organization id="LANL">
       <foaf:name>Los Alamos National Laboratory</foaf:name>
       <cal:orgName source="ROR">https://ror.org/01e41cf67</cal:orgName>
+      <cal:orgName source="INSPIRE">Los Alamos</cal:orgName>
       <cal:orgAddress>Los Alamos National Laboratory, Los Alamos, New Mexico 87545, USA</cal:orgAddress>
     </foaf:Organization>
     <foaf:Organization id="normal">
       <foaf:name>National Kaohsiung Normal University</foaf:name>
       <cal:orgName source="ROR">https://ror.org/04tsc8g87</cal:orgName>
+      <cal:orgName source="INSPIRE">Taiwan, Natl. Kaohsiung Normal U.</cal:orgName>
       <cal:orgAddress>Department of Physics, National Kaohsiung Normal University, Kaohsiung 824, Taiwan</cal:orgAddress>
     </foaf:Organization>
     <foaf:Organization id="Colorado">
       <foaf:name>University of Colorado</foaf:name>
       <cal:orgName source="ROR">https://ror.org/054spjc55</cal:orgName>
+      <cal:orgName source="INSPIRE">Colorado U.</cal:orgName>
       <cal:orgAddress>Department of Physics, University of Colorado, Boulder, Colorado 80309, USA</cal:orgAddress>
     </foaf:Organization>
     <foaf:Organization id="Michigan">
       <foaf:name>University of Michigan</foaf:name>
       <cal:orgName source="ROR">https://ror.org/00jmfr291</cal:orgName>
+      <cal:orgName source="INSPIRE">Michigan U.</cal:orgName>
       <cal:orgAddress>Randall Laboratory of Physics, University of Michigan, Ann Arbor, Michigan 48109, USA</cal:orgAddress>
     </foaf:Organization>
     <foaf:Organization id="FNAL">
       <foaf:name>Fermi National Accelerator Laboratory</foaf:name>
       <cal:orgName source="ROR">https://ror.org/020hgte69</cal:orgName>
+      <cal:orgName source="INSPIRE">Fermilab</cal:orgName>
       <cal:orgAddress>Fermi National Accelerator Laboratory, Batavia, Illinois 60510, USA</cal:orgAddress>
     </foaf:Organization>
     <foaf:Organization id="ACU">
       <foaf:name>Abilene Christian University</foaf:name>
       <cal:orgName source="ROR">https://ror.org/004srrf86</cal:orgName>
+      <cal:orgName source="INSPIRE">Abilene Christian U.</cal:orgName>
       <cal:orgAddress>Department of Engineering and Physics, Abilene Christian University, Abilene, Texas 79699, USA</cal:orgAddress>
     </foaf:Organization>
     <foaf:Organization id="Yamagata">
       <foaf:name>Yamagata University</foaf:name>
       <cal:orgName source="ROR">https://ror.org/00xy44n04</cal:orgName>
+      <cal:orgName source="INSPIRE">Yamagata U.</cal:orgName>
       <cal:orgAddress>Department of Physics, Yamagata University, Yamagata City, Yamagata 990-8560, Japan</cal:orgAddress>
     </foaf:Organization>
     <foaf:Organization id="KEK">
       <foaf:name>KEK</foaf:name>
       <cal:orgName source="ROR">https://ror.org/01g5y5k24</cal:orgName>
+      <cal:orgName source="INSPIRE">KEK, Tsukuba</cal:orgName>
       <cal:orgAddress>Institute of Particle and Nuclear Studies, KEK, High Energy Accelerator Research Organization, Tsukuba, Ibaraki 305-0801, Japan</cal:orgAddress>
     </foaf:Organization>
     <foaf:Organization id="Rutgers">
       <foaf:name>Rutgers, The State University of New Jersey</foaf:name>
       <cal:orgName source="ROR">https://ror.org/05vt9qd57</cal:orgName>
+      <cal:orgName source="INSPIRE">Rutgers U., Piscataway</cal:orgName>
       <cal:orgAddress>Department of Physics and Astronomy, Rutgers, The State University of New Jersey, Piscataway, New Jersey 08854, USA</cal:orgAddress>
     </foaf:Organization>
     <foaf:Organization id="National">
       <foaf:name>National Central University</foaf:name>
       <cal:orgName source="ROR">https://ror.org/00944ve71</cal:orgName>
+      <cal:orgName source="INSPIRE">Taiwan, Natl. Central U.</cal:orgName>
       <cal:orgAddress>Department of Physics, National Central University, Jhongli District, Taoyuan City 32001,Taiwan</cal:orgAddress>
     </foaf:Organization>
     <foaf:Organization id="UVa">
       <foaf:name>University of Virginia</foaf:name>
       <cal:orgName source="ROR">https://ror.org/0153tk833</cal:orgName>
+      <cal:orgName source="INSPIRE">Virginia U.</cal:orgName>
       <cal:orgAddress>University of Virginia, Charlottesville, Virginia 22904 USA</cal:orgAddress>
     </foaf:Organization>
     <foaf:Organization id="Maryland">
       <foaf:name>University of Maryland</foaf:name>
       <cal:orgName source="ROR">https://ror.org/047s2c258</cal:orgName>
+      <cal:orgName source="INSPIRE">Maryland U.</cal:orgName>
       <cal:orgAddress>Department of Physics, University of Maryland, College Park, Maryland 20742, USA</cal:orgAddress>
     </foaf:Organization>
     <foaf:Organization id="msstate">
       <foaf:name>Mississippi State University</foaf:name>
       <cal:orgName source="ROR">https://ror.org/0432jq872</cal:orgName>
+      <cal:orgName source="INSPIRE">Mississippi State U.</cal:orgName>
       <cal:orgAddress>Department of Physics and Astronomy, Mississippi State University, Mississippi State, Mississippi 39762, USA</cal:orgAddress>
     </foaf:Organization>
     <foaf:Organization id="nmsu">
       <foaf:name>New Mexico State University</foaf:name>
       <cal:orgName source="ROR">https://ror.org/00hpz7z43</cal:orgName>
+      <cal:orgName source="INSPIRE">New Mexico State U.</cal:orgName>
       <cal:orgAddress>Department of Physics, New Mexico State University, Las Cruces, NM 88003 USA</cal:orgAddress>
     </foaf:Organization>
     <foaf:Organization id="jlab">
       <foaf:name>Thomas Jefferson National Accelerator Facility</foaf:name>
       <cal:orgName source="ROR">https://ror.org/02vwzrd76</cal:orgName>
+      <cal:orgName source="INSPIRE">Jefferson Lab</cal:orgName>
       <cal:orgAddress>Thomas Jefferson National Accelerator Facility, Newport News, Virginia 23606, USA</cal:orgAddress>
     </foaf:Organization>
     <foaf:Organization id="lbnl">
       <foaf:name>Lawrence Berkeley National Laboratory</foaf:name>
       <cal:orgName source="ROR">https://ror.org/02jbv0t02</cal:orgName>
+      <cal:orgName source="INSPIRE">LBL, Berkeley</cal:orgName>
       <cal:orgAddress>Lawrence Berkeley National Laboratory, Berkeley, California 94720 USA</cal:orgAddress>
     </foaf:Organization>
     <foaf:Organization id="fiu">
       <foaf:name>Florida International University</foaf:name>
       <cal:orgName source="ROR">https://ror.org/02gz6gg07</cal:orgName>
+      <cal:orgName source="INSPIRE">Florida Intl. U.</cal:orgName>
       <cal:orgAddress>Physics Department, Florida International University, Miami, Florida, 33199, USA</cal:orgAddress>
     </foaf:Organization>
     <foaf:Organization id="caltech">
       <foaf:name>California Institute of Technology</foaf:name>
       <cal:orgName source="ROR">https://ror.org/05dxps055</cal:orgName>
+      <cal:orgName source="INSPIRE">Caltech</cal:orgName>
       <cal:orgAddress>Kellogg Radiation Laboratory, California Institute of Technology, Pasadena, California 91125, USA</cal:orgAddress>
     </foaf:Organization>
     <foaf:Organization id="pensacola">
       <foaf:name>Pensacola State College</foaf:name>
       <cal:orgName source="ROR">https://ror.org/051kxxw69</cal:orgName>
+      <cal:orgName source="INSPIRE">Pensacola Jr. Coll.</cal:orgName>
       <cal:orgAddress>Pensacola State College, Pensacola, FL 32504, USA</cal:orgAddress>
     </foaf:Organization>
     <foaf:Organization id="uconn">
       <foaf:name>University of Connecticut</foaf:name>
       <cal:orgName source="ROR">https://ror.org/02der9h97</cal:orgName>
+      <cal:orgName source="INSPIRE">Connecticut U.</cal:orgName>
       <cal:orgAddress>University of Connecticut, Storrs, CT 06269, USA</cal:orgAddress>
     </foaf:Organization>
     <foaf:Organization id="nihon">
       <foaf:name>Nihon University</foaf:name>
       <cal:orgName source="ROR">https://ror.org/05jk51a88</cal:orgName>
+      <cal:orgName source="INSPIRE">Nihon U., Japan</cal:orgName>
       <cal:orgAddress>Nihon University, College of Science and Technology, Chiyoda-ku, Tokyo 101-8308, Japan</cal:orgAddress>
     </foaf:Organization>
     <foaf:Organization id="aps">
       <foaf:name>APS</foaf:name>
       <cal:orgName source="ROR">https://ror.org/04qxsr837</cal:orgName>
+      <cal:orgName source="INSPIRE">Argonne</cal:orgName>
       <cal:orgAddress>APS, Argonne National Laboratory, Lemont, Illinois 60439, USA</cal:orgAddress>
     </foaf:Organization>
     <foaf:Organization id="tsinghua">
       <foaf:name>Tsinghua University</foaf:name>
       <cal:orgName source="ROR">https://ror.org/03cve4549</cal:orgName>
+      <cal:orgName source="INSPIRE">Tsinghua U., Beijing</cal:orgName>
       <cal:orgAddress>Department of Physics, Tsinghua University, Beijing 100084, China</cal:orgAddress>
     </foaf:Organization>
     <foaf:Organization id="GWU">
       <foaf:name>George Washington University</foaf:name>
       <cal:orgName source="ROR">https://ror.org/00y4zzh67</cal:orgName>
+      <cal:orgName source="INSPIRE">George Washington U.</cal:orgName>
       <cal:orgAddress>George Washington University, Washington, DC 20052, USA</cal:orgAddress>
     </foaf:Organization>
     <foaf:Organization id="Memphis">
       <foaf:name>The University of Memphis</foaf:name>
       <cal:orgName source="ROR">https://ror.org/01cq23130</cal:orgName>
+      <cal:orgName source="INSPIRE">Memphis State U.</cal:orgName>
       <cal:orgAddress>Department of Physics and Materials Science, The University of Memphis, Memphis, TN 38152</cal:orgAddress>
     </foaf:Organization>
   </cal:organizations>
