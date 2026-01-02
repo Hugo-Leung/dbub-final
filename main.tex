@@ -1,5 +1,5 @@
 % !TeX root = main.tex
-\documentclass[reprint,aps,unsortedaddress,superscriptaddress,prl,floatfix,showpacs,linenumbers]{revtex4-2}
+\documentclass[reprint,aps,unsortedaddress,superscriptaddress,prl,floatfix,showpacs]{revtex4-2}
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
 \usepackage{amsmath,amsthm,amssymb}
@@ -76,7 +76,11 @@ deep-inelastic scattering experiments~\cite{stein1975,amaudruz1991,arneodo1994} 
 the observation of the violation
 of the Gottfried Sum Rule~\cite{gottfried1967}. Field and Feynman
 attributed the asymmetry observed in the early SLAC DIS data to the Pauli
-Exclusion Principle~\cite{field1977}. It was pointed out~\cite{ellis1991}
+Exclusion Principle~\cite{field1977}.
+Many theoretical models were subsequently proposed to explain the
+asymmetry, including the meson-cloud model~\cite{thomas1983,speth1997},
+chiral-quark model~\cite{szczurek1996}, statistical model~\cite{bourrely2002}.
+It was pointed out~\cite{ellis1991}
 that an independent experimental technique to probe this flavor asymmetry is
 to measure the Drell-Yan cross section ratios,
 $\sigma_{pd}/2\sigma_{pp}$, which can further determine the $x$ dependence
@@ -120,7 +124,7 @@ have included these results, in addition to the $W$ boson production data
 from the STAR collaboration~\cite{adam2021}, to better constrain the
 flavor asymmetry of $\bar u$ and $\bar d$ in the proton. The SeaQuest
 flavor asymmetry data have also been compared with the predictions from the
-statistical model~\cite{soffer2019} and pion-cloud model~\cite{alberg2022}.
+statistical model~\cite{soffer2019}, pion-cloud model~\cite{alberg2022} and continuum Schwinger function method\cite{chang2022,yin2023}. % not sure what to call this model.
 
 In this paper we present the final results on Drell-Yan $\sigma_{pd}/2\sigma_{pp}$ ratios from the SeaQuest experiment,
 including all data collected during the run periods June 2014--July 2015 and March 2016--July 2017.
@@ -339,7 +343,7 @@ calculation is less than $10^{-3}$.
 	\end{subfigure}
 	\caption{The extracted $\bar{d}(x)/\bar{u}(x)$ (left) and $\bar{d}(x)-\bar{u}(x)$ (right)
 		from the measured $\sigma_{pd}/2\sigma_{pp}$ Drell-Yan cross section ratio
-		from SeaQuest (black square), E866~\cite{towell2001} (red circles), and HERMES~\cite{ackerstaff1998} (blue triangles).
+		from SeaQuest (red square), E866~\cite{towell2001} (black circles), and HERMES~\cite{ackerstaff1998} (blue triangles).
 		The extracted ratios are compared with CJ22~\cite{accardi2023}, and NNPDF4.0~\cite{ball2022a} global PDF analyses (top),
 		and with predictions from statistical model~\cite{soffer2019} and meson cloud model~\cite{alberg2022} (bottom).
 		The error bands on the PDFs correspond to their \SI{68}{\percent} confidence level.
@@ -422,6 +426,7 @@ where abundant sea quarks reside, can be further measured via the semi-inclusive
 	C.~N.~Brown for contributions to 5 decades of dimuon experiments at Fermilab, % C. N. Brown
 	and N.~C.~R.~Makins for contributions to the execution of the experiment. % N. C. R. Makins
 	We also thank the Fermilab Accelerator Division and Particle Physics Division for their support of this experiment. % AD and PPD
+	We would also like to thank C.~D.~Roberts and A.~W.~Thomas for their helpful suggestions on the manuscript. % Not sure id we should include this?
 	This work was performed by the SeaQuest Collaboration, whose work was supported in part by the
 	U.S. Department of Energy, Office of Nuclear Physics under contract
 	No.\ DE-AC02-06CH11357, % P. E. Reimer
@@ -439,8 +444,8 @@ where abundant sea quarks reside, can be further measured via the semi-inclusive
 	Fermilab is managed by FermiForward Discovery Group, LLC, acting under Contract No.\ 89243024CSC000002. %https://techpubs.fnal.gov/
 \end{acknowledgments}
 
-\paragraph{Data availability.}
-The data that support the findings of this article are openly available~\cite{hepdata}.
+%\paragraph{Data availability.}
+%The data that support the findings of this article are openly available~\cite{hepdata}.
 
 \bibliography{reference}
 

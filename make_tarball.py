@@ -14,7 +14,8 @@ def main():
                                    description="try to make a tarball for journal submission")
     args.add_argument("filename", help="Name of the main tex file")
     args.add_argument("-B", "--buildDir", help="/path/to/build/dir")
-    args.add_argument("--bbl", action='store_true', default=False, help="To include the bbl file")
+    args.add_argument("--bbl-single", action='store_true', default=False, help="To copy the bbl file to output tex")
+    args.add_argument("--bbl", action='store_true', default=False, help="To include the bbl file in tarball")
     args.add_argument("-F","--FileList", type=list_of_strings, help="Extra files to be included")
     args.add_argument("-O", "--outName", help="output name")
     parse_args= args.parse_args()
@@ -103,14 +104,17 @@ def main():
                 sys.exit(1)
 
     cmd =["latexpand"]
-    if parse_args.bbl:
+    if parse_args.bbl or parse_args.bbl-single:
         search_path = [pathToFile]
         if parse_args.buildDir != None:
             search_path.append (parse_args.buildDir)
         for s in search_path:
             tmpPath=os.path.join(s,(baseName+".bbl"))
             if os.path.isfile(tmpPath):
-                cmd.extend(["--expand-bbl",tmpPath])
+				if parse_args.bbl-single:
+	                cmd.extend(["--expand-bbl",tmpPath])
+				if parse_args.bbl:
+					shutil.copy(tmpPath, tmpDir_obj.name)
                 break
     else:
         bib_list=getBibFile(bib_list,pathToFile)
