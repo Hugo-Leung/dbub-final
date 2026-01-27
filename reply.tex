@@ -1,0 +1,79 @@
+\documentclass[letterpaper,12pt,oneside,final]{letter}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{comment}
+\usepackage{csquotes}
+\usepackage{xcolor}
+\usepackage{soul}
+\usepackage{todonotes}
+\usepackage{fancyhdr}
+\setuptodonotes{inline}
+\date{\today}
+\makeatletter
+\renewenvironment*{displayquote}
+  {\begingroup\color{blue}\csq@getcargs{\csq@bdquote{}{}}}
+  {\csq@edquote\endgroup}
+\makeatother
+\name{Ching Him Leung\\On behalf of the SeaQuest Collaboration}
+
+
+\begin{document}
+\begin{letter}{Physical Review Letters}
+	\opening{Dear Dr.~Karthik:}
+    \thispagestyle{fancy}
+    We appreciate very much the positive assessment and constructive comments by the referees.
+    The results present in this paper are important for understanding the light sea flavor asymmetry,
+    which both referees also agree. 
+    Below we list the referees' comments (in blue), followed by our replies (in black).
+
+    \textbf{Referee A}:
+    \begin{displayquote}
+        This is a very important result and should certainly be published.
+
+        I have just a few comments:
+    \end{displayquote}
+    We thank referee A for the positive assessment of this work. We believe this paper would provide useful information on the light quark sea. We will address their comments in detail.
+    \begin{enumerate}
+        \item \begin{displayquote}
+            It is stated that the transition from the parton model predictions of Eq.~2 to the cross section is actually done at NLO. Could this not have been done at NNLO? Would it have made no difference?
+        \end{displayquote}
+        \todo{not sure what the response should be}
+        \item  \begin{displayquote}
+            On Fig.~1 in the key there is an entry called `mix'. I think this is the background from accidental coincidence? It would be helpful to say so.
+        \end{displayquote}
+        Yes. It is the background from accidental coincidence.
+        \todo{Replace the key with ``accidental coincidenc''?} 
+        \item \begin{displayquote}
+            Please can you tell us what `empty flask' means? I know this is a letter and details are elsewhere, but this is needed for comprehensibility
+        \end{displayquote}
+        \todo{Add something like ``An empty flask target is used to measured the background from interactions of the beam with materials other than the target material, and it is subtracted from the data''}
+        \item \begin{displayquote}
+            Again I know this is a letter but I am curious about the comparison of the two halves of the data, which are combined. Could a figure not be put in `end matter'?
+        \end{displayquote}
+        \todo{I have a plot, but we need a better one and some explanition on why the first part change}
+        \item \begin{displayquote}
+            How are $x_1$ and $x_2$ defined in terms of experimental variables? You only define $x_F$. I think these definitions are needed within the letter
+        \end{displayquote}
+        \todo{Add the definition somewhere}
+        \item \begin{displayquote}
+            In Fig.~3, lower right hand side, there seems to be no error band for the statistical model, whereas there is on the left hand side. Is this a mistake? or is it invisible?
+        \end{displayquote}
+        \todo{Not sure what the reposense should be. I don't have the error band in the fotran code the author send us}
+    \end{enumerate}
+
+    \textbf{Referee B}:
+    \begin{displayquote}
+        This paper presents the final results from the SeaQuest experiment on the light-quark sea flavor asymmetry of the proton. While the behavior of this asymmetry at large $x$ has long been debated, these new measurements provide a definitive resolution. The results are also of significant interest because the observed asymmetry highlights nonperturbative contributions that go beyond the standard perturbative QCD framework.
+
+        This work expands on the previous SeaQuest analyses reported in Refs.~23 and 24 by using the complete dataset, which contains roughly twice as many detected muons, and by applying comparable analysis methods. The results are presented in detail, enabling direct comparisons with both the earlier SeaQuest results and the E866 NuSea asymmetry measurements.
+
+        This work is clearly presented and suitable for publication in its present form. I have no suggested changes to the text.
+
+        This study merits publication in Physical Review Letters, as it provides a definitive resolution to longstanding questions regarding flavor asymmetry. The measurement offers significant and unique insight into the behavior of the sea-quark asymmetry at large $x$. In particular, the results demonstrate a $\bar{d}/\bar{u}$ ratio exceeding unity at high $x$, with substantially reduced uncertainties relative to previous measurements—an issue that had remained unresolved prior to this work. These results will be incorporated into future parton distribution function fits, which are essential inputs for a wide range of measurements involving protons and nuclei.
+    \end{displayquote}
+    We thank the reviewer for the concise summary and positive assessment of this work. We agree with the reviewer that the results presented in this paper provides important constraints on the behavior of the light sea flavor asymmetry, which will be incorporated into many parton distribution function global analyses. 
+
+    \closing{Sincerely,}
+\end{letter}
+\end{document}
