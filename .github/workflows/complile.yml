@@ -28,7 +28,7 @@ jobs:
         run: |
           bash  ${GITHUB_WORKSPACE}/.github/compile.sh ${ref} ${tag}
       - name: upload compiled document
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         with:
           files: |
             build/*.pdf
